@@ -357,10 +357,11 @@ p {
 }
 
 .walpc {
-  background-image: url(../images/4k-wallpapers2.jpg);
+  background-image: url(../images/4unsplash.jpg);
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
+  background-blend-mode: overlay;  
 }
 
 #about .about {
@@ -526,7 +527,7 @@ ul {
   transition: all 0.5s ease;
 }
 .footer-col .social-links a:hover {
-  color: #24262b;
+  color: crimson;
   background-color: #ffffff;
   font-size: xx-large;
 }
