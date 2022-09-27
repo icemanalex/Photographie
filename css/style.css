@@ -458,14 +458,18 @@ p {
 }
 /*Fin contact Section */
 
-/* Footer */
+/*Début Slider */
+
+/*Fin Slider */
+
+/* Début Footer */
 .containerfooter {
   max-width: 1170px;
   margin: auto;
 }
 .row {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: wrap;   
 }
 ul {
   list-style: none;
@@ -532,6 +536,9 @@ ul {
   font-size: xx-large;
 }
 /* Fin Footer */
+
+
+
 
 /* Keyframes */
 @keyframes hamburger_puls {
