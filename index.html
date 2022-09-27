@@ -3,19 +3,23 @@
   <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/test.css"/>
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <title>La Photographie</title>
   </head>
 
   <body>
     <!-- Début Header -->
-    <section id="header">
-      <div class="header container">
+     <!-- The video -->
+     <div><video autoplay muted loop id="myVideo">
+      <source src="video/home-bg.mp4" type="video/mp4">
+    </video></div>
+    <section id="header">      
+      <div class="header container">        
         <div class="nav-bar">
           <div class="brand">
             <a href="index.html">
-              <h1><span>L</span>a <span>P</span>hotographie</h1>
+            <h1><span>L</span>a <span>P</span>hotographie</h1>
             </a>
           </div>
           <div class="nav-list">
@@ -44,6 +48,7 @@
           <a href="./html/projets.html" type="button" class="cta">Découvrir</a>
         </div>
       </div>
+      <div id="audiosetup"><audio class="audio" src="audio/dave-brubeck-take-five.mp3" controls autoplay></audio></div>
     </section>
     <!-- Fin Hero Section  -->  
 
