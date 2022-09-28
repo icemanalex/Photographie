@@ -462,11 +462,11 @@ ul {
 /*  Début FAQ */
 
 .containerFAQ {
-  /*width: 45%;
-  min-width: 350px; */
+  width: 45%;
+  /* min-width: 350px; */
   position: absolute;
   transform: translate(-50%, -50%);
-  top: 60%;
+  top: 53%;
   left: 50%;
 }
 .wrapperFAQ {
