@@ -457,6 +457,7 @@ ul {
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
+  background-blend-mode: overlay;
 }
 /*  Début FAQ */
 
@@ -495,7 +496,6 @@ ul {
   padding: 15px 0;
 }
 .contentFAQ {
-  position: relative;
   font-size: 14px;
   text-align: justify;
   line-height: 30px;
