@@ -462,8 +462,8 @@ ul {
 /*  Début FAQ */
 
 .containerFAQ {
-  width: 45%;
-  /* min-width: 350px; */
+  /*width: 45%;
+  min-width: 350px; */
   position: absolute;
   transform: translate(-50%, -50%);
   top: 53%;
@@ -471,7 +471,7 @@ ul {
 }
 .wrapperFAQ {
   background-color: #ffffff;
-  opacity: 0.8;
+  /*opacity: 0.8;*/
   margin-bottom: 20px;
   padding: 15px 40px;
   border-radius: 5px;
