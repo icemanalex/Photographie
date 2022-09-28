@@ -464,9 +464,9 @@ ul {
 .containerFAQ {
   /*width: 45%;
   min-width: 350px; */
-  position: absolute;
-  transform: translate(-50%, -50%);
-  top: 53%;
+  position: center;
+
+  top: 70%;
   left: 50%;
 }
 .wrapperFAQ {
