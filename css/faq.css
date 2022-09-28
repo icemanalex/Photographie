@@ -468,7 +468,6 @@ ul {
   transform: translate(-50%, -50%);
   top: 52%;
   left: 50%;
-  min-height: 30vh;
 }
 .wrapperFAQ {
   background-color: #ffffff;
@@ -477,6 +476,7 @@ ul {
   padding: 15px 40px;
   border-radius: 5px;
   box-shadow: 0 15px 25px rgba(0, 0, 50, 0.2);
+  z-index: 2;
 }
 .toggleFAQ,
 .contentFAQ {
