@@ -462,7 +462,7 @@ ul {
 
 .containerFAQ {
   width: 45%;
-  min-width: 500px;
+  min-width: 350px;
   position: absolute;
   transform: translate(-50%, -50%);
   top: 50%;
