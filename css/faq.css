@@ -464,10 +464,10 @@ ul {
 
 .containerFAQ {
   width: fit-content;
-  min-width: 350px;
+  min-width: 345px;
   position: absolute;
   transform: translate(-50%, -50%);
-  top: 55%;
+  top: 60%;
   left: 50%;
 }
 .wrapperFAQ {
