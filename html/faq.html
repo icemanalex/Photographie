@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="fr">
   <head>
-    <meta charset="UTF-8"/>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../css/style.css"/>
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="../css/faq.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <title>FAQ</title>
+    <link rel="icon" type="image/x-icon" href="../images/icons8-photo-96.png">
   </head>
 
-  <body>
+  <body class="wallcontact">
     <!-- Début Header -->
     <section id="header">
       <div class="header container">
@@ -24,15 +25,76 @@
             </div>
             <ul>
               <li><a href="../index.html" data-after="Accueil">Accueil</a></li>
-              <li><a href="./html/photos.html" data-after="Photos">Photos</a></li>
-              <li><a href="./html/projets.html" data-after="Projets">Projets</a></li>
-              <li><a href="./html/apropos.html" data-after="À propos">À propos</a></li>              
-              <li><a href="./html/contact.html" data-after="Contact">Contact</a></li>
+              <li><a href="photos.html" data-after="Photos">Photos</a></li>
+              <li><a href="projets.html" data-after="Projets">Projets</a></li>
+              <li><a href="apropos.html" data-after="À propos">À propos</a></li>              
+              <li><a href="contact.html" data-after="Contact">Contact</a></li>
             </ul>       
         </div>
       </div>
     </section>
     <!-- Fin Header -->
+    <!-- Début FAQ --> 
+    <section id="about">
+      <div class="about container">
+        <div class="col-left">
+          <div>            
+          </div>
+        </div>
+        <div class="col-right">
+          <!-- Ici LA FAQ -->
+          <div class="containerFAQ">
+            <div class="wrapperFAQ">
+                <button class="toggleFAQ">
+                    What is the return policy?
+                    <i class="fas fa-plus iconFAQ"></i>
+                </button>
+                <div class="contentFAQ">
+                    <p id="TexteFAQ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta aliquam facere adipisci quod mollitia, aut nemo deleniti fugiat et, corrupti sequi. Omnis dolorem quos eligendi placeat soluta sint corrupti quod.</p>
+                </div>
+            </div>
+            <div class="wrapperFAQ">
+                <button class="toggleFAQ">
+                    How do I apply the coupon?
+                    <i class="fas fa-plus iconFAQ"></i>
+                </button>
+                <div class="contentFAQ">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores error doloremque, quibusdam qui necessitatibus autem aperiam reprehenderit? Ipsum maiores dolore inventore ea. Accusantium fuga eius laboriosam iusto blanditiis doloremque ullam?</p>
+                </div>
+            </div>
+            <div class="wrapperFAQ">
+                <button class="toggleFAQ">
+                    How do I become a member?
+                    <i class="fas fa-plus iconFAQ"></i>
+                </button>
+                <div class="contentFAQ">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae consectetur officiis labore commodi sunt ex praesentium dolor magnam asperiores reiciendis. Minus magnam nesciunt aliquid eos ipsam sequi recusandae quos incidunt.</p>
+                </div>                
+            </div>
+            <div class="wrapperFAQ">
+              <button class="toggleFAQ">
+                  How do I apply the coupon?
+                  <i class="fas fa-plus iconFAQ"></i>
+              </button>
+              <div class="contentFAQ">
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores error doloremque, quibusdam qui necessitatibus autem aperiam reprehenderit? Ipsum maiores dolore inventore ea. Accusantium fuga eius laboriosam iusto blanditiis doloremque ullam?</p>
+              </div>              
+        </div>
+        <div class="wrapperFAQ">
+          <button class="toggleFAQ">
+              How do I apply the coupon?
+              <i class="fas fa-plus iconFAQ"></i>
+          </button>
+          <div class="contentFAQ">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores error doloremque, quibusdam qui necessitatibus autem aperiam reprehenderit? Ipsum maiores dolore inventore ea. Accusantium fuga eius laboriosam iusto blanditiis doloremque ullam?</p>
+          </div>
+        <!--Script-->
+        <script src="../js/script.js"></script>    
+        </div>
+      </div>
+    </section>
+    <!-- Fin FAQ -->
+
     <!-- debut Footer -->
     <footer class="footer">
       <div class="containerfooter">
@@ -61,17 +123,18 @@
             <h4>Optomisé</h4>
             <ul>
               <p class="Optimise">Se site est optimisé pour les navigateurs Chrome, Opéra, <br> Safari, Edge et FireFox </p>
-            </ul>
+            </ul>            
           </div>
           <div class="footer-col">
             <h4>Media Sociaux</h4>
             <div class="social-links">
               <a href="https://www.facebook.com/profile.php?id=100083169858534" target="_blank"><i class="fab fa-facebook-f"></i></a>
               <a href="https://twitter.com/AlexandreBoss15" target="_blank"><i class="fab fa-twitter"></i></a>              
-              <a href="https://www.linkedin.com/in/alexandre-boss%C3%A9-838408245" target="_blank"><i class="fab fa-linkedin"></i></a>              
+              <a href="https://www.linkedin.com/in/alexandre-boss%C3%A9-838408245" target="_blank"><i class="fab fa-linkedin"></i></a>
+              <a href="mailto:tech.alexandre.bosse@gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i></a>
             </div>
           </div>
-        </div>        
+        </div>
       </div>
     </footer>
     <!-- Fin Footer -->
