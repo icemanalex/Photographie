@@ -446,7 +446,7 @@ p {
   border-radius: 10px;
   padding: 30px;
   margin: 30px;
-  display: flex; /*Avent flex*/
+  display: block; /*Avant flex*/
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -474,10 +474,6 @@ p {
   font-weight: 500;
 }
 /*Fin contact Section */
-
-/*Début Slider */
-
-/*Fin Slider */
 
 /* Début Footer */
 .containerfooter {
