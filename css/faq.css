@@ -368,6 +368,7 @@ ul {
   #hero h1 {
     font-size: 7rem;
   }
+
   /* End Hero */
 
   /* contact  */
@@ -462,9 +463,9 @@ ul {
 /*  Début FAQ */
 
 .containerFAQ {
-  width: 45%;
+  width: fit-content;
   min-width: 350px;
-  position: fixed;
+  position: absolute;
   transform: translate(-50%, -50%);
   top: 55%;
   left: 50%;
