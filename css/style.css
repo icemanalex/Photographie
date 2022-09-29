@@ -379,6 +379,14 @@ p {
   background-blend-mode: overlay;
 }
 
+.wallsiteinteret {
+  background-image: url(../images/4unsplash.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  background-blend-mode: overlay;
+}
+
 #about .about {
   flex-direction: column-reverse;
   text-align: left;
@@ -709,4 +717,12 @@ ul {
   background-position: center;
   background-blend-mode: overlay;
   background-size: cover;
+}
+
+.wallsiteinteret {
+  background-image: url(../images/2pxhere.com.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  background-origin: content-box;
 }
