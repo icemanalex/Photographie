@@ -708,3 +708,22 @@ ul {
   margin: auto;
   background-color: gray;
 }
+
+#accueillePara {
+  color: antiquewhite;
+  margin-left: 2%;
+  margin-right: 2%;
+  margin-bottom: 2%;
+  margin-top: 1%;
+  text-align: justify;
+  font-family: "Montserrat", sans-serif;
+  font-size: 17px;
+}
+
+#TitreBien {
+  color: antiquewhite;
+  margin-left: 2%;
+  font-size: 40px;
+  font-family: "Montserrat", sans-serif;
+  scroll-behavior: smooth;
+}
