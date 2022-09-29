@@ -467,7 +467,7 @@ ul {
   min-width: 345px;
   position: absolute;
   transform: translate(-50%, -50%);
-  top: 60%;
+  top: 67%;
   left: 50%;
 }
 .wrapperFAQ {
@@ -509,4 +509,15 @@ ul {
   color: #ffffff;
   text-align: left;
   font-style: italic;
+}
+
+.titreFAQ {
+  font-size: 4rem;
+  font-weight: 300;
+  color: white;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  text-align: center;
+  box-shadow: 0px 0px 30px 0 #0000002c;
 }
