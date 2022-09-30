@@ -584,7 +584,7 @@ ul {
   #hero h1 {
     font-size: 7rem;
   }
-  /* End Hero */
+  /* Fin Hero */
 
   /* contact  */
   #contact .contact {
@@ -619,7 +619,7 @@ ul {
     text-align: left;
     padding-left: 20px;
   }
-  /* End contact  */
+  /* Fin contact  */
 }
 /* End Media Query For Tablet */
 
@@ -645,7 +645,7 @@ ul {
   #header .nav-list ul a:after {
     display: none;
   }
-  /* End header */
+  /* Fin header */
 
   #services .service-bottom .service-item {
     flex-basis: 22%;

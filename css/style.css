@@ -726,3 +726,17 @@ ul {
   background-size: cover;
   background-origin: content-box;
 }
+
+.wallpDSLR {
+  background-image: url(../images/5555wallpaper.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  background-origin: content-box;
+}
+
+.ParDSLR {
+  color: antiquewhite;
+  font-size: 14px;
+  text-align: justify;
+}
