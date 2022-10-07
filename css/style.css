@@ -223,7 +223,7 @@ p {
 #header .hamburger.active .bar::after {
   top: 0;
 }
-/* End Header section */
+/* Fin Header section */
 
 /* Hero Section */
 #hero {
@@ -289,7 +289,7 @@ p {
   animation-delay: 2.5s;
 }
 
-/* End Hero Section */
+/* Fin Hero Section */
 
 /* Projects section */
 #projects .projects {
@@ -362,7 +362,7 @@ p {
 #projects .project-item:hover .project-img img {
   transform: scale(1.1);
 }
-/* End Projects section */
+/* Fin Projects section */
 
 /* Début Apropos Section */
 .ParContact {
@@ -617,9 +617,9 @@ ul {
     font-weight: 500;
   }
 }
-/* End Keyframes */
+/* Fin Keyframes */
 
-/* Media Query For Tablet */
+/* Media Query pour Tablet */
 @media only screen and (min-width: 768px) {
   .cta {
     font-size: 2.5rem;
@@ -633,7 +633,7 @@ ul {
   #hero h1 {
     font-size: 7rem;
   }
-  /* End Hero */
+  /* Fin Hero */
 
   /* contact  */
   #contact .contact {
@@ -668,11 +668,11 @@ ul {
     text-align: left;
     padding-left: 20px;
   }
-  /* End contact  */
+  /* Fin contact  */
 }
-/* End Media Query For Tablet */
+/* fin Media Query pour Tablet */
 
-/* Media Query For Desktop */
+/* Media Query pour Desktop */
 @media only screen and (min-width: 1200px) {
   /* header */
   #header .hamburger {
@@ -694,7 +694,7 @@ ul {
   #header .nav-list ul a:after {
     display: none;
   }
-  /* End header */
+  /* fin header */
 
   #services .service-bottom .service-item {
     flex-basis: 22%;
@@ -715,7 +715,7 @@ ul {
   }
 }
 
-/* End  Media Query For Desktop */
+/* fin  Media Query pour Desktop */
 
 #myVideo {
   position: relative;
@@ -829,4 +829,4 @@ ul {
   color: white;
   text-align: left;
 }
-/* End Services Section */
+/* fin Services Section */

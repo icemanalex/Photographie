@@ -197,7 +197,7 @@ p {
 #header .hamburger.active .bar::after {
   top: 0;
 }
-/* End Header section */
+/* Fin Header section */
 
 /* Hero Section */
 #hero {
@@ -262,7 +262,7 @@ p {
   animation-delay: 2.5s;
 }
 
-/* End Hero Section */
+/* Fin Hero Section */
 
 /* Projects section */
 #projects .projects {
@@ -335,7 +335,7 @@ p {
 #projects .project-item:hover .project-img img {
   transform: scale(1.1);
 }
-/* End Projects section */
+/* Fin Projects section */
 
 /* Début Apropos Section */
 .ParContact {
@@ -568,9 +568,9 @@ ul {
     font-weight: 500;
   }
 }
-/* End Keyframes */
+/* Fin Keyframes */
 
-/* Media Query For Tablet */
+/* Media Query pour Tablet */
 @media only screen and (min-width: 768px) {
   .cta {
     font-size: 2.5rem;
@@ -621,9 +621,9 @@ ul {
   }
   /* Fin contact  */
 }
-/* End Media Query For Tablet */
+/* Fin Media Query pour Tablet */
 
-/* Media Query For Desktop */
+/* Media Query pour Desktop */
 @media only screen and (min-width: 1200px) {
   /* header */
   #header .hamburger {
@@ -666,7 +666,7 @@ ul {
   }
 }
 
-/* End  Media Query For Desktop */
+/* fin  Media Query pour Desktop */
 
 #myVideo {
   position: relative;
@@ -689,7 +689,7 @@ ul {
   background-color: gray;
 }
 
-/* Style the video: 100% width and height to cover the entire window */
+/* Style the video: 100% width and height pour couvrir toute la fenetre */
 #myVideo {
   width: 100vw;
   height: 100vh;

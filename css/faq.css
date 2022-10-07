@@ -320,7 +320,7 @@ ul {
 }
 /* Fin Footer */
 
-/* Keyframes */
+/* Debut Keyframes */
 @keyframes hamburger_puls {
   0% {
     opacity: 1;
@@ -352,9 +352,9 @@ ul {
     font-weight: 500;
   }
 }
-/* End Keyframes */
+/* Fin Keyframes */
 
-/* Media Query For Tablet */
+/* Media Query pour Tablet */
 @media only screen and (min-width: 768px) {
   .cta {
     font-size: 2.5rem;
@@ -369,9 +369,9 @@ ul {
     font-size: 7rem;
   }
 
-  /* End Hero */
+  /* Fin Hero */
 
-  /* contact  */
+  /*  Debut contact  */
   #contact .contact {
     flex-direction: column;
     padding: 100px 0;
@@ -404,11 +404,11 @@ ul {
     text-align: left;
     padding-left: 20px;
   }
-  /* End contact  */
+  /* Fin contact  */
 }
-/* End Media Query For Tablet */
+/* Fin Media Query Pour Tablet */
 
-/* Media Query For Desktop */
+/* Media Query Pour Desktop */
 @media only screen and (min-width: 1200px) {
   /* header */
   #header .hamburger {
@@ -430,7 +430,7 @@ ul {
   #header .nav-list ul a:after {
     display: none;
   }
-  /* End header */
+  /* Fin header */
 
   #services .service-bottom .service-item {
     flex-basis: 22%;
@@ -451,10 +451,10 @@ ul {
   }
 }
 
-/* End  Media Query For Desktop */
+/* Fin  Media Query pour Desktop */
 
 .wallcontact {
-  background-image: url(../images/img-3.jpg);
+  background-image: url(../images/pexels-garrett-morrow-2179865.jpg);
   background-attachment: fixed;
   background-position: center;
   background-size: cover;

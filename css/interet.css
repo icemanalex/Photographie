@@ -231,7 +231,7 @@ p {
 #header .hamburger.active .bar::after {
   top: 0;
 }
-/* End Header section */
+/* Fin Header section */
 
 /* Hero Section */
 #hero {
@@ -297,7 +297,7 @@ p {
   animation-delay: 2.5s;
 }
 
-/* End Hero Section */
+/* Fin Hero Section */
 
 /* Projects section */
 #projects .projects {
@@ -570,7 +570,7 @@ p {
 #header .hamburger.active .bar::after {
   top: 0;
 }
-/* End Header section */
+/* Fin Header section */
 
 /* Début Footer */
 .containerfooter {
@@ -711,7 +711,7 @@ ul {
   animation-delay: 2.5s;
 }
 
-/* End Hero Section */
+/* Fin Hero Section */
 
 /* Début Apropos Section */
 .ParContact {
@@ -875,9 +875,9 @@ ul {
     font-weight: 500;
   }
 }
-/* End Keyframes */
+/* Fin Keyframes */
 
-/* Media Query For Tablet */
+/* Media Query pour Tablet */
 @media only screen and (min-width: 768px) {
   .cta {
     font-size: 2.5rem;
@@ -891,7 +891,7 @@ ul {
   #hero h1 {
     font-size: 7rem;
   }
-  /* End Hero */
+  /* Fin Hero */
 
   /* contact  */
   #contact .contact {
@@ -926,11 +926,11 @@ ul {
     text-align: left;
     padding-left: 20px;
   }
-  /* End contact  */
+  /* Fin contact  */
 }
-/* End Media Query For Tablet */
+/* Fin Media Query pour Tablet */
 
-/* Media Query For Desktop */
+/* Media Query pour Desktop */
 @media only screen and (min-width: 1200px) {
   /* header */
   #header .hamburger {
@@ -952,7 +952,7 @@ ul {
   #header .nav-list ul a:after {
     display: none;
   }
-  /* End header */
+  /* Fin header */
 
   #services .service-bottom .service-item {
     flex-basis: 22%;
@@ -960,7 +960,7 @@ ul {
   }
 }
 
-/* End  Media Query For Desktop */
+/* Fin  Media Query pour Desktop */
 
 #myVideo {
   position: relative;
@@ -1016,7 +1016,7 @@ ul {
 #projects .project-item:hover .project-img img {
   transform: scale(1.2);
 }
-/* End Projects section */
+/* Fin Projects section */
 
 /* Keyframes */
 @keyframes hamburger_puls {
@@ -1050,9 +1050,9 @@ ul {
     font-weight: 500;
   }
 }
-/* End Keyframes */
+/* Fin Keyframes */
 
-/* Media Query For Tablet */
+/* Media Query pour Tablet */
 @media only screen and (min-width: 768px) {
   .cta {
     font-size: 2.5rem;
@@ -1066,11 +1066,11 @@ ul {
   #hero h1 {
     font-size: 7rem;
   }
-  /* End Hero */
+  /* Fin Hero */
 
-  /* End Media Query For Tablet */
+  /* Fin Media Query pour Tablet */
 
-  /* Media Query For Desktop */
+  /* Media Query pour Desktop */
   @media only screen and (min-width: 1200px) {
     /* header */
     #header .hamburger {
@@ -1092,7 +1092,7 @@ ul {
     #header .nav-list ul a:after {
       display: none;
     }
-    /* End header */
+    /* Fin header */
 
     #services .service-bottom .service-item {
       flex-basis: 22%;
@@ -1100,7 +1100,7 @@ ul {
     }
   }
 
-  /* End  Media Query For Desktop */
+  /* Fin  Media Query For Desktop */
 
   #myVideo {
     position: relative;
@@ -1172,7 +1172,7 @@ ul {
   #projects .all-projects .project-img {
     height: 100%;
   }
-  /* End Project */
+  /* Fin Project */
 }
 
 /*responsive footer*/
