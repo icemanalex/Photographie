@@ -26,7 +26,7 @@
             <ul>
               <li><a href="../index.html" data-after="Accueil">Accueil</a></li>
               <li><a href="photos.html" data-after="Collection Photos">Collection Photos</a></li>
-              <li><a href="sitesinterets.html" data-after="Sites d’intérêts">Sites d’intérêts</a></li>
+              <li><a href="sitesinterets.html" data-after="Sites d'intérêts">Sites d'intérêts</a></li>
               <li><a href="faq.html" data-after="FAQ">FAQ</a></li>
               <li><a href="apropos.html" data-after="À propos">À propos</a></li>
             </ul>
@@ -35,78 +35,118 @@
       </div><!-- fin header container -->
     </section>
     <!-- Fin Header -->
+
     <!-- Début FAQ -->
-    <section id="about">
-      <div class="about container">
-        <div class="col-left">
-          <div>
+    <section id="faq-section">
+      <div class="faq-container">
+
+        <div class="faq-header">
+          <h1 class="section-title">Foire aux <span>questions</span></h1>
+          <p class="faq-subtitle">Tout ce que vous devez savoir sur la photographie DSLR</p>
+          <div class="faq-meta">
+            <span class="meta-badge"><i class="fas fa-question-circle"></i> 5 questions</span>
+            <span class="meta-badge"><i class="fas fa-camera"></i> Photographie DSLR</span>
+            <button class="toggle-all-btn" id="toggleAll">
+              Tout ouvrir <i class="fas fa-chevron-down"></i>
+            </button>
           </div>
         </div>
-        <div class="col-right">
-          <!-- Ici LA FAQ -->
-          <div class="titreFAQ">
-            <h1>Foire aux <span style="color:crimson ;">questions</span> </h1>
-          </div>
-          <div class="containerFAQ">
-            <div class="wrapperFAQ">
-                <button class="toggleFAQ">
-                  Appareil photographique reflex numérique
-                    <i class="fas fa-plus iconFAQ"></i>
-                </button>
-                <div class="contentFAQ">
-                    <p id="TexteFAQ">Un appareil photographique reflex numérique (APRN, ou en anglais Digital Single-Lens Reflex, DSLR) est un appareil photographique numérique de type reflex mono-objectif utilisant un capteur numérique de grande taille (format 4/3, APS-C, APS-H, 24 × 36 et "moyen format"), ayant une visée reflex et permettant de changer d'objectif.
 
-                      Il existe également des appareils d'aspect similaire utilisant une visée électronique (appelés également « appareil à miroir semi-transparent » comme les modèles de la gamme Sony Alpha SLT). Au sens strict, ce ne sont pas des reflex car ils sont dépourvus de visée optique. </p>
-                </div>
-            </div>
-            <div class="wrapperFAQ">
-                <button class="toggleFAQ">
-                  Objectif photographique
-                    <i class="fas fa-plus iconFAQ"></i>
-                </button>
-                <div class="contentFAQ">
-                    <p>Un objectif photographique est un système optique convergent formé de plusieurs lentilles, et éventuellement de miroirs, donnant des images réelles sur la surface sensible de l'appareil photographique. Un objectif se caractérise en premier lieu par sa distance focale (ou sa plage de focale pour un zoom), son ouverture maximale, et le format maximum de la surface sensible (film ou capteur) avec lequel il est utilisable.
+        <div class="faq-list">
 
-                      Un objectif photographique ou la cornée de l’œil n'ont à l'origine qu'une seule fonction : concentrer la lumière (pour chaque point de l'image) pour sensibiliser la rétine ou le capteur photo. C'est un peu ce que fait la parabole pour des signaux lointain donc pratiquement parallèles. Tout le reste : distorsion, profondeur de champ ne sont que les défauts du système. Par exemple pour une source très lumineuse à une grande distance un simple petit trou suffit. </p>
+          <div class="faq-item slide-in">
+            <button class="faq-toggle">
+              <div class="faq-left">
+                <span class="faq-num">01</span>
+                <div class="faq-title-block">
+                  <span class="faq-cat"><i class="fas fa-camera-retro"></i> Matériel</span>
+                  <span class="faq-title">Appareil photographique reflex numérique</span>
                 </div>
-            </div>
-            <div class="wrapperFAQ">
-                <button class="toggleFAQ">
-                  Flash photographique
-                    <i class="fas fa-plus iconFAQ"></i>
-                </button>
-                <div class="contentFAQ">
-                    <p>Un flash photographique est un dispositif d'éclairage produisant une lumière intense pendant un très court laps de temps (environ 1/1000 de seconde) utilisé en photographie pour éclairer un sujet.</p>
-                </div>
-            </div>
-            <div class="wrapperFAQ">
-              <button class="toggleFAQ">
-                Format de capteur et facteur de conversion
-                  <i class="fas fa-plus iconFAQ"></i>
-              </button>
-              <div class="contentFAQ">
-                  <p>Il existe au moins cinq formats de capteurs pour les reflex numériques. Ces tailles de capteur différentes impliquent que, pour un objectif d'une focale donnée, le champ embrassé sera facteur de la taille du capteur utilisé. Afin de rendre le choix et les comparaisons plus aisées, il est d'usage de ramener toutes les focales à la focale qui embrasserait le même champ en 24 x 36. C'est le coefficient de focale ou facteur de conversion28. Ainsi, un objectif d'une focale de 50 mm utilisé sur un reflex numérique à capteur APS-C (facteur de conversion 1,5) procurera le champ d'un objectif de 75 mm en 24 x 36.</p>
               </div>
-        </div>
-        <div class="wrapperFAQ">
-          <button class="toggleFAQ">
-            Connexions DSLR
-              <i class="fas fa-plus iconFAQ"></i>
-          </button>
-          <div class="contentFAQ">
-              <p>Les reflex numériques disposent de possibilités de connexion plus ou moins importantes suivant leur niveau de gamme et l'utilisation prévue par leur fabricant. Ces possibilités ont évolué, au cours des années, avec la diffusion de plus en plus importante du reflex numérique à partir du début des années 2000.
-
-                USB : Tous les reflex on rapidement adopté l'interface USB comme connexion vers un ordinateur ou autre équipement similaire. Il s'agit généralement d'une interface USB 2.0 permettant, entre autres fonctions, de transférer les photos vers un ordinateur. Cette interface est très souvent couplée avec une sortie vidéo composite permettant l'affichage des photos, en basse définition, sur un écran. Un câble offrant à la fois une connexion USB et une connexion vidéo composite est fourni.
-                HDMI : La sortie vidéo composite n'offrant qu'une qualité d'image très modeste, les reflex sont désormais dotés d'une sortie vidéo numérique HDMI permettant le raccordement à un téléviseur ou autre écran disposant de ce type d'entrée. Le connecteur est de type C (mini-HDMI) mais aucun câble n'est généralement fourni : il doit être acquis séparément.</p>
+              <span class="faq-icon"><i class="fas fa-plus"></i></span>
+            </button>
+            <div class="faq-content">
+              <p>Un appareil photographique reflex numérique (APRN, ou <strong>Digital Single-Lens Reflex — DSLR</strong>) utilise un capteur numérique de grande taille (format 4/3, APS-C, APS-H, 24×36 ou moyen format), une visée reflex et permet de changer d'objectif.</p>
+              <p>Il existe aussi des appareils similaires à visée électronique, comme les modèles Sony Alpha SLT. Au sens strict, ce ne sont pas des reflex car ils sont dépourvus de visée optique.</p>
+            </div>
           </div>
-          </div><!-- fin wrapperFAQ 5 -->
-        </div><!-- fin containerFAQ -->
-        </div><!-- fin col-right -->
-      </div><!-- fin about container -->
+
+          <div class="faq-item slide-in">
+            <button class="faq-toggle">
+              <div class="faq-left">
+                <span class="faq-num">02</span>
+                <div class="faq-title-block">
+                  <span class="faq-cat"><i class="fas fa-bullseye"></i> Optique</span>
+                  <span class="faq-title">Objectif photographique</span>
+                </div>
+              </div>
+              <span class="faq-icon"><i class="fas fa-plus"></i></span>
+            </button>
+            <div class="faq-content">
+              <p>Un objectif photographique est un système optique convergent formé de lentilles et miroirs, produisant des images réelles sur la surface sensible de l'appareil. Il se caractérise par sa <strong>distance focale</strong>, son <strong>ouverture maximale</strong> et le format de capteur compatible.</p>
+              <p>Sa fonction principale est de concentrer la lumière sur le capteur. Les autres caractéristiques — distorsion, profondeur de champ — sont considérées comme des imperfections du système.</p>
+            </div>
+          </div>
+
+          <div class="faq-item slide-in">
+            <button class="faq-toggle">
+              <div class="faq-left">
+                <span class="faq-num">03</span>
+                <div class="faq-title-block">
+                  <span class="faq-cat"><i class="fas fa-bolt"></i> Éclairage</span>
+                  <span class="faq-title">Flash photographique</span>
+                </div>
+              </div>
+              <span class="faq-icon"><i class="fas fa-plus"></i></span>
+            </button>
+            <div class="faq-content">
+              <p>Un flash photographique est un dispositif d'éclairage produisant une lumière intense pendant un très court laps de temps — environ <strong>1/1000 de seconde</strong> — utilisé pour éclairer un sujet lors de la prise de vue.</p>
+            </div>
+          </div>
+
+          <div class="faq-item slide-in">
+            <button class="faq-toggle">
+              <div class="faq-left">
+                <span class="faq-num">04</span>
+                <div class="faq-title-block">
+                  <span class="faq-cat"><i class="fas fa-expand"></i> Technique</span>
+                  <span class="faq-title">Format de capteur et facteur de conversion</span>
+                </div>
+              </div>
+              <span class="faq-icon"><i class="fas fa-plus"></i></span>
+            </button>
+            <div class="faq-content">
+              <p>Il existe au moins cinq formats de capteurs pour les reflex numériques. Pour comparer les focales, on les ramène toutes à l'équivalent <strong>24×36 mm</strong> — c'est le <strong>facteur de conversion</strong>.</p>
+              <p>Exemple : un objectif de 50 mm sur un reflex APS-C (facteur 1,5×) donne le même champ qu'un 75 mm en plein format 24×36.</p>
+            </div>
+          </div>
+
+          <div class="faq-item slide-in">
+            <button class="faq-toggle">
+              <div class="faq-left">
+                <span class="faq-num">05</span>
+                <div class="faq-title-block">
+                  <span class="faq-cat"><i class="fas fa-plug"></i> Connectivité</span>
+                  <span class="faq-title">Connexions DSLR</span>
+                </div>
+              </div>
+              <span class="faq-icon"><i class="fas fa-plus"></i></span>
+            </button>
+            <div class="faq-content">
+              <p>Les reflex numériques proposent plusieurs interfaces de connexion selon leur gamme :</p>
+              <ul class="faq-list-items">
+                <li><i class="fas fa-circle"></i> <strong>USB 2.0</strong> — transfert de photos vers un ordinateur, souvent couplé à une sortie vidéo composite.</li>
+                <li><i class="fas fa-circle"></i> <strong>HDMI (mini-HDMI type C)</strong> — sortie vidéo numérique haute définition vers un téléviseur ou moniteur externe. Câble non fourni.</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
     </section>
     <!-- Fin FAQ -->
 
-    <!-- debut Footer -->
+    <!-- Début Footer -->
     <footer class="footer">
       <div class="containerfooter">
         <div class="row">
@@ -132,15 +172,15 @@
           <div class="footer-col">
             <h4>Navigateurs</h4>
             <ul>
-              <p class="Optimise">Se site est optimisé pour les navigateurs Chrome, Opéra, <br> Safari, Edge et FireFox </p>
+              <p class="Optimise">Ce site est optimisé pour Chrome, Opéra, Safari, Edge et FireFox</p>
             </ul>
           </div>
           <div class="footer-col">
             <h4>Média Sociaux</h4>
             <div class="social-links">
-              <a href="https://www.facebook.com/profile.php?id=100083169858534" target="_blank"><i class="fab fa-facebook-f"></i></a>
-              <a href="https://twitter.com/AlexandreBoss15" target="_blank"><i class="fab fa-twitter"></i></a>
-              <a href="https://www.linkedin.com/in/alexandre-boss%C3%A9-838408245" target="_blank"><i class="fab fa-linkedin"></i></a>
+              <a href="https://www.facebook.com/profile.php?id=100083169858534" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
+              <a href="https://twitter.com/AlexandreBoss15" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
+              <a href="https://www.linkedin.com/in/alexandre-boss%C3%A9-838408245" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
               <a href="mailto:tech.alexandre.bosse@gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i></a>
             </div>
           </div>
@@ -148,7 +188,7 @@
       </div>
     </footer>
     <!-- Fin Footer -->
-    <script src="../js/script.js"></script>
     <script src="../js/app.js"></script>
+    <script src="../js/faq.js"></script>
   </body>
 </html>
