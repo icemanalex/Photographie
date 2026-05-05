@@ -1,819 +1,811 @@
+@import "https://fonts.googleapis.com/css?family=Montserrat:300, 400, 700&display=swap";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 10px;
+  font-family: "Montserrat", sans-serif;
+  scroll-behavior: smooth;
+}
+a {
+  text-decoration: none;
+}
+.container {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+p {
+  color: black;
+  font-size: 1.4rem;
+  margin-top: 5px;
+  line-height: 2.5rem;
+  font-weight: 300;
+  letter-spacing: 0.05rem;
+}
+.section-title {
+  font-size: 4rem;
+  font-weight: 300;
+  color: black;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  text-align: center;
+}
+.section-title span {
+  color: crimson;
+}
 
+.cta {
+  display: inline-block;
+  padding: 10px 30px;
+  color: white;
+  background-color: transparent;
+  border: 2px solid crimson;
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  margin-top: 30px;
+  transition: 0.3s ease;
+  transition-property: background-color, color;
 }
-} ;llorcs :tnemhcatta-dnuorgkcab { tcatnocllaw. ,cplaw.  
-} ;dexif :noitisop { oediVym#  
-{ )enon :tuollac-hcuot-tikbew-( stroppus@
-/* irafaS SOi */
+.cta:hover {
+  color: white;
+  background-color: crimson;
+}
+.brand h1 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  color: white;
+}
+.brand h1 span {
+  color: crimson;
+}
 
+/* Header section */
+#header {
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: auto;
 }
-} ;mer6 :ezis-tnof { 1h oreh#  
-} ;enon :yalpsid { retfa:a lu tsil-van. redaeh#  
-} ;mer6.1 :ezis-tnof { a il lu tsil-van. redaeh#  
-} ;kcolb-enilni :yalpsid { il lu tsil-van. redaeh#  
-} ;tnerapsnart :roloc-dnuorgkcab ;tnetnoc-tif :htdiw ;otua :thgieh ;kcolb :yalpsid ;laitini :noitisop { lu tsil-van. redaeh#  
-} ;enon :yalpsid { regrubmah. redaeh#  
-{ )xp9911 :htdiw-xam( dna )xp4201 :htdiw-nim( aidem@
-/* xp9911 – xp4201 — GL */
+#header .header {
+  min-height: 8vh;
+  background-color: rgba(31, 30, 30, 0.24);
+  transition: 0.3s ease background-color;
+}
+#header .nav-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  max-width: 1300px;
+  padding: 0 10px;
+}
+#header .nav-list ul {
+  list-style: none;
+  position: absolute;
+  background-color: rgb(31, 30, 30);
+  width: 100vw;
+  height: 100vh;
+  left: 100%;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  overflow-x: hidden;
+  transition: 0.5s ease left;
+}
+#header .nav-list ul.active {
+  left: 0%;
+}
+#header .nav-list ul a {
+  font-size: 2.5rem;
+  font-weight: 500;
+  letter-spacing: 0.2rem;
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+  padding: 20px;
+  display: block;
+}
+#header .nav-list ul a::after {
+  content: attr(data-after);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  color: rgba(240, 248, 255, 0.021);
+  font-size: 13rem;
+  letter-spacing: 50px;
+  z-index: -1;
+  transition: 0.3s ease letter-spacing;
+}
+#header .nav-list ul li:hover a::after {
+  transform: translate(-50%, -50%) scale(1);
+  letter-spacing: initial;
+}
+#header .nav-list ul li:hover a {
+  color: crimson;
+}
+#header .hamburger {
+  height: 60px;
+  width: 60px;
+  display: inline-block;
+  border: 3px solid white;
+  border-radius: 50%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  cursor: pointer;
+  transform: scale(0.8);
+  margin-right: 20px;
+}
+#header .hamburger:after {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  border: 3px solid white;
+  animation: hamburger_puls 1s ease infinite;
+}
+#header .hamburger .bar {
+  height: 2px;
+  width: 30px;
+  position: relative;
+  background-color: white;
+  z-index: -1;
+}
+#header .hamburger .bar::after,
+#header .hamburger .bar::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  background-color: white;
+  transition: 0.3s ease;
+  transition-property: top, bottom;
+}
+#header .hamburger .bar::after {
+  top: 8px;
+}
+#header .hamburger .bar::before {
+  bottom: 8px;
+}
+#header .hamburger.active .bar::before {
+  bottom: 0;
+}
+#header .hamburger.active .bar::after {
+  top: 0;
+}
+/* Fin Header section */
 
+/* Hero Section */
+#hero {
+  background-color: #1a1a1a;
+  background-image: url(../images/hero-bg.png);
+  background-size: cover;
+  background-position: top center;
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
 }
-} ;mer5 :ezis-tnof { eltit-noitces.1h  
-} ;xp54 xp51 :gniddap ;mer2 :ezis-tnof { atc.  
-} ;xp61 :ezis-tnof { araPellieucca#  
-} ;xp23 :ezis-tnof { neiBertiT#  
-} ;mer5.5 :ezis-tnof { 1h oreh#  
-{ )xp3201 :htdiw-xam( dna )xp867 :htdiw-nim( aidem@
-/* )xp3201 – xp867( settelbaT — DM */
+#hero::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  opacity: 0.7;
+  z-index: 1;
+}
+#hero .hero {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 50px;
+  justify-content: flex-start;
+  position: relative;
+  z-index: 2;
+}
+#hero h1 {
+  display: block;
+  width: fit-content;
+  font-size: 4rem;
+  position: relative;
+  color: transparent;
+  animation: text_reveal 0.5s ease forwards;
+  animation-delay: 1s;
+  z-index: 2;
+}
+#hero h1:nth-child(1) {
+  animation-delay: 1s;
+}
+#hero h1:nth-child(2) {
+  animation-delay: 2s;
+}
+#hero h1:nth-child(3) {
+  animation: text_reveal_name 0.5s ease forwards;
+  animation-delay: 3s;
+}
+#hero h1 span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  background-color: crimson;
+  animation: text_reveal_box 1s ease;
+  animation-delay: 0.5s;
+}
+#hero h1:nth-child(1) span {
+  animation-delay: 0.5s;
+}
+#hero h1:nth-child(2) span {
+  animation-delay: 1.5s;
+}
+#hero h1:nth-child(3) span {
+  animation-delay: 2.5s;
+}
 
-}
-} ;xp03 :mottob-nigram ;%05 :htdiw { loc-retoof.  
-} ;xp03 xp21 :gniddap ;mer8.1 :ezis-tnof { atc.  
+/* Fin Hero Section */
 
-} ;%09 :htdiw { oidua.  
+/* Projects section */
+#projects .projects {
+  flex-direction: column;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 100px 0;
+}
+#projects .projects-header h1 {
+  margin-bottom: 50px;
+}
+#projects .all-projects {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+#projects .project-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 80%;
+  margin: 20px auto;
+  overflow: hidden;
+  border-radius: 10px;
+}
+#projects .project-info {
+  padding: 30px;
+  flex-basis: 50%;
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+  color: white;
+}
+#projects .project-info h1 {
+  font-size: 4rem;
+  font-weight: 500;
+}
+#projects .project-info h2 {
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-top: 10px;
+}
+#projects .project-info p {
+  color: white;
+}
+#projects .project-img {
+  flex-basis: 50%;
+  height: 300px;
+  overflow: hidden;
+  position: relative;
+}
+#projects .project-img:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+  opacity: 0.7;
+}
+#projects .project-img img {
+  transition: 0.3s ease transform;
+}
+#projects .project-item:hover .project-img img {
+  transform: scale(1.1);
+}
+/* Fin Projects section */
 
-} ;xp02 xp01 :nigram ;xp41 :ezis-tnof { araPellieucca#  
-} ;xp02 :tfel-nigram ;xp62 :ezis-tnof { neiBertiT#  
+/* Début Apropos Section */
+.ParContact {
+  color: #ffffff;
+}
 
-} ;xp52 0 :gniddap { oreh. oreh#  
-} ;mer5.3 :ezis-tnof { 1h oreh#  
+.section-title2 {
+  font-size: 4rem;
+  font-weight: 300;
+  color: white;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  text-align: left;
+}
+.section-title2 span {
+  color: crimson;
+}
 
-} ;mer5.2 :ezis-tnof { 1h dnarb.  
-} ;xp9 :ezis-tnof { lmth  
-{ )xp767 :htdiw-xam( dna )xp084 :htdiw-nim( aidem@
-/* )xp767 – xp084( senohpéléT — MS */
+.walpc {
+  background-image: url(../images/4unsplash.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  background-blend-mode: overlay;
+}
 
+#about .about {
+  flex-direction: column-reverse;
+  text-align: left;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 100px 20px;
 }
-} ;xp02 xp05 :gniddap { retoof.  
-} ;%001 :htdiw { loc-retoof.  
+#about .col-left {
+  width: 250px;
+  height: 360px;
+}
+#about .col-right {
+  width: 100%;
+}
+#about .col-right h2 {
+  font-size: 1.8rem;
+  font-weight: 500;
+  letter-spacing: 0.2rem;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+#about .col-right p {
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+#about .col-right .cta {
+  color: white;
+  margin-bottom: 50px;
+  padding: 10px 20px;
+  font-size: 2rem;
+}
+#about .col-left .about-img {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  border: 10px solid white;
+}
+#about .col-left .about-img::after {
+  content: "";
+  position: absolute;
+  left: -33px;
+  top: 19px;
+  height: 98%;
+  width: 98%;
+  border: 7px solid crimson;
+  z-index: -1;
+}
+/* fin apropos Section */
 
-} ;xp02 xp01 :gniddap ;mer6.1 :ezis-tnof { atc.  
-} ;mer50.0 :gnicaps-rettel ;mer6.2 :ezis-tnof { 2eltit-noitces. ,eltit-noitces.  
+/* contact Section */
+#contact .contact {
+  flex-direction: column;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 90%;
+}
+#contact .contact-items {
+  /* max-width: 400px; */
+  width: 100%;
+}
+#contact .contact-item {
+  width: 80%;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  padding: 30px;
+  margin: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0px 0px 18px 0 #0000002c;
+  transition: 0.3s ease box-shadow;
+}
+#contact .contact-item:hover {
+  box-shadow: 0px 0px 5px 0 #0000002c;
+}
+#contact .icon {
+  width: 70px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
+#contact .contact-info h1 {
+  font-size: 2.5rem;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+#contact .contact-info h2 {
+  font-size: 1.3rem;
+  line-height: 2rem;
+  font-weight: 500;
+}
+/*Fin contact Section */
 
-} ;otua xp01 :nigram ;%59 :htdiw { oidua.  
+/*Début Slider */
 
-} ;xp51 xp01 :nigram ;xp31 :ezis-tnof { araPellieucca#  
-} ;xp02 :pot-nigram ;xp51 :tfel-nigram ;xp22 :ezis-tnof { neiBertiT#  
+/*Fin Slider */
 
-} ;hv06 :thgieh-nim ;xp51 0 :gniddap { oreh. oreh#  
-} ;mer8.2 :ezis-tnof { 1h oreh#  
-} ;hv001 :thgieh-nim { oreh#  
+/* Début Footer */
+.containerfooter {
+  max-width: 1170px;
+  margin: auto;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+ul {
+  list-style: none;
+}
+.footer {
+  background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+  padding: 70px 0;
+}
+.footer-col {
+  width: 25%;
+  padding: 0 15px;
+}
+.footer-col h4 {
+  font-size: 18px;
+  color: #ffffff;
+  text-transform: capitalize;
+  margin-bottom: 35px;
+  font-weight: 500;
+  position: relative;
+}
+.footer-col h4::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  background-color: #e91e63;
+  height: 2px;
+  box-sizing: border-box;
+  width: 50px;
+}
+.footer-col ul li:not(:last-child) {
+  margin-bottom: 10px;
+  font-family: "Poppins", sans-serif;
+}
+.footer-col ul li a {
+  font-size: 16px;
+  text-transform: capitalize;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 300;
+  color: #bbbbbb;
+  display: block;
+  transition: all 0.3s ease;
+}
+.footer-col ul li a:hover {
+  color: crimson;
+  padding-left: 8px;
+}
+.footer-col .social-links a {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin: 0 10px 10px 0;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: #ffffff;
+  transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover {
+  color: crimson;
+  background-color: #ffffff;
+  font-size: xx-large;
+}
+/* Fin Footer */
 
-} ;mer2.2 :ezis-tnof { 1h dnarb.  
+/* Keyframes */
+@keyframes hamburger_puls {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.4);
+  }
+}
+@keyframes text_reveal_box {
+  50% {
+    width: 100%;
+    left: 0;
+  }
+  100% {
+    width: 0;
+    left: 100%;
+  }
+}
+@keyframes text_reveal {
+  100% {
+    color: white;
+  }
+}
+@keyframes text_reveal_name {
+  100% {
+    color: crimson;
+    font-weight: 500;
+  }
+}
+/* Fin Keyframes */
 
-} ;xp8 :ezis-tnof { lmth  
-{ )xp084 :htdiw-xam( aidem@
-/* )xp084 <( senohpélét stitep sèrT — SX */
+/* Media Query pour Tablet */
+@media only screen and (min-width: 768px) {
+  .cta {
+    font-size: 2.5rem;
+    padding: 20px 60px;
+  }
+  h1.section-title {
+    font-size: 6rem;
+  }
 
-/* ============================================================   
-)lmth.xedni( ssc.ortni — TELPMOC EVISNOPSER   
-============================================================ */
+  /* Hero */
+  #hero h1 {
+    font-size: 7rem;
+  }
+  /* Fin Hero */
 
+  /* contact  */
+  #contact .contact {
+    flex-direction: column;
+    padding: 100px 0;
+    align-items: center;
+    justify-content: center;
+    min-width: 20vh;
+    margin-top: 0%;
+  }
+  #contact .contact-items {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 0;
+  }
+  #contact .contact-item {
+    width: 30%;
+    margin: 0;
+    flex-direction: row;
+  }
+  #contact .contact-item .icon {
+    height: 100px;
+    width: 100px;
+  }
+  #contact .contact-item .icon img {
+    object-fit: contain;
+  }
+  #contact .contact-item .contact-info {
+    width: 100%;
+    text-align: left;
+    padding-left: 20px;
+  }
+  /* Fin contact  */
 }
-;2 :xedni-z  
-;evitaler :noitisop  
-;fires-snas ,"tarrestnoM" :ylimaf-tnof  
-;xp04 :ezis-tnof  
-;%2 :tfel-nigram  
-;etihweuqitna :roloc  
-{ neiBertiT#
+/* Fin Media Query pour Tablet */
 
-}
-;2 :xedni-z  
-;evitaler :noitisop  
-;xp71 :ezis-tnof  
-;fires-snas ,"tarrestnoM" :ylimaf-tnof  
-;yfitsuj :ngila-txet  
-;%2 %2 %1 :nigram  
-;etihweuqitna :roloc  
-{ araPellieucca#
+/* Media Query pour Desktop */
+@media only screen and (min-width: 1200px) {
+  /* header */
+  #header .hamburger {
+    display: none;
+  }
+  #header .nav-list ul {
+    position: initial;
+    display: block;
+    height: auto;
+    width: fit-content;
+    background-color: transparent;
+  }
+  #header .nav-list ul li {
+    display: inline-block;
+  }
+  #header .nav-list ul li a {
+    font-size: 1.8rem;
+  }
+  #header .nav-list ul a:after {
+    display: none;
+  }
+  /* Fin header */
 
+  #services .service-bottom .service-item {
+    flex-basis: 22%;
+    margin: 1.5%;
+  }
 }
-;yarg :roloc-dnuorgkcab  
-;otua :nigram  
-;%001 :htdiw  
-;xelf :yalpsid  
-{ oidua.
 
+/*responsive footer*/
+@media (max-width: 767px) {
+  .footer-col {
+    width: 50%;
+    margin-bottom: 30px;
+  }
 }
-;2 :xedni-z  
-;evitaler :noitisop  
-{ atc. oreh#
-,putesoidua# oreh#
-,araPellieucca# oreh#
-,neiBertiT# oreh#
-,vid > oreh#
-,oreh. oreh#
-/* yalrevo'l ed te oédiv al ed sussed-ua oreh ud unetnoc el tuoT */
+@media (max-width: 574px) {
+  .footer-col {
+    width: 100%;
+  }
+}
 
-}
-;1 :xedni-z  
-{ retfa::oreh#
-/* oédiv al sussed-rap erbmos yalrevO */
+/* fin  Media Query pour Desktop */
 
-}
-;mrofsnart :egnahc-lliw  
-;)0(Zetalsnart :mrofsnart  
-;)0(Zetalsnart :mrofsnart-tikbew-  
-/* elibom rus gniredner UPG el recroF */  
-;0 :xedni-z  
-;revoc :tif-tcejbo  
-;%001 :thgieh  
-;%001 :htdiw  
-;0 :tfel  
-;0 :pot  
-;etulosba :noitisop  
-{ oediVym#
+/* #myVideo — voir la règle principale ci-dessous */
 
+.Optimise {
+  color: #ffffff;
+  text-align: left;
+  font-style: italic;
 }
-;neddih :wolfrevo  
-;evitaler :noitisop  
-{ oreh#
-/* --------------------------------------------------------------------   
-.irafaS SOi rus sap ennoitcnof en >oediv< enu rus dexif:noitisop   
-.)etulosba:noitisop( oreh# ed rueirétni'l à tse oédiv aL   
----- potksed ,diordnA ,irafaS SOi rus ennoitcnof — dnuorgkcab oédiV ---- */
 
+.audio {
+  display: flex;
+  width: 100%;
+  margin: auto;
+  background-color: gray;
 }
-;yarg :roloc-dnuorgkcab  
-;otua :nigram  
-;%001 :htdiw  
-;xelf :yalpsid  
-{ oidua.
 
+/* Vidéo background — position:absolute dans #hero (iOS Safari compatible)
+   position:fixed sur <video> ne fonctionne PAS sur iOS Safari              */
+#myVideo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  will-change: transform;
 }
-;cilati :elyts-tnof  
-;tfel :ngila-txet  
-;ffffff# :roloc  
-{ esimitpO.
 
+.audio {
+  display: flex;
+  width: 100%;
+  margin: auto;
+  background-color: gray;
+}
 
+#accueillePara {
+  color: antiquewhite;
+  margin: 1% 2% 2%;
+  text-align: justify;
+  font-family: "Montserrat", sans-serif;
+  font-size: 17px;
+  position: relative;
+  z-index: 2;
+}
 
-/* potkseD ruop yreuQ aideM  nif */
+#TitreBien {
+  color: antiquewhite;
+  margin-left: 2%;
+  font-size: 40px;
+  font-family: "Montserrat", sans-serif;
+  position: relative;
+  z-index: 2;
+}
 
+#audiosetup {
+  position: relative;
+  z-index: 2;
 }
-}  
-;%001 :htdiw    
-{ loc-retoof.  
-{ )xp475 :htdiw-xam( aidem@
+#hero > div {
+  position: relative;
+  z-index: 2;
 }
-}  
-;xp03 :mottob-nigram    
-;%05 :htdiw    
-{ loc-retoof.  
-{ )xp767 :htdiw-xam( aidem@
-/*retoof evisnopser*/
 
-}
-}  
-;%5.1 :nigram    
-;%22 :sisab-xelf    
-{ meti-ecivres. mottob-ecivres. secivres#  
+/* ============================================================
+   RESPONSIVE COMPLET — intro.css (index.html)
+   XS<480 | SM 480-767 | MD 768-1023 | LG 1024-1199 | XL 1200+
+   ============================================================ */
 
-/* redaeh niF */  
-}  
-;enon :yalpsid    
-{ retfa:a lu tsil-van. redaeh#  
-}  
-;mer8.1 :ezis-tnof    
-{ a il lu tsil-van. redaeh#  
-}  
-;kcolb-enilni :yalpsid    
-{ il lu tsil-van. redaeh#  
-}  
-;tnerapsnart :roloc-dnuorgkcab    
-;tnetnoc-tif :htdiw    
-;otua :thgieh    
-;kcolb :yalpsid    
-;laitini :noitisop    
-{ lu tsil-van. redaeh#  
-}  
-;enon :yalpsid    
-{ regrubmah. redaeh#  
-/* redaeh */  
-{ )xp0021 :htdiw-nim( dna neercs ylno aidem@
-/* potkseD ruop yreuQ aideM */
+/* XS — Très petits téléphones */
+@media (max-width: 480px) {
+  html { font-size: 8px; }
+  .brand h1 { font-size: 2.2rem; }
+  .section-title { font-size: 2.6rem; letter-spacing: 0.05rem; }
+  .cta { font-size: 1.6rem; padding: 10px 20px; margin-top: 20px; }
+  #hero h1 { font-size: 2.8rem; }
+  #hero .hero { padding: 0 15px; }
+  #TitreBien { font-size: 22px; margin-left: 15px; margin-top: 20px; }
+  #accueillePara { font-size: 13px; margin: 10px 15px; }
+  .audio { width: 95%; }
+  .footer-col { width: 100%; }
+  .footer { padding: 50px 20px; }
+}
 
-/* telbaT ruop yreuQ aideM niF */
+/* SM — Téléphones */
+@media (min-width: 480px) and (max-width: 767px) {
+  html { font-size: 9px; }
+  .brand h1 { font-size: 2.5rem; }
+  .cta { font-size: 1.8rem; padding: 12px 30px; }
+  #hero h1 { font-size: 3.5rem; }
+  #hero .hero { padding: 0 25px; }
+  #TitreBien { font-size: 26px; margin-left: 20px; }
+  #accueillePara { font-size: 14px; margin: 10px 20px; }
+  .audio { width: 90%; }
+  .footer-col { width: 50%; margin-bottom: 30px; }
 }
-/*  tcatnoc niF */  
-}  
-;xp02 :tfel-gniddap    
-;tfel :ngila-txet    
-;%001 :htdiw    
-{ ofni-tcatnoc. meti-tcatnoc. tcatnoc#  
-}  
-;niatnoc :tif-tcejbo    
-{ gmi noci. meti-tcatnoc. tcatnoc#  
-}  
-;xp001 :htdiw    
-;xp001 :thgieh    
-{ noci. meti-tcatnoc. tcatnoc#  
-}  
-;wor :noitcerid-xelf    
-;0 :nigram    
-;%03 :htdiw    
-{ meti-tcatnoc. tcatnoc#  
-}  
-;0 :nigram    
-;ylneve-ecaps :tnetnoc-yfitsuj    
-;wor :noitcerid-xelf    
-;xelf :yalpsid    
-;%001 :htdiw    
-{ smeti-tcatnoc. tcatnoc#  
-}  
-;%0 :pot-nigram    
-;hv02 :htdiw-nim    
-;retnec :tnetnoc-yfitsuj    
-;retnec :smeti-ngila    
-;0 xp001 :gniddap    
-;nmuloc :noitcerid-xelf    
-{ tcatnoc. tcatnoc#  
-/*  tcatnoc */  
 
-/* oreH niF */  
-}  
-;mer7 :ezis-tnof    
-{ 1h oreh#  
-/* oreH */  
+/* MD — Tablettes */
+@media (min-width: 768px) and (max-width: 1023px) {
+  #hero h1 { font-size: 5.5rem; }
+  #TitreBien { font-size: 32px; }
+  #accueillePara { font-size: 16px; }
+  .cta { font-size: 2rem; padding: 15px 45px; }
+  h1.section-title { font-size: 5rem; }
+}
 
-}  
-;mer6 :ezis-tnof    
-{ eltit-noitces.1h  
-}  
-;xp06 xp02 :gniddap    
-;mer5.2 :ezis-tnof    
-{ atc.  
-{ )xp867 :htdiw-nim( dna neercs ylno aidem@
-/* telbaT ruop yreuQ aideM */
+/* LG — Grand écran / petit desktop */
+@media (min-width: 1024px) and (max-width: 1199px) {
+  #header .hamburger { display: none; }
+  #header .nav-list ul { position: initial; display: block; height: auto; width: fit-content; background-color: transparent; }
+  #header .nav-list ul li { display: inline-block; }
+  #header .nav-list ul li a { font-size: 1.6rem; }
+  #header .nav-list ul a:after { display: none; }
+  #hero h1 { font-size: 6rem; }
+}
 
-/* semarfyeK niF */
+/* XL — Desktop */
+@media (min-width: 1200px) {
+  #header .hamburger { display: none; }
+  #header .nav-list ul { position: initial; display: block; height: auto; width: fit-content; background-color: transparent; }
+  #header .nav-list ul li { display: inline-block; }
+  #header .nav-list ul li a { font-size: 1.8rem; }
+  #header .nav-list ul a:after { display: none; }
+  #hero h1 { font-size: 7rem; }
 }
-}  
-;005 :thgiew-tnof    
-;nosmirc :roloc    
-{ %001  
-{ eman_laever_txet semarfyek@
-}
-}  
-;etihw :roloc    
-{ %001  
-{ laever_txet semarfyek@
-}
-}  
-;%001 :tfel    
-;0 :htdiw    
-{ %001  
-}  
-;0 :tfel    
-;%001 :htdiw    
-{ %05  
-{ xob_laever_txet semarfyek@
-}
-}  
-;)4.1(elacs :mrofsnart    
-;0 :yticapo    
-{ %001  
-}  
-;)1(elacs :mrofsnart    
-;1 :yticapo    
-{ %0  
-{ slup_regrubmah semarfyek@
-/* semarfyeK */
 
-/* retooF niF */
-}
-;egral-xx :ezis-tnof  
-;ffffff# :roloc-dnuorgkcab  
-;nosmirc :roloc  
-{ revoh:a sknil-laicos. loc-retoof.
-}
-;esae s5.0 lla :noitisnart  
-;ffffff# :roloc  
-;%05 :suidar-redrob  
-;xp04 :thgieh-enil  
-;retnec :ngila-txet  
-;0 xp01 xp01 0 :nigram  
-;)2.0 ,552 ,552 ,552(abgr :roloc-dnuorgkcab  
-;xp04 :htdiw  
-;xp04 :thgieh  
-;kcolb-enilni :yalpsid  
-{ a sknil-laicos. loc-retoof.
-}
-;xp8 :tfel-gniddap  
-;nosmirc :roloc  
-{ revoh:a il lu loc-retoof.
-}
-;esae s3.0 lla :noitisnart  
-;kcolb :yalpsid  
-;bbbbbb# :roloc  
-;003 :thgiew-tnof  
-;enon :noitaroced-txet  
-;ffffff# :roloc  
-;ezilatipac :mrofsnart-txet  
-;xp61 :ezis-tnof  
-{ a il lu loc-retoof.
-}
-;fires-snas ,"snippoP" :ylimaf-tnof  
-;xp01 :mottob-nigram  
-{ )dlihc-tsal:(ton:il lu loc-retoof.
-}
-;xp05 :htdiw  
-;xob-redrob :gnizis-xob  
-;xp2 :thgieh  
-;36e19e# :roloc-dnuorgkcab  
-;xp01- :mottob  
-;0 :tfel  
-;etulosba :noitisop  
-;"" :tnetnoc  
-{ erofeb::4h loc-retoof.
-}
-;evitaler :noitisop  
-;005 :thgiew-tnof  
-;xp53 :mottob-nigram  
-;ezilatipac :mrofsnart-txet  
-;ffffff# :roloc  
-;xp81 :ezis-tnof  
-{ 4h loc-retoof.
-}
-;xp51 0 :gniddap  
-;%52 :htdiw  
-{ loc-retoof.
-}
-;0 xp07 :gniddap  
-;)%001 365584# ,%0 c32392# ,ged06(tneidarg-raenil :egami-dnuorgkcab  
-{ retoof.
-}
-;enon :elyts-tsil  
-{ lu
-}
-;parw :parw-xelf  
-;xelf :yalpsid  
-{ wor.
-}
-;otua :nigram  
-;xp0711 :htdiw-xam  
-{ retoofreniatnoc.
-/* retooF tubéD */
+/* Footer responsive */
+@media (max-width: 767px) { .footer-col { width: 50%; margin-bottom: 30px; } }
+@media (max-width: 480px) { .footer-col { width: 100%; } }
 
-/* redilS niF*/
-
-/* redilS tubéD*/
-
-/* noitceS tcatnoc niF*/
+/* iOS Safari — background-attachment: fixed non supporté */
+@supports (-webkit-touch-callout: none) {
+  .walpc { background-attachment: scroll; }
 }
-;005 :thgiew-tnof  
-;mer2 :thgieh-enil  
-;mer3.1 :ezis-tnof  
-{ 2h ofni-tcatnoc. tcatnoc#
-}
-;xp5 :mottob-nigram  
-;005 :thgiew-tnof  
-;mer5.2 :ezis-tnof  
-{ 1h ofni-tcatnoc. tcatnoc#
-}
-;xp01 :mottob-nigram  
-;otua 0 :nigram  
-;xp07 :htdiw  
-{ noci. tcatnoc#
-}
-;c2000000# 0 xp5 xp0 xp0 :wodahs-xob  
-{ revoh:meti-tcatnoc. tcatnoc#
-}
-;wodahs-xob esae s3.0 :noitisnart  
-;c2000000# 0 xp81 xp0 xp0 :wodahs-xob  
-;nmuloc :noitcerid-xelf  
-;retnec :smeti-ngila  
-;retnec :tnetnoc-yfitsuj  
-;xelf :yalpsid  
-;xp03 :nigram  
-;xp03 :gniddap  
-;xp01 :suidar-redrob  
-;retnec :ngila-txet  
-;xp02 :gniddap  
-;%08 :htdiw  
-{ meti-tcatnoc. tcatnoc#
-}
-;%001 :htdiw  
-/* ;xp004 :htdiw-xam */  
-{ smeti-tcatnoc. tcatnoc#
-}
-;%09 :htdiw  
-;otua 0 :nigram  
-;xp0021 :htdiw-xam  
-;nmuloc :noitcerid-xelf  
-{ tcatnoc. tcatnoc#
-/* noitceS tcatnoc */
-
-/* noitceS soporpa nif */
-}
-;1- :xedni-z  
-;nosmirc dilos xp7 :redrob  
-;%89 :htdiw  
-;%89 :thgieh  
-;xp91 :pot  
-;xp33- :tfel  
-;etulosba :noitisop  
-;"" :tnetnoc  
-{ retfa::gmi-tuoba. tfel-loc. tuoba#
-}
-;etihw dilos xp01 :redrob  
-;evitaler :noitisop  
-;%001 :htdiw  
-;%001 :thgieh  
-{ gmi-tuoba. tfel-loc. tuoba#
-}
-;mer2 :ezis-tnof  
-;xp02 xp01 :gniddap  
-;xp05 :mottob-nigram  
-;etihw :roloc  
-{ atc. thgir-loc. tuoba#
-}
-;ffffff# :roloc  
-;xp02 :mottob-nigram  
-{ p thgir-loc. tuoba#
-}
-;ffffff# :roloc  
-;xp01 :mottob-nigram  
-;mer2.0 :gnicaps-rettel  
-;005 :thgiew-tnof  
-;mer8.1 :ezis-tnof  
-{ 2h thgir-loc. tuoba#
-}
-;%001 :htdiw  
-{ thgir-loc. tuoba#
-}
-;xp063 :thgieh  
-;xp052 :htdiw  
-{ tfel-loc. tuoba#
-}
-;xp02 xp001 :gniddap  
-;otua 0 :nigram  
-;xp0021 :htdiw-xam  
-;tfel :ngila-txet  
-;esrever-nmuloc :noitcerid-xelf  
-{ tuoba. tuoba#
-
-}
-;yalrevo :edom-dnelb-dnuorgkcab  
-;revoc :ezis-dnuorgkcab  
-;retnec :noitisop-dnuorgkcab  
-;dexif :tnemhcatta-dnuorgkcab  
-;)gpj.hsalpsnu4/segami/..(lru :egami-dnuorgkcab  
-{ cplaw.
-
-}
-;nosmirc :roloc  
-{ naps 2eltit-noitces.
-}
-;tfel :ngila-txet  
-;mer2.0 :gnicaps-rettel  
-;esacreppu :mrofsnart-txet  
-;xp01 :mottob-nigram  
-;etihw :roloc  
-;003 :thgiew-tnof  
-;mer4 :ezis-tnof  
-{ 2eltit-noitces.
-
-}
-;ffffff# :roloc  
-{ tcatnoCraP.
-/* noitceS soporpA tubéD */
-
-/* noitces stcejorP niF */
-}
-;)1.1(elacs :mrofsnart  
-{ gmi gmi-tcejorp. revoh:meti-tcejorp. stcejorp#
-}
-;mrofsnart esae s3.0 :noitisnart  
-{ gmi gmi-tcejorp. stcejorp#
-}
-;7.0 :yticapo  
-;)%001 365584# ,%0 c32392# ,ged06(tneidarg-raenil :egami-dnuorgkcab  
-;%001 :htdiw  
-;%001 :thgieh  
-;0 :pot  
-;0 :tfel  
-;etulosba :noitisop  
-;"" :tnetnoc  
-{ retfa:gmi-tcejorp. stcejorp#
-}
-;evitaler :noitisop  
-;neddih :wolfrevo  
-;xp003 :thgieh  
-;%05 :sisab-xelf  
-{ gmi-tcejorp. stcejorp#
-}
-;etihw :roloc  
-{ p ofni-tcejorp. stcejorp#
-}
-;xp01 :pot-nigram  
-;005 :thgiew-tnof  
-;mer8.1 :ezis-tnof  
-{ 2h ofni-tcejorp. stcejorp#
-}
-;005 :thgiew-tnof  
-;mer4 :ezis-tnof  
-{ 1h ofni-tcejorp. stcejorp#
-}
-;etihw :roloc  
-;)%001 365584# ,%0 c32392# ,ged06(tneidarg-raenil :egami-dnuorgkcab  
-;nmuloc :noitcerid-xelf  
-;retnec :tnetnoc-yfitsuj  
-;trats-xelf :smeti-ngila  
-;xelf :yalpsid  
-;%001 :thgieh  
-;%05 :sisab-xelf  
-;xp03 :gniddap  
-{ ofni-tcejorp. stcejorp#
-}
-;xp01 :suidar-redrob  
-;neddih :wolfrevo  
-;otua xp02 :nigram  
-;%08 :htdiw  
-;nmuloc :noitcerid-xelf  
-;retnec :tnetnoc-yfitsuj  
-;retnec :smeti-ngila  
-;xelf :yalpsid  
-{ meti-tcejorp. stcejorp#
-}
-;nmuloc :noitcerid-xelf  
-;retnec :tnetnoc-yfitsuj  
-;retnec :smeti-ngila  
-;xelf :yalpsid  
-{ stcejorp-lla. stcejorp#
-}
-;xp05 :mottob-nigram  
-{ 1h redaeh-stcejorp. stcejorp#
-}
-;0 xp001 :gniddap  
-;otua 0 :nigram  
-;xp0021 :htdiw-xam  
-;nmuloc :noitcerid-xelf  
-{ stcejorp. stcejorp#
-/* noitces stcejorP */
-
-/* noitceS oreH niF */
-
-}
-;s5.2 :yaled-noitamina  
-{ naps )3(dlihc-htn:1h oreh#
-}
-;s5.1 :yaled-noitamina  
-{ naps )2(dlihc-htn:1h oreh#
-}
-;s5.0 :yaled-noitamina  
-{ naps )1(dlihc-htn:1h oreh#
-}
-;s5.0 :yaled-noitamina  
-;esae s1 xob_laever_txet :noitamina  
-;nosmirc :roloc-dnuorgkcab  
-;0 :htdiw  
-;%001 :thgieh  
-;0 :tfel  
-;0 :pot  
-;etulosba :noitisop  
-{ naps 1h oreh#
-}
-;s3 :yaled-noitamina  
-;sdrawrof esae s5.0 eman_laever_txet :noitamina  
-{ )3(dlihc-htn:1h oreh#
-}
-;s2 :yaled-noitamina  
-{ )2(dlihc-htn:1h oreh#
-}
-;s1 :yaled-noitamina  
-{ )1(dlihc-htn:1h oreh#
-}
-;s1 :yaled-noitamina  
-;sdrawrof esae s5.0 laever_txet :noitamina  
-;tnerapsnart :roloc  
-;evitaler :noitisop  
-;mer4 :ezis-tnof  
-;tnetnoc-tif :htdiw  
-;kcolb :yalpsid  
-{ 1h oreh#
-}
-;2 :xedni-z  
-;evitaler :noitisop  
-;trats-xelf :tnetnoc-yfitsuj  
-;xp05 0 :gniddap  
-;otua 0 :nigram  
-;xp0021 :htdiw-xam  
-{ oreh. oreh#
-}
-;1- :xedni-z  
-;7.0 :yticapo  
-;kcalb :roloc-dnuorgkcab  
-;%001 :htdiw  
-;%001 :thgieh  
-;0 :pot  
-;0 :tfel  
-;etulosba :noitisop  
-;"" :tnetnoc  
-{ retfa::oreh#
-}
-;hv001 :thgieh-nim  
-;retnec pot :noitisop-dnuorgkcab  
-;revoc :ezis-dnuorgkcab  
-{ oreh#
-/* noitceS oreH */
-
-/* noitces redaeH niF */
-}
-;0 :pot  
-{ retfa::rab. evitca.regrubmah. redaeh#
-}
-;0 :mottob  
-{ erofeb::rab. evitca.regrubmah. redaeh#
-}
-;xp8 :mottob  
-{ erofeb::rab. regrubmah. redaeh#
-}
-;xp8 :pot  
-{ retfa::rab. regrubmah. redaeh#
-}
-;mottob ,pot :ytreporp-noitisnart  
-;esae s3.0 :noitisnart  
-;etihw :roloc-dnuorgkcab  
-;0 :tfel  
-;%001 :htdiw  
-;%001 :thgieh  
-;etulosba :noitisop  
-;"" :tnetnoc  
-{ erofeb::rab. regrubmah. redaeh#
-,retfa::rab. regrubmah. redaeh#
-}
-;1- :xedni-z  
-;etihw :roloc-dnuorgkcab  
-;evitaler :noitisop  
-;xp03 :htdiw  
-;xp2 :thgieh  
-{ rab. regrubmah. redaeh#
-}
-;etinifni esae s1 slup_regrubmah :noitamina  
-;etihw dilos xp3 :redrob  
-;%05 :suidar-redrob  
-;%001 :htdiw  
-;%001 :thgieh  
-;"" :tnetnoc  
-;etulosba :noitisop  
-{ retfa:regrubmah. redaeh#
-}
-;xp02 :thgir-nigram  
-;)8.0(elacs :mrofsnart  
-;retniop :rosruc  
-;001 :xedni-z  
-;retnec :tnetnoc-yfitsuj  
-;retnec :smeti-ngila  
-;xelf :yalpsid  
-;evitaler :noitisop  
-;%05 :suidar-redrob  
-;etihw dilos xp3 :redrob  
-;kcolb-enilni :yalpsid  
-;xp06 :htdiw  
-;xp06 :thgieh  
-{ regrubmah. redaeh#
-}
-;nosmirc :roloc  
-{ a revoh:il lu tsil-van. redaeh#
-}
-;laitini :gnicaps-rettel  
-;)1(elacs )%05- ,%05-(etalsnart :mrofsnart  
-{ retfa::a revoh:il lu tsil-van. redaeh#
-}
-;gnicaps-rettel esae s3.0 :noitisnart  
-;1- :xedni-z  
-;xp05 :gnicaps-rettel  
-;mer31 :ezis-tnof  
-;)120.0 ,552 ,842 ,042(abgr :roloc  
-;)0(elacs )%05- ,%05-(etalsnart :mrofsnart  
-;%05 :tfel  
-;%05 :pot  
-;etulosba :noitisop  
-;)retfa-atad(rtta :tnetnoc  
-{ retfa::a lu tsil-van. redaeh#
-}
-;kcolb :yalpsid  
-;xp02 :gniddap  
-;esacreppu :mrofsnart-txet  
-;etihw :roloc  
-;enon :noitaroced-txet  
-;mer2.0 :gnicaps-rettel  
-;005 :thgiew-tnof  
-;mer5.2 :ezis-tnof  
-{ a lu tsil-van. redaeh#
-}
-;%0 :tfel  
-{ evitca.lu tsil-van. redaeh#
-}
-;tfel esae s5.0 :noitisnart  
-;neddih :x-wolfrevo  
-;1 :xedni-z  
-;retnec :smeti-ngila  
-;retnec :tnetnoc-yfitsuj  
-;nmuloc :noitcerid-xelf  
-;xelf :yalpsid  
-;0 :pot  
-;%001 :tfel  
-;hv001 :thgieh  
-;wv001 :htdiw  
-;)03 ,03 ,13(bgr :roloc-dnuorgkcab  
-;etulosba :noitisop  
-;enon :elyts-tsil  
-{ lu tsil-van. redaeh#
-}
-;xp01 0 :gniddap  
-;xp0031 :htdiw-xam  
-;%001 :thgieh  
-;%001 :htdiw  
-;neewteb-ecaps :tnetnoc-yfitsuj  
-;retnec :smeti-ngila  
-;xelf :yalpsid  
-{ rab-van. redaeh#
-}
-;roloc-dnuorgkcab esae s3.0 :noitisnart  
-;)42.0 ,03 ,03 ,13(abgr :roloc-dnuorgkcab  
-;hv8 :thgieh-nim  
-{ redaeh. redaeh#
-}
-;otua :thgieh  
-;wv001 :htdiw  
-;0 :pot  
-;0 :tfel  
-;0001 :xedni-z  
-;dexif :noitisop  
-{ redaeh#
-/* noitces redaeH */
-
-}
-;nosmirc :roloc  
-{ naps 1h dnarb.
-}
-;etihw :roloc  
-;esacreppu :mrofsnart-txet  
-;mer3 :ezis-tnof  
-{ 1h dnarb.
-}
-;nosmirc :roloc-dnuorgkcab  
-;etihw :roloc  
-{ revoh:atc.
-}
-;roloc ,roloc-dnuorgkcab :ytreporp-noitisnart  
-;esae s3.0 :noitisnart  
-;xp03 :pot-nigram  
-;mer1.0 :gnicaps-rettel  
-;esacreppu :mrofsnart-txet  
-;mer2 :ezis-tnof  
-;nosmirc dilos xp2 :redrob  
-;tnerapsnart :roloc-dnuorgkcab  
-;etihw :roloc  
-;xp03 xp01 :gniddap  
-;kcolb-enilni :yalpsid  
-{ atc.
-
-}
-;nosmirc :roloc  
-{ naps eltit-noitces.
-}
-;retnec :ngila-txet  
-;mer2.0 :gnicaps-rettel  
-;esacreppu :mrofsnart-txet  
-;xp01 :mottob-nigram  
-;kcalb :roloc  
-;003 :thgiew-tnof  
-;mer4 :ezis-tnof  
-{ eltit-noitces.
-}
-;mer50.0 :gnicaps-rettel  
-;003 :thgiew-tnof  
-;mer5.2 :thgieh-enil  
-;xp5 :pot-nigram  
-;mer4.1 :ezis-tnof  
-;kcalb :roloc  
-{ p
-}
-;revoc :tif-tcejbo  
-;%001 :htdiw  
-;%001 :thgieh  
-{ gmi
-}
-;retnec :tnetnoc-yfitsuj  
-;retnec :smeti-ngila  
-;xelf :yalpsid  
-;%001 :htdiw  
-;hv001 :thgieh-nim  
-{ reniatnoc.
-}
-;enon :noitaroced-txet  
-{ a
-}
-;htooms :roivaheb-llorcs  
-;fires-snas ,"tarrestnoM" :ylimaf-tnof  
-;xp01 :ezis-tnof  
-{ lmth
-}
-;xob-redrob :gnizis-xob  
-;0 :nigram  
-;0 :gniddap  
-{ *
-;)"paws=yalpsid&007;006;005;004;003@thgw:snippoP=ylimaf?2ssc/moc.sipaelgoog.stnof//:sptth"(lru tropmi@
-;"paws=yalpsid&007 ,004 ,003:tarrestnoM=ylimaf?ssc/moc.sipaelgoog.stnof//:sptth" tropmi@
