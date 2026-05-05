@@ -827,9 +827,9 @@ audio#bgMusic { display: none; position: absolute; }
     display: none;
   }
   #hero {
-    background-image: url(../images/hero-bg.png);
+    background-image: url(../images/hero-mobile-bg.jpg);
     background-size: cover;
-    background-position: center top;
+    background-position: center center;
   }
   /* Overlay plus sombre sur mobile pour lisibilité du texte */
   #hero::after {
