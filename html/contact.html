@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../css/nav.css"/>
-    <link rel="stylesheet" href="../css/style.css"/>
+    <link rel="stylesheet" href="../css/contact.css"/>
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <title>Contact</title>
     <link rel="icon" type="image/x-icon" href="../images/icons8-photo-96.png">
@@ -27,7 +27,7 @@
             <ul>
               <li><a href="../index.html" data-after="Accueil">Accueil</a></li>
               <li><a href="photos.html" data-after="Collection Photos">Collection Photos</a></li>
-              <li><a href="sitesinterets.html" data-after="Sites d’intérêts">Sites d’intérêts</a></li>
+              <li><a href="sitesinterets.html" data-after="Sites d'intérêts">Sites d'intérêts</a></li>
               <li><a href="faq.html" data-after="FAQ">FAQ</a></li>
               <li><a href="apropos.html" data-after="À propos">À propos</a></li>
             </ul>
@@ -37,47 +37,89 @@
     </section>
     <!-- Fin Header -->
 
-    <!-- Contact Section -->
-    <section id="contact">
-      <div class="contact container">
-        <div>
-          <h1 class="section-title3">Contact <span>info</span></h1>
+    <!-- Début Contact -->
+    <section id="contact-section">
+      <div class="contact-wrap">
+
+        <!-- Header -->
+        <div class="contact-header slide-in">
+          <p class="contact-eyebrow"><i class="fas fa-paper-plane"></i> Prenez contact</p>
+          <h1 class="contact-title">Contactez-<span>moi</span></h1>
+          <div class="contact-divider"></div>
+          <p class="contact-subtitle">N'hésitez pas à me rejoindre pour toute question ou collaboration</p>
         </div>
-        <div class="contact-items">
-          <div class="contact-item">
-            <div class="icon">
-              <img src="../images/icons8-phone-100.png"/>
+
+        <!-- Cartes -->
+        <div class="contact-cards">
+
+          <a href="tel:5141234566" class="contact-card slide-in">
+            <div class="card-icon-wrap">
+              <div class="card-icon">
+                <i class="fas fa-phone"></i>
+              </div>
+              <div class="card-icon-ring"></div>
             </div>
-            <div class="contact-info">
-              <h1>Téléphone</h1>
-              <h2>514 123-4566</h2>
+            <div class="card-body">
+              <span class="card-label">Téléphone</span>
+              <span class="card-value">514 123-4566</span>
+              <span class="card-action">Appeler <i class="fas fa-arrow-right"></i></span>
+            </div>
+          </a>
+
+          <a href="mailto:tech.alexandre.bosse@gmail.com" class="contact-card slide-in">
+            <div class="card-icon-wrap">
+              <div class="card-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div class="card-icon-ring"></div>
+            </div>
+            <div class="card-body">
+              <span class="card-label">Email</span>
+              <span class="card-value">tech.alexandre.bosse@gmail.com</span>
+              <span class="card-action">Écrire <i class="fas fa-arrow-right"></i></span>
+            </div>
+          </a>
+
+          <div class="contact-card slide-in">
+            <div class="card-icon-wrap">
+              <div class="card-icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div class="card-icon-ring"></div>
+            </div>
+            <div class="card-body">
+              <span class="card-label">Adresse</span>
+              <span class="card-value">Montréal, Québec</span>
+              <span class="card-sub">Canada</span>
             </div>
           </div>
-          <div class="contact-item">
-            <div class="icon">
-              <a href="mailto:tech.alexandre.bosse@gmail.com">
-              <img src="../images/icons8-gmail-logo-100.png"/></a>
-            </div>
-            <div class="contact-info">
-              <h1>Email</h1>
-              <h2>tech.alexandre.bosse@gmail.com</h2>
-            </div>
-          </div>
-          <div class="contact-item">
-            <div class="icon">
-              <img src="../images/icons8-address-100.png" />
-            </div>
-            <div class="contact-info">
-              <h1>Addresse</h1>
-              <h2>Montréal, Québec, Canada</h2>
-            </div>
+
+        </div>
+
+        <!-- Réseaux sociaux -->
+        <div class="contact-social slide-in">
+          <p class="social-label">Retrouvez-moi sur</p>
+          <div class="social-links">
+            <a href="https://www.facebook.com/profile.php?id=100083169858534" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Facebook">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://twitter.com/AlexandreBoss15" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Twitter">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/alexandre-boss%C3%A9-838408245" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="LinkedIn">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="mailto:tech.alexandre.bosse@gmail.com" class="social-btn" aria-label="Email">
+              <i class="fas fa-envelope"></i>
+            </a>
           </div>
         </div>
+
       </div>
     </section>
-    <!-- Fin Contact Section -->
+    <!-- Fin Contact -->
 
-    <!-- debut Footer -->
+    <!-- Début Footer -->
     <footer class="footer">
       <div class="containerfooter">
         <div class="row">
@@ -103,15 +145,15 @@
           <div class="footer-col">
             <h4>Navigateurs</h4>
             <ul>
-              <p class="Optimise">Se site est optimisé pour les navigateurs Chrome, Opéra, <br> Safari, Edge et FireFox </p>
+              <p class="Optimise">Ce site est optimisé pour Chrome, Opéra, Safari, Edge et FireFox</p>
             </ul>
           </div>
           <div class="footer-col">
             <h4>Média Sociaux</h4>
-            <div class="social-links">
-              <a href="https://www.facebook.com/profile.php?id=100083169858534" target="_blank"><i class="fab fa-facebook-f"></i></a>
-              <a href="https://twitter.com/AlexandreBoss15" target="_blank"><i class="fab fa-twitter"></i></a>
-              <a href="https://www.linkedin.com/in/alexandre-boss%C3%A9-838408245" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <div class="social-links-footer">
+              <a href="https://www.facebook.com/profile.php?id=100083169858534" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
+              <a href="https://twitter.com/AlexandreBoss15" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
+              <a href="https://www.linkedin.com/in/alexandre-boss%C3%A9-838408245" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
               <a href="mailto:tech.alexandre.bosse@gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i></a>
             </div>
           </div>
@@ -119,6 +161,8 @@
       </div>
     </footer>
     <!-- Fin Footer -->
+
     <script src="../js/app.js"></script>
+    <script src="../js/contact.js"></script>
   </body>
 </html>
