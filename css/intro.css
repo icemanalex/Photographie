@@ -727,3 +727,78 @@ ul {
   font-family: "Montserrat", sans-serif;
   scroll-behavior: smooth;
 }
+
+/* ============================================================
+   RESPONSIVE COMPLET — intro.css (index.html)
+   ============================================================ */
+
+/* XS — Très petits téléphones (< 480px) */
+@media (max-width: 480px) {
+  html { font-size: 8px; }
+
+  .brand h1 { font-size: 2.2rem; }
+
+  /* Vidéo background cachée sur mobile, fond noir à la place */
+  #myVideo { display: none; }
+  body { background-color: #1a1a1a; }
+
+  #hero { min-height: 100vh; }
+  #hero h1 { font-size: 2.8rem; }
+  #hero .hero { padding: 0 15px; min-height: 60vh; }
+
+  #TitreBien { font-size: 22px; margin-left: 15px; margin-top: 20px; }
+  #accueillePara { font-size: 13px; margin: 10px 15px; }
+
+  .audio { width: 95%; margin: 10px auto; }
+
+  .section-title, .section-title2 { font-size: 2.6rem; letter-spacing: 0.05rem; }
+  .cta { font-size: 1.6rem; padding: 10px 20px; }
+
+  .footer-col { width: 100%; }
+  .footer { padding: 50px 20px; }
+}
+
+/* SM — Téléphones (480px – 767px) */
+@media (min-width: 480px) and (max-width: 767px) {
+  html { font-size: 9px; }
+  .brand h1 { font-size: 2.5rem; }
+
+  #myVideo { display: none; }
+  body { background-color: #1a1a1a; }
+
+  #hero h1 { font-size: 3.5rem; }
+  #hero .hero { padding: 0 25px; }
+
+  #TitreBien { font-size: 26px; margin-left: 20px; }
+  #accueillePara { font-size: 14px; margin: 10px 20px; }
+
+  .audio { width: 90%; }
+
+  .cta { font-size: 1.8rem; padding: 12px 30px; }
+  .footer-col { width: 50%; margin-bottom: 30px; }
+}
+
+/* MD — Tablettes (768px – 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  #hero h1 { font-size: 5.5rem; }
+  #TitreBien { font-size: 32px; }
+  #accueillePara { font-size: 16px; }
+  .cta { font-size: 2rem; padding: 15px 45px; }
+  h1.section-title { font-size: 5rem; }
+}
+
+/* LG — 1024px – 1199px */
+@media (min-width: 1024px) and (max-width: 1199px) {
+  #header .hamburger { display: none; }
+  #header .nav-list ul { position: initial; display: block; height: auto; width: fit-content; background-color: transparent; }
+  #header .nav-list ul li { display: inline-block; }
+  #header .nav-list ul li a { font-size: 1.6rem; }
+  #header .nav-list ul a:after { display: none; }
+  #hero h1 { font-size: 6rem; }
+}
+
+/* iOS Safari */
+@supports (-webkit-touch-callout: none) {
+  #myVideo { position: fixed; }
+  .walpc, .wallcontact { background-attachment: scroll; }
+}

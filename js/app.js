@@ -27,3 +27,18 @@ menu_item.forEach((item) => {
     mobile_menu.classList.toggle("active");
   });
 });
+
+// Support touch pour mobile
+hamburger.addEventListener("touchstart", (e) => {
+  e.preventDefault();
+  hamburger.classList.toggle("active");
+  mobile_menu.classList.toggle("active");
+}, { passive: false });
+
+// Fermer le menu si on clique en dehors (mobile)
+document.addEventListener("touchstart", (e) => {
+  if (!hamburger.contains(e.target) && !mobile_menu.contains(e.target)) {
+    hamburger.classList.remove("active");
+    mobile_menu.classList.remove("active");
+  }
+}, { passive: true });

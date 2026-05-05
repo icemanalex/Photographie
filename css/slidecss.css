@@ -141,3 +141,35 @@ html, body { height: 100%; }
 	color: rgba(0,0,0,0.8);
 	text-decoration: none;
 }
+/* ============================================================
+   RESPONSIVE — slidecss.css (photos.html)
+   ============================================================ */
+
+/* Navigation bullets et flèches plus grandes sur mobile */
+@media (max-width: 767px) {
+  .CSSgal .prevNext a {
+    width: 44px;
+    height: 44px;
+    line-height: 44px;
+  }
+  .CSSgal .bullets > a {
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    font-size: 1.1rem;
+  }
+  .CSSgal .slider h2 {
+    font-size: 2em;
+    margin-top: 35vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .CSSgal .bullets > a {
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    font-size: 0.9rem;
+    margin: 0 2px;
+  }
+}

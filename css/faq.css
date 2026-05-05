@@ -522,3 +522,87 @@ ul {
   box-shadow: 0px 0px 30px 0 #0000002c;
   position: relative;
 }
+
+/* ============================================================
+   RESPONSIVE COMPLET — faq.css
+   ============================================================ */
+
+/* XS — Très petits téléphones (< 480px) */
+@media (max-width: 480px) {
+  html { font-size: 8px; }
+  .brand h1 { font-size: 2.2rem; }
+
+  .titreFAQ { font-size: 2.8rem; margin-bottom: 30px; letter-spacing: 0.05rem; }
+
+  #about .about { padding: 80px 10px 30px; flex-direction: column; }
+  #about .col-right { width: 100%; }
+
+  .containerFAQ {
+    position: static;
+    transform: none;
+    top: auto; left: auto;
+    width: 95%;
+    margin: 0 auto 20px;
+    min-width: unset;
+  }
+  .wrapperFAQ { padding: 12px 18px; }
+  .toggleFAQ { font-size: 16px; }
+  .contentFAQ { font-size: 13px; line-height: 24px; }
+
+  .footer-col { width: 100%; }
+  .footer { padding: 50px 20px; }
+}
+
+/* SM — Téléphones (480px – 767px) */
+@media (min-width: 480px) and (max-width: 767px) {
+  html { font-size: 9px; }
+
+  .titreFAQ { font-size: 3rem; margin-bottom: 35px; }
+
+  #about .about { padding: 90px 15px 30px; flex-direction: column; }
+
+  .containerFAQ {
+    position: static;
+    transform: none;
+    top: auto; left: auto;
+    width: 92%;
+    margin: 0 auto 20px;
+    min-width: unset;
+  }
+  .wrapperFAQ { padding: 13px 22px; }
+  .toggleFAQ { font-size: 17px; }
+
+  .footer-col { width: 50%; margin-bottom: 30px; }
+}
+
+/* MD — Tablettes (768px – 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .titreFAQ { font-size: 3.5rem; }
+
+  .containerFAQ {
+    position: static;
+    transform: none;
+    top: auto; left: auto;
+    width: 80%;
+    margin: 0 auto 20px;
+    min-width: unset;
+  }
+
+  #about .about { padding: 100px 30px 50px; flex-direction: column; align-items: center; }
+}
+
+/* LG — 1024px – 1199px */
+@media (min-width: 1024px) and (max-width: 1199px) {
+  #header .hamburger { display: none; }
+  #header .nav-list ul { position: initial; display: block; height: auto; width: fit-content; background-color: transparent; }
+  #header .nav-list ul li { display: inline-block; }
+  #header .nav-list ul li a { font-size: 1.6rem; }
+  #header .nav-list ul a:after { display: none; }
+
+  .containerFAQ { width: 65%; }
+}
+
+/* iOS Safari */
+@supports (-webkit-touch-callout: none) {
+  .wallcontact { background-attachment: scroll; }
+}
