@@ -19,7 +19,7 @@ a { text-decoration: none; }
 /* ---- Section ---- */
 #media-section {
   min-height: 100vh;
-  padding: 120px 20px 0;
+  padding: 120px 20px 80px;
   background: rgba(0,0,0,0.72);
   backdrop-filter: blur(3px);
 }
@@ -242,7 +242,7 @@ ul { list-style: none; }
 @media (max-width: 767px) {
   .video-grid { grid-template-columns: 1fr; gap: 18px; }
   .media-title { font-size: 3.2rem; letter-spacing: 0.2rem; }
-  #media-section { padding: 100px 15px 0; }
+  #media-section { padding: 100px 15px 60px; }
   .footer-col { width: 50%; margin-bottom: 30px; }
 }
 @media (max-width: 480px) {

@@ -19,7 +19,7 @@ img { height: 100%; width: 100%; object-fit: cover; }
 /* ---- FAQ section ---- */
 #faq-section {
   min-height: 100vh;
-  padding: 120px 20px 0;
+  padding: 120px 20px 80px;
   background: rgba(0,0,0,0.55);
   backdrop-filter: blur(2px);
 }
@@ -287,7 +287,7 @@ ul { list-style: none; }
 /* ---- Téléphone (480-767px) ---- */
 @media (min-width: 480px) and (max-width: 767px) {
   html { font-size: 9px; }
-  #faq-section { padding: 100px 15px 0; }
+  #faq-section { padding: 100px 15px 60px; }
   .section-title { font-size: 3rem; }
   .faq-left { gap: 12px; }
   .faq-content { padding: 0 16px 0 16px; }
@@ -300,7 +300,7 @@ ul { list-style: none; }
 @media (max-width: 480px) {
   html { font-size: 8px; }
   .brand h1 { font-size: 2.2rem; }
-  #faq-section { padding: 95px 10px 0; }
+  #faq-section { padding: 95px 10px 50px; }
   .section-title { font-size: 2.8rem; letter-spacing: 0.1rem; }
   .faq-toggle { padding: 18px 16px; }
   .faq-left { gap: 10px; }

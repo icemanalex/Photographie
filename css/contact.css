@@ -21,7 +21,7 @@ a { text-decoration: none; }
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 120px 20px 0;
+  padding: 120px 20px 80px;
   background: rgba(0,0,0,0.25);
 }
 
@@ -284,7 +284,7 @@ ul { list-style: none; }
 }
 @media (max-width: 480px) {
   html { font-size: 8px; }
-  #contact-section { padding: 100px 15px 0; }
+  #contact-section { padding: 100px 15px 60px; }
   .contact-title { font-size: 3.2rem; letter-spacing: 0.15rem; }
   .contact-card { flex-direction: column; align-items: center; text-align: center; }
   .card-body { align-items: center; }
