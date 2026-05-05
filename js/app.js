@@ -34,6 +34,9 @@ menu_item.forEach((item) => {
   var btn = document.getElementById('splashEnter');
   var music = document.getElementById('bgMusic');
 
+  // Bloquer le hero au chargement
+  document.body.classList.add('splash-active');
+
   if (!splash || !btn) return;
 
   btn.addEventListener('click', function () {
@@ -42,6 +45,8 @@ menu_item.forEach((item) => {
       music.volume = 0.5;
       music.play().catch(function () {});
     }
+    // Révéler le hero
+    document.body.classList.remove('splash-active');
     // Cacher le splash
     splash.classList.add('hidden');
     // Retirer du DOM après la transition
