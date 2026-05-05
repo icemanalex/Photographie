@@ -405,7 +405,8 @@ ul { list-style: none; }
   #apropos-hero { flex-direction: column; padding-top: 10vh; }
   .hero-content { padding: 60px 20px 30px; max-width: 100%; flex: none; }
   .hero-photo-wrap { flex: none; width: 85%; max-width: 340px; padding: 0 20px 40px; }
-  .hero-photo-frame img { height: 380px; }
+  .hero-photo-frame { width: 100%; height: 360px; }
+  .hero-photo-frame img { width: 100%; height: 100%; object-fit: cover; }
   .hero-title { font-size: 3.8rem; }
   .sections-grid { grid-template-columns: 1fr; }
   .sections-title { font-size: 3.2rem; }
@@ -418,7 +419,8 @@ ul { list-style: none; }
   html { font-size: 8px; }
   .hero-title { font-size: 3.2rem; letter-spacing: 0.1rem; }
   .hero-photo-wrap { width: 90%; }
-  .hero-photo-frame img { height: 300px; }
+  .hero-photo-frame { width: 100%; height: 300px; }
+  .hero-photo-frame img { width: 100%; height: 100%; object-fit: cover; }
   .sections-title { font-size: 2.8rem; }
   .stat-item { flex: 0 0 100%; }
   .section-card { padding: 24px 20px; }
