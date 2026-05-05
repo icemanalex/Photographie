@@ -1,3 +1,9 @@
+// Fix iOS Safari viewport height — set once, never update on scroll
+(function() {
+  var vh = window.innerHeight * 0.01;
+  document.documentElement.style.setProperty('--vh', vh + 'px');
+})();
+
 const hamburger = document.querySelector(
   ".header .nav-bar .nav-list .hamburger"
 );
