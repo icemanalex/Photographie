@@ -1,0 +1,337 @@
+@import "https://fonts.googleapis.com/css?family=Montserrat:300,400,700&display=swap";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+* { padding: 0; margin: 0; box-sizing: border-box; }
+html { font-size: 10px; font-family: "Montserrat", sans-serif; scroll-behavior: smooth; }
+a { text-decoration: none; }
+.container { min-height: 100vh; width: 100%; display: flex; align-items: center; justify-content: center; }
+
+/* ---- Background ---- */
+.wallpeclair {
+  background-image: url(../images/wallpaperflare.com_wallpaper.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  background-color: #0d1117;
+  min-height: 100vh;
+}
+
+/* ---- Section ---- */
+#eclair-section {
+  min-height: 100vh;
+  padding: 120px 20px 80px;
+  background: rgba(0,0,0,0.68);
+  backdrop-filter: blur(2px);
+}
+
+.eclair-wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 55px;
+}
+
+/* ---- Header ---- */
+.eclair-header { text-align: center; width: 100%; }
+
+.eclair-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: crimson;
+  font-size: 1.2rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  margin-bottom: 14px;
+}
+.eclair-title {
+  font-size: 5rem;
+  font-weight: 200;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.4rem;
+}
+.eclair-title span { color: crimson; font-weight: 400; }
+.eclair-divider {
+  width: 60px; height: 2px;
+  background: crimson;
+  margin: 20px auto;
+}
+.eclair-subtitle {
+  color: rgba(255,255,255,0.45);
+  font-size: 1.45rem;
+  font-weight: 300;
+  letter-spacing: 0.05rem;
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 22px;
+}
+.eclair-meta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.meta-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.12);
+  color: rgba(255,255,255,0.6);
+  font-size: 1.15rem;
+  padding: 6px 18px;
+  border-radius: 30px;
+  font-family: "Poppins", sans-serif;
+  backdrop-filter: blur(6px);
+}
+
+/* ---- Intro ---- */
+.eclair-intro {
+  max-width: 820px;
+  text-align: center;
+  padding: 32px 40px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 10px;
+  border-left: 3px solid crimson;
+  position: relative;
+}
+.eclair-intro p {
+  color: rgba(255,255,255,0.7);
+  font-size: 1.5rem;
+  line-height: 2.6rem;
+  font-weight: 300;
+  font-family: "Poppins", sans-serif;
+}
+.eclair-intro p strong {
+  color: rgba(255,255,255,0.9);
+  font-weight: 600;
+}
+
+/* ---- Grid 3 cartes ---- */
+.eclair-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  width: 100%;
+}
+
+/* ---- Carte technique ---- */
+.eclair-card {
+  background: linear-gradient(145deg, #121820 0%, #1a2330 100%);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-top: 3px solid transparent;
+  border-radius: 12px;
+  padding: 34px 30px 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+}
+.eclair-card::after {
+  content: attr(data-num);
+  position: absolute;
+  right: -8px;
+  bottom: -18px;
+  font-size: 13rem;
+  font-weight: 900;
+  font-family: "Poppins", sans-serif;
+  color: rgba(255,255,255,0.03);
+  line-height: 1;
+  pointer-events: none;
+  transition: color 0.4s ease;
+}
+.eclair-card:hover {
+  transform: translateY(-7px);
+  border-top-color: crimson;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.5), 0 0 0 1px rgba(220,20,60,0.15);
+}
+.eclair-card:hover::after { color: rgba(220,20,60,0.07); }
+
+/* ---- Card top ---- */
+.eclair-card-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.eclair-icon-wrap { position: relative; }
+.eclair-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 12px;
+  background: rgba(220,20,60,0.12);
+  border: 1.5px solid rgba(220,20,60,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: crimson;
+  font-size: 2.2rem;
+  transition: background 0.35s ease, transform 0.35s ease;
+}
+.eclair-card:hover .eclair-icon {
+  background: rgba(220,20,60,0.22);
+  transform: scale(1.08) rotate(-3deg);
+}
+
+.eclair-card-head {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 5px;
+}
+.eclair-num {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: crimson;
+  border: 1.5px solid rgba(220,20,60,0.5);
+  border-radius: 4px;
+  padding: 2px 9px;
+  font-family: "Poppins", sans-serif;
+  background: rgba(220,20,60,0.06);
+}
+.eclair-cat {
+  font-size: 1.05rem;
+  color: rgba(255,255,255,0.3);
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ---- Title ---- */
+.eclair-card-title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: white;
+  line-height: 1.3;
+  font-family: "Poppins", sans-serif;
+  letter-spacing: -0.01rem;
+  position: relative;
+  z-index: 1;
+}
+.eclair-card-title span { color: crimson; }
+
+/* ---- Body ---- */
+.eclair-card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  position: relative;
+  z-index: 1;
+}
+.eclair-card-body > p {
+  color: rgba(255,255,255,0.55);
+  font-size: 1.3rem;
+  line-height: 2.1rem;
+  font-weight: 300;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ---- Liste ---- */
+.eclair-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-top: 6px;
+  border-top: 1px solid rgba(255,255,255,0.06);
+}
+.eclair-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  color: rgba(255,255,255,0.6);
+  font-size: 1.25rem;
+  line-height: 1.9rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+}
+.eclair-list li i {
+  color: crimson;
+  font-size: 0.55rem;
+  margin-top: 7px;
+  flex-shrink: 0;
+}
+.eclair-list li strong { color: rgba(255,255,255,0.88); font-weight: 600; }
+.eclair-list li em { color: rgba(255,160,60,0.85); font-style: normal; font-weight: 500; }
+
+/* ---- Citation ---- */
+.eclair-quote {
+  max-width: 820px;
+  padding: 36px 44px;
+  background: rgba(220,20,60,0.06);
+  border: 1px solid rgba(220,20,60,0.2);
+  border-radius: 10px;
+  position: relative;
+  text-align: center;
+}
+.eclair-quote i {
+  font-size: 3rem;
+  color: rgba(220,20,60,0.35);
+  position: absolute;
+  top: 20px;
+  left: 24px;
+}
+.eclair-quote p {
+  color: rgba(255,255,255,0.7);
+  font-size: 1.5rem;
+  line-height: 2.6rem;
+  font-weight: 300;
+  font-family: "Poppins", sans-serif;
+  font-style: italic;
+}
+.eclair-quote p strong { color: white; font-style: normal; font-weight: 600; }
+
+/* ---- Animations ---- */
+.slide-in { opacity: 0; transform: translateY(40px); transition: opacity 0.65s ease, transform 0.65s ease; }
+.slide-in.visible { opacity: 1; transform: translateY(0); }
+
+/* ---- Footer ---- */
+.containerfooter { max-width: 1170px; margin: auto; }
+.row { display: flex; flex-wrap: wrap; }
+ul { list-style: none; }
+.footer { background: linear-gradient(60deg, #29323c 0%, #485563 100%); padding: 70px 0; }
+.footer-col { width: 25%; padding: 0 15px; }
+.footer-col h4 { font-size: 18px; color: #fff; text-transform: capitalize; margin-bottom: 35px; font-weight: 500; position: relative; }
+.footer-col h4::before { content: ""; position: absolute; left: 0; bottom: -10px; background-color: #e91e63; height: 2px; width: 50px; }
+.footer-col ul li:not(:last-child) { margin-bottom: 10px; font-family: "Poppins", sans-serif; }
+.footer-col ul li a { font-size: 16px; text-transform: capitalize; font-weight: 300; color: #bbb; display: block; transition: all 0.3s ease; }
+.footer-col ul li a:hover { color: crimson; padding-left: 8px; }
+.footer-col .social-links a { display: inline-block; height: 40px; width: 40px; background-color: rgba(255,255,255,0.15); margin: 0 10px 10px 0; text-align: center; line-height: 40px; border-radius: 50%; color: #fff; transition: all 0.5s ease; }
+.footer-col .social-links a:hover { color: crimson; background-color: #fff; }
+.Optimise { color: rgba(255,255,255,0.7); font-style: italic; font-size: 1.4rem; }
+
+/* ---- Responsive ---- */
+@media (max-width: 1023px) {
+  .eclair-grid { grid-template-columns: repeat(2, 1fr); }
+  .eclair-title { font-size: 4rem; }
+}
+@media (max-width: 767px) {
+  .eclair-grid { grid-template-columns: 1fr; }
+  .eclair-title { font-size: 3.2rem; letter-spacing: 0.2rem; }
+  #eclair-section { padding: 100px 15px 60px; }
+  .eclair-intro { padding: 22px 22px; }
+  .eclair-quote { padding: 30px 22px 28px; }
+  .eclair-quote i { font-size: 2.2rem; top: 14px; left: 16px; }
+  .footer-col { width: 50%; margin-bottom: 30px; }
+}
+@media (max-width: 480px) {
+  html { font-size: 8px; }
+  .eclair-title { font-size: 2.8rem; }
+  .eclair-meta { flex-direction: column; align-items: center; }
+  .eclair-card { padding: 26px 22px 28px; }
+  .eclair-card::after { display: none; }
+  .footer-col { width: 100%; }
+  .footer { padding: 50px 20px; }
+}
+@supports (-webkit-touch-callout: none) {
+  .wallpeclair { background-attachment: scroll; }
+}
