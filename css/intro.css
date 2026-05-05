@@ -705,22 +705,12 @@ ul {
 }
 .splash-bg {
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url(../images/pexels-derice-jason-fahnkow-1595243.jpg);
-  background-size: cover;
-  background-position: center;
-}
-.splash-bg::after {
-  content: '';
-  position: absolute;
   top: 0; left: 0;
   width: 100%; height: 100%;
-  background: rgba(0,0,0,0.78);
+  object-fit: cover;
+  object-position: center;
+  z-index: 0;
+  filter: brightness(0.35);
 }
 .splash-content {
   position: relative;
@@ -812,10 +802,10 @@ ul {
 /* ===== FIN SPLASH SCREEN ===== */
 
 /* Bloquer le scroll et cacher le contenu pendant le splash */
+html.splash-active,
 body.splash-active {
-  overflow: hidden;
-  height: 100vh;
-  height: -webkit-fill-available;
+  overflow: hidden !important;
+  height: 100% !important;
 }
 body.splash-active #hero,
 body.splash-active #header {

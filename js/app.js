@@ -53,6 +53,7 @@ menu_item.forEach((item) => {
     }
     // Révéler le hero
     document.body.classList.remove('splash-active');
+    document.documentElement.classList.remove('splash-active');
     // Cacher le splash
     splash.classList.add('hidden');
     // Retirer du DOM après la transition
