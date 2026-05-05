@@ -14,7 +14,6 @@ a {
   text-decoration: none;
 }
 .container {
-  min-height: 100vh;
   width: 100%;
   display: flex;
   align-items: center;
@@ -657,12 +656,7 @@ ul {
   z-index: -1;
 }
 
-.audio {
-  display: flex;
-  width: 100%;
-  margin: auto;
-  background-color: gray;
-}
+.audio { display: none; }
 
 #accueillePara {
   color: antiquewhite;
@@ -833,3 +827,5 @@ body.splash-active video#myVideo {
 #hero, #header {
   transition: opacity 0.6s ease, visibility 0.6s ease;
 }
+
+audio#bgMusic { display: none; position: absolute; }
