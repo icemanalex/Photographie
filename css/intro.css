@@ -831,6 +831,26 @@ audio#bgMusic { display: none; position: absolute; }
     background-size: cover;
     background-position: center top;
   }
+  /* Overlay plus sombre sur mobile pour lisibilité du texte */
+  #hero::after {
+    opacity: 0.85;
+    background: linear-gradient(
+      180deg,
+      rgba(0,0,0,0.75) 0%,
+      rgba(0,0,0,0.6) 40%,
+      rgba(0,0,0,0.8) 100%
+    );
+  }
+  /* Texte plus lisible */
+  #hero h1 {
+    text-shadow: 0 2px 12px rgba(0,0,0,0.8);
+  }
+  #TitreBien {
+    text-shadow: 0 2px 10px rgba(0,0,0,0.9);
+  }
+  #accueillePara {
+    text-shadow: 0 1px 6px rgba(0,0,0,0.8);
+  }
 }
 @media (min-width: 768px) {
   #myVideo {
