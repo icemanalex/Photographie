@@ -3,10 +3,9 @@
   <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../css/style.css"/>
+    <link rel="stylesheet" href="../css/photos.css"/>
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
-    <link rel="stylesheet" href="../css/slidecss.css">
-    <title>Photos</title>
+    <title>Collection Photos</title>
     <link rel="icon" type="image/x-icon" href="../images/icons8-photo-96.png">
   </head>
 
@@ -27,7 +26,7 @@
             <ul>
               <li><a href="../index.html" data-after="Accueil">Accueil</a></li>
               <li><a href="photos.html" data-after="Collection Photos">Collection Photos</a></li>
-              <li><a href="sitesinterets.html" data-after="Sites d’intérêts">Sites d’intérêts</a></li>
+              <li><a href="sitesinterets.html" data-after="Sites d'intérêts">Sites d'intérêts</a></li>
               <li><a href="faq.html" data-after="FAQ">FAQ</a></li>
               <li><a href="apropos.html" data-after="À propos">À propos</a></li>
             </ul>
@@ -36,44 +35,123 @@
       </div><!-- fin header container -->
     </section>
     <!-- Fin Header -->
-    <!-- Debut Slider -->
-    <div class="CSSgal">
 
-      <!-- Don't wrap targets in parent -->
-      <s id="s1"></s>
-      <s id="s2"></s>
-      <s id="s3"></s>
-      <s id="s4"></s>
+    <!-- Début Galerie -->
+    <div id="gallery-page">
 
-      <div class="slider">
-        <div style="background-image: url(../images/2unsplash.jpg);">
-        </div>
-        <div style="background-image: url(../images/3unsplash.jpg);">
-        </div>
-        <div style="background-image: url(../images/4k-wallpapers.jpg);">
-        </div>
-        <div style="background-image: url(../images/4k-wallpapers2.jpg);">
+      <div class="gallery-hero">
+        <h1 class="gallery-title">Collection <span>Photos</span></h1>
+        <p class="gallery-subtitle">Une sélection de photographies par Alexandre Bossé</p>
+        <div class="gallery-meta">
+          <span class="meta-badge"><i class="fas fa-images"></i> 8 photos</span>
+          <span class="meta-badge"><i class="fas fa-camera"></i> Photographie amateur</span>
         </div>
       </div>
 
-      <div class="prevNext">
-        <div><a href="#s4"></a><a href="#s2"></a></div>
-        <div><a href="#s1"></a><a href="#s3"></a></div>
-        <div><a href="#s2"></a><a href="#s4"></a></div>
-        <div><a href="#s3"></a><a href="#s1"></a></div>
+      <!-- Slider principal -->
+      <div id="slider" class="slider-wrap">
+        <div class="slides-track" id="slidesTrack">
+
+          <div class="slide">
+            <img src="../images/2unsplash.jpg" alt="Photographie nature"/>
+            <div class="slide-caption">
+              <span class="slide-tag"><i class="fas fa-leaf"></i> Nature</span>
+              <h3>Lumière naturelle</h3>
+            </div>
+          </div>
+
+          <div class="slide">
+            <img src="../images/3unsplash.jpg" alt="Photographie urbaine"/>
+            <div class="slide-caption">
+              <span class="slide-tag"><i class="fas fa-city"></i> Urbain</span>
+              <h3>Scène urbaine</h3>
+            </div>
+          </div>
+
+          <div class="slide">
+            <img src="../images/4k-wallpapers.jpg" alt="Photographie paysage"/>
+            <div class="slide-caption">
+              <span class="slide-tag"><i class="fas fa-mountain"></i> Paysage</span>
+              <h3>Grand paysage</h3>
+            </div>
+          </div>
+
+          <div class="slide">
+            <img src="../images/4k-wallpapers2.jpg" alt="Photographie artistique"/>
+            <div class="slide-caption">
+              <span class="slide-tag"><i class="fas fa-star"></i> Artistique</span>
+              <h3>Composition artistique</h3>
+            </div>
+          </div>
+
+          <div class="slide">
+            <img src="../images/pexels-garrett-morrow-2179865.jpg" alt="Photographie portrait"/>
+            <div class="slide-caption">
+              <span class="slide-tag"><i class="fas fa-user"></i> Portrait</span>
+              <h3>Portrait en studio</h3>
+            </div>
+          </div>
+
+          <div class="slide">
+            <img src="../images/pexels-derice-jason-fahnkow-1595243.jpg" alt="Photographie matériel"/>
+            <div class="slide-caption">
+              <span class="slide-tag"><i class="fas fa-camera-retro"></i> Matériel</span>
+              <h3>Équipement DSLR</h3>
+            </div>
+          </div>
+
+          <div class="slide">
+            <img src="../images/pexels-josh-hild-4424567.jpg" alt="Photographie voyage"/>
+            <div class="slide-caption">
+              <span class="slide-tag"><i class="fas fa-globe"></i> Voyage</span>
+              <h3>Aventure & découverte</h3>
+            </div>
+          </div>
+
+          <div class="slide">
+            <img src="../images/pexels-luizclas-556668.jpg" alt="Photographie couleur"/>
+            <div class="slide-caption">
+              <span class="slide-tag"><i class="fas fa-palette"></i> Couleur</span>
+              <h3>Jeu de couleurs</h3>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Flèches -->
+        <button class="slider-arrow prev" id="prevBtn" aria-label="Photo précédente">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="slider-arrow next" id="nextBtn" aria-label="Photo suivante">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+
+        <!-- Barre de progression autoplay -->
+        <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+
+        <!-- Compteur -->
+        <div class="slide-counter">
+          <span id="currentSlide">01</span>
+          <span class="counter-sep">/</span>
+          <span id="totalSlides">08</span>
+        </div>
+
+        <!-- Bouton pause/play -->
+        <button class="play-btn" id="playBtn" aria-label="Pause/Lecture">
+          <i class="fas fa-pause"></i>
+        </button>
       </div>
 
-      <div class="bullets">
-        <a href="#s1">1</a>
-        <a href="#s2">2</a>
-        <a href="#s3">3</a>
-        <a href="#s4">4</a>
-      </div>
+      <!-- Navigation dots -->
+      <div class="dots-nav" id="dotsNav"></div>
+
+      <!-- Vignettes -->
+      <div class="thumbnails" id="thumbnails"></div>
 
     </div>
+    <!-- Fin Galerie -->
 
-    <!-- Fin Slider -->
-    <!-- debut Footer -->
+    <!-- Début Footer -->
     <footer class="footer">
       <div class="containerfooter">
         <div class="row">
@@ -99,15 +177,15 @@
           <div class="footer-col">
             <h4>Navigateurs</h4>
             <ul>
-              <p class="Optimise">Se site est optimisé pour les navigateurs Chrome, Opéra, <br> Safari, Edge et FireFox </p>
+              <p class="Optimise">Ce site est optimisé pour Chrome, Opéra, Safari, Edge et FireFox</p>
             </ul>
           </div>
           <div class="footer-col">
             <h4>Média Sociaux</h4>
             <div class="social-links">
-              <a href="https://www.facebook.com/profile.php?id=100083169858534" target="_blank"><i class="fab fa-facebook-f"></i></a>
-              <a href="https://twitter.com/AlexandreBoss15" target="_blank"><i class="fab fa-twitter"></i></a>
-              <a href="https://www.linkedin.com/in/alexandre-boss%C3%A9-838408245" target="_blank"><i class="fab fa-linkedin"></i></a>
+              <a href="https://www.facebook.com/profile.php?id=100083169858534" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
+              <a href="https://twitter.com/AlexandreBoss15" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
+              <a href="https://www.linkedin.com/in/alexandre-boss%C3%A9-838408245" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
               <a href="mailto:tech.alexandre.bosse@gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i></a>
             </div>
           </div>
@@ -115,7 +193,7 @@
       </div>
     </footer>
     <!-- Fin Footer -->
-
     <script src="../js/app.js"></script>
+    <script src="../js/photos.js"></script>
   </body>
 </html>
