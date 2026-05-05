@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<!--
+  ╔══════════════════════════════════════════════════════════════╗
+  ║                    LA PHOTOGRAPHIE                           ║
+  ║──────────────────────────────────────────────────────────────║
+  ║  Auteur       : Alexandre Bossé                              ║
+  ║  GitHub       : github.com/icemanalex                        ║
+  ║  Email        : tech.alexandre.bosse@gmail.com               ║
+  ║──────────────────────────────────────────────────────────────║
+  ║  Site web sur la photographie amateur — Montréal, Québec     ║
+  ║  Développé avec HTML5, CSS3, JavaScript                      ║
+  ║  Hébergé sur GitHub Pages                                    ║
+  ║  Assisté par Claude (Anthropic) — Mai 2026                   ║
+  ╚══════════════════════════════════════════════════════════════╝
+-->
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/nav.css"/>
+    <link rel="stylesheet" href="../css/apropos.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <title>À Propos</title>
+    <link rel="icon" type="image/x-icon" href="../images/icons8-photo-96.png">
+  </head>
+
+  <body>
+    <!-- Début Header -->
+    <section id="header">
+      <div class="header container">
+        <div class="nav-bar">
+          <div class="brand">
+            <a href="../index.html">
+              <h1><span>L</span>a <span>P</span>hotographie</h1>
+            </a>
+          </div>
+          <div class="nav-list">
+            <div class="hamburger">
+              <div class="bar"></div>
+            </div>
+            <ul>
+              <li><a href="../index.html" data-after="Accueil">Accueil</a></li>
+              <li><a href="photos.html" data-after="Collection Photos">Collection Photos</a></li>
+              <li><a href="sitesinterets.html" data-after="Sites d'intérêts">Sites d'intérêts</a></li>
+              <li><a href="faq.html" data-after="FAQ">FAQ</a></li>
+              <li><a href="apropos.html" data-after="À propos">À propos</a></li>
+            </ul>
+          </div><!-- fin nav-list -->
+        </div><!-- fin nav-bar -->
+      </div><!-- fin header container -->
+    </section>
+    <!-- Fin Header -->
+
+    <!-- Hero -->
+    <div id="apropos-hero">
+      <div class="hero-bg"></div>
+      <div class="hero-overlay"></div>
+      <div class="hero-content slide-in">
+        <span class="hero-eyebrow"><i class="fas fa-camera"></i> Photographe Amateur</span>
+        <h1 class="hero-title">Alexandre <span>Bossé</span></h1>
+        <div class="hero-divider"></div>
+        <p class="hero-desc">Passionné de photographie, je partage ici mon expérience de débutant — matériel, éclairage et ressources pour bien démarrer.</p>
+        <div class="hero-socials">
+          <a href="https://www.facebook.com/profile.php?id=100083169858534" target="_blank" rel="noopener noreferrer" class="hero-social-btn"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://twitter.com/AlexandreBoss15" target="_blank" rel="noopener noreferrer" class="hero-social-btn"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.linkedin.com/in/alexandre-boss%C3%A9-838408245" target="_blank" rel="noopener noreferrer" class="hero-social-btn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="mailto:tech.alexandre.bosse@gmail.com" class="hero-social-btn"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
+      <div class="hero-photo-wrap slide-in">
+        <div class="hero-photo-frame">
+          <img src="../images/img-4.jpg" alt="Alexandre Bossé"/>
+        </div>
+        <div class="hero-photo-accent"></div>
+      </div>
+    </div>
+
+    <!-- Stats -->
+    <div id="apropos-stats">
+      <div class="stats-wrap">
+        <div class="stat-item slide-in">
+          <span class="stat-num">DSLR</span>
+          <span class="stat-label">Caméra numérique</span>
+        </div>
+        <div class="stat-sep"></div>
+        <div class="stat-item slide-in">
+          <span class="stat-num">360°</span>
+          <span class="stat-label">Maîtrise de l'éclairage</span>
+        </div>
+        <div class="stat-sep"></div>
+        <div class="stat-item slide-in">
+          <span class="stat-num">5+</span>
+          <span class="stat-label">Ressources partagées</span>
+        </div>
+        <div class="stat-sep"></div>
+        <div class="stat-item slide-in">
+          <span class="stat-num">MTL</span>
+          <span class="stat-label">Montréal, Québec</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sections du site -->
+    <div id="apropos-sections">
+      <div class="sections-wrap">
+
+        <div class="sections-header slide-in">
+          <p class="sections-eyebrow"><i class="fas fa-map-signs"></i> Explorer le site</p>
+          <h2 class="sections-title">Ce que vous <span>trouverez</span></h2>
+          <div class="sections-divider"></div>
+        </div>
+
+        <div class="sections-grid">
+
+          <a href="dslrcamera.html" class="section-card slide-in">
+            <div class="section-card-icon"><i class="fas fa-camera-retro"></i></div>
+            <div class="section-card-body">
+              <h3>Caméra <span>DSLR</span></h3>
+              <p>Découvrez les appareils reflex numériques, leurs caractéristiques et pourquoi ils constituent un excellent choix pour débuter.</p>
+            </div>
+            <div class="section-card-arrow"><i class="fas fa-arrow-right"></i></div>
+          </a>
+
+          <a href="eclairage.html" class="section-card slide-in">
+            <div class="section-card-icon"><i class="fas fa-lightbulb"></i></div>
+            <div class="section-card-body">
+              <h3>Écla<span>irage</span></h3>
+              <p>Positionnement, façonnage et manipulation de la lumière pour obtenir des photos d'aspect professionnel.</p>
+            </div>
+            <div class="section-card-arrow"><i class="fas fa-arrow-right"></i></div>
+          </a>
+
+          <a href="sitesinterets.html" class="section-card slide-in">
+            <div class="section-card-icon"><i class="fas fa-globe"></i></div>
+            <div class="section-card-body">
+              <h3>Sites d'<span>intérêts</span></h3>
+              <p>Canon, Sony, Nikon, Apple et Adobe Lightroom — les ressources incontournables pour le photographe amateur.</p>
+            </div>
+            <div class="section-card-arrow"><i class="fas fa-arrow-right"></i></div>
+          </a>
+
+          <a href="faq.html" class="section-card slide-in">
+            <div class="section-card-icon"><i class="fas fa-question-circle"></i></div>
+            <div class="section-card-body">
+              <h3>Foire aux <span>questions</span></h3>
+              <p>Objectifs, capteurs, flash, connexions DSLR — toutes les réponses aux questions fréquentes des débutants.</p>
+            </div>
+            <div class="section-card-arrow"><i class="fas fa-arrow-right"></i></div>
+          </a>
+
+          <a href="photos.html" class="section-card slide-in">
+            <div class="section-card-icon"><i class="fas fa-images"></i></div>
+            <div class="section-card-body">
+              <h3>Collection <span>Photos</span></h3>
+              <p>Une galerie de 8 photographies sélectionnées — nature, urbain, portrait et paysage.</p>
+            </div>
+            <div class="section-card-arrow"><i class="fas fa-arrow-right"></i></div>
+          </a>
+
+          <a href="multimedias.html" class="section-card slide-in">
+            <div class="section-card-icon"><i class="fas fa-play-circle"></i></div>
+            <div class="section-card-body">
+              <h3>Multi<span>médias</span></h3>
+              <p>Vidéos YouTube sur le matériel Canon, l'éclairage et les techniques de portrait pour débutants.</p>
+            </div>
+            <div class="section-card-arrow"><i class="fas fa-arrow-right"></i></div>
+          </a>
+
+        </div>
+
+        <!-- CTA contact -->
+        <div class="apropos-cta slide-in">
+          <p>Une question ? N'hésitez pas à me contacter.</p>
+          <a href="contact.html" class="cta-btn">
+            <i class="fas fa-paper-plane"></i> Me contacter
+          </a>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Début Footer -->
+    <footer class="footer">
+      <div class="containerfooter">
+        <div class="row">
+          <div class="footer-col">
+            <h4>Plan du Site</h4>
+            <ul>
+              <li><a href="../index.html">Accueil</a></li>
+              <li><a href="photos.html">Collection Photos</a></li>
+              <li><a href="sitesinterets.html">Sites d'intérêts</a></li>
+              <li><a href="faq.html">FAQ</a></li>
+              <li><a href="apropos.html">À Propos</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Information</h4>
+            <ul>
+              <li><a href="dslrcamera.html">dslr camera</a></li>
+              <li><a href="eclairage.html">Élairage</a></li>
+              <li><a href="multimedias.html">Multimédias</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Navigateurs</h4>
+            <ul>
+              <p class="Optimise">Ce site est optimisé pour Chrome, Opéra, Safari, Edge et FireFox</p>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Média Sociaux</h4>
+            <div class="social-links">
+              <a href="https://www.facebook.com/profile.php?id=100083169858534" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
+              <a href="https://twitter.com/AlexandreBoss15" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
+              <a href="https://www.linkedin.com/in/alexandre-boss%C3%A9-838408245" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+              <a href="mailto:tech.alexandre.bosse@gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Fin Footer -->
+
+    <script src="../js/app.js"></script>
+    <script src="../js/apropos.js"></script>
+  </body>
+</html>
