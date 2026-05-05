@@ -18,7 +18,7 @@ body { background: #111; }
 /* ---- Hero header ---- */
 .gallery-hero {
   text-align: center;
-  padding: 40px 20px 30px;
+  padding: 25px 20px 22px;
   background: linear-gradient(180deg, #1a1e26 0%, #0f1115 100%);
 }
 .gallery-title {
@@ -35,7 +35,7 @@ body { background: #111; }
   font-size: 1.5rem;
   font-weight: 300;
   letter-spacing: 0.08rem;
-  margin-bottom: 18px;
+  margin-bottom: 12px;
 }
 .gallery-meta {
   display: flex;
