@@ -42,6 +42,7 @@ menu_item.forEach((item) => {
 
   // Bloquer le hero au chargement
   document.body.classList.add('splash-active');
+  document.documentElement.classList.add('splash-active');
 
   if (!splash || !btn) return;
 
@@ -53,6 +54,8 @@ menu_item.forEach((item) => {
     }
     // Révéler le hero
     document.body.classList.remove('splash-active');
+    document.documentElement.classList.remove('splash-active');
+    window.scrollTo(0, 0);
     // Cacher le splash
     splash.classList.add('hidden');
     // Retirer du DOM après la transition

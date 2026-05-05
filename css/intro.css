@@ -811,10 +811,12 @@ ul {
 /* ===== FIN SPLASH SCREEN ===== */
 
 /* Bloquer le scroll et cacher le contenu pendant le splash */
-body.splash-active {
-  overflow: hidden;
-  height: 100vh;
-  height: -webkit-fill-available;
+body.splash-active,
+html.splash-active {
+  overflow: hidden !important;
+  height: 100% !important;
+  position: fixed;
+  width: 100%;
 }
 body.splash-active #hero,
 body.splash-active #header {
