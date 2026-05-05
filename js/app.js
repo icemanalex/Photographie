@@ -27,3 +27,27 @@ menu_item.forEach((item) => {
     mobile_menu.classList.toggle("active");
   });
 });
+
+// ===== Splash Screen =====
+(function () {
+  var splash = document.getElementById('splash');
+  var btn = document.getElementById('splashEnter');
+  var music = document.getElementById('bgMusic');
+
+  if (!splash || !btn) return;
+
+  btn.addEventListener('click', function () {
+    // Lancer la musique
+    if (music) {
+      music.volume = 0.5;
+      music.play().catch(function () {});
+    }
+    // Cacher le splash
+    splash.classList.add('hidden');
+    // Retirer du DOM après la transition
+    setTimeout(function () {
+      splash.style.display = 'none';
+    }, 950);
+  });
+})();
+// ===== Fin Splash Screen =====

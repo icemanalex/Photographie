@@ -11,6 +11,21 @@
   </head>
 
   <body>
+    <!-- Splash Screen -->
+    <div id="splash">
+      <div class="splash-bg"></div>
+      <div class="splash-content">
+        <h1 class="splash-logo"><span>L</span>a <span>P</span>hotographie</h1>
+        <div class="splash-divider"></div>
+        <p class="splash-sub">par Alexandre Bossé</p>
+        <button id="splashEnter" class="splash-btn">
+          <span>Entrer</span>
+          <i class="fas fa-arrow-right"></i>
+        </button>
+        <p class="splash-hint"><i class="fas fa-music"></i> Avec musique</p>
+      </div>
+    </div>
+    <!-- Fin Splash Screen -->
     <!-- Début Header -->
      <!-- La video -->
      <div><video autoplay muted loop id="myVideo">
@@ -58,7 +73,7 @@
         </a>
        </p>
       </div>
-      <div id="audiosetup"><audio class="audio" src="audio/battle-of-the-dragons-8037.mp3" controls autoplay></audio></div>
+      <div id="audiosetup"><audio id="bgMusic" src="audio/battle-of-the-dragons-8037.mp3"></audio></div>
     </section>
     <!-- Fin Hero Section  -->
 

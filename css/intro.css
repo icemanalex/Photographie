@@ -682,3 +682,120 @@ ul {
   font-family: "Montserrat", sans-serif;
   scroll-behavior: smooth;
 }
+
+/* ===== SPLASH SCREEN ===== */
+#splash {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.9s ease, visibility 0.9s ease;
+}
+#splash.hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+.splash-bg {
+  position: absolute;
+  inset: 0;
+  background-image: url(images/hero-bg.png);
+  background-size: cover;
+  background-position: center;
+}
+.splash-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.78);
+}
+.splash-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  animation: splashFadeIn 1s ease forwards;
+}
+@keyframes splashFadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.splash-logo {
+  font-size: 4.5rem;
+  font-weight: 300;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.4rem;
+  margin-bottom: 0;
+}
+.splash-logo span { color: crimson; }
+.splash-divider {
+  width: 60px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, crimson, transparent);
+  margin: 22px auto;
+}
+.splash-sub {
+  font-size: 1.3rem;
+  color: rgba(255,255,255,0.4);
+  text-transform: uppercase;
+  letter-spacing: 0.25rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  margin-bottom: 40px;
+}
+.splash-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 48px;
+  background: transparent;
+  border: 1.5px solid rgba(220,20,60,0.6);
+  color: white;
+  font-size: 1.5rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all 0.35s ease;
+  position: relative;
+  overflow: hidden;
+}
+.splash-btn::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: crimson;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.35s ease;
+  z-index: -1;
+}
+.splash-btn:hover::before { transform: scaleX(1); }
+.splash-btn:hover {
+  border-color: crimson;
+  box-shadow: 0 10px 30px rgba(220,20,60,0.4);
+  transform: translateY(-3px);
+}
+.splash-btn i { font-size: 1.3rem; transition: transform 0.3s ease; }
+.splash-btn:hover i { transform: translateX(5px); }
+.splash-hint {
+  margin-top: 22px;
+  font-size: 1.1rem;
+  color: rgba(255,255,255,0.2);
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  letter-spacing: 0.1rem;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+.splash-hint i { color: rgba(220,20,60,0.4); font-size: 1rem; }
+/* ===== FIN SPLASH SCREEN ===== */
