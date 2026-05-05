@@ -51,8 +51,6 @@ menu_item.forEach((item) => {
       music.volume = 0.5;
       music.play().catch(function () {});
     }
-    // Révéler le hero
-    document.body.classList.remove('splash-active');
     // Cacher le splash
     splash.classList.add('hidden');
     // Retirer du DOM après la transition

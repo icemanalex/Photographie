@@ -817,22 +817,6 @@ ul {
 .splash-hint i { color: rgba(220,20,60,0.4); font-size: 1rem; }
 /* ===== FIN SPLASH SCREEN ===== */
 
-/* Bloquer le scroll et cacher le contenu pendant le splash */
-body.splash-active {
-  overflow: hidden;
-  height: 100vh;
-  height: -webkit-fill-available;
-}
-body.splash-active #hero,
-body.splash-active #header {
-  visibility: hidden;
-  opacity: 0;
-}
-body.splash-active video#myVideo {
-  display: none;
-}
-#hero, #header {
-  transition: opacity 0.6s ease, visibility 0.6s ease;
-}
+/* splash z-index:9999 position:fixed couvre tout — body non modifié */
 
 audio#bgMusic { display: none; position: absolute; }
