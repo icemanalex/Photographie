@@ -63,7 +63,6 @@ a { text-decoration: none; }
   height: 360px;
   position: relative;
   border: 10px solid white;
-  overflow: hidden;
 }
 #about .col-left .about-img img {
   width: 100%; height: 100%;
