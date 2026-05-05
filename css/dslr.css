@@ -198,7 +198,8 @@ ul { list-style: none; }
 }
 @media (max-width: 767px) {
   #about .about { padding: 70px 24px; align-items: center; text-align: center; }
-  #about .col-left { padding-left: 33px; display: flex; justify-content: center; }
+  #about .col-left { padding: 0; margin: 0 auto; display: flex; justify-content: center; }
+  #about .col-left .about-img { margin-left: 16px; }
   #about .col-right { align-items: center; }
   .dslr-tags { justify-content: center; }
   .section-title2 { font-size: 3.2rem; }
@@ -207,8 +208,8 @@ ul { list-style: none; }
 @media (max-width: 480px) {
   html { font-size: 9px; }
   #about .about { padding: 60px 20px; }
-  #about .col-left { padding-left: 33px; display: flex; justify-content: center; }
-  #about .col-left .about-img { width: 220px; height: 320px; }
+  #about .col-left { padding: 0; margin: 0 auto; display: flex; justify-content: center; }
+  #about .col-left .about-img { width: 210px; height: 300px; margin-left: 16px; }
   .section-title2 { font-size: 2.8rem; }
   .footer-col { width: 100%; }
 }
