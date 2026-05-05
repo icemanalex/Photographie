@@ -9,7 +9,9 @@ html {
   font-size: 10px;
   font-family: "Montserrat", sans-serif;
   scroll-behavior: smooth;
+  background: #111;
 }
+body { background: #111; }
 a {
   text-decoration: none;
 }
