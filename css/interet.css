@@ -227,7 +227,7 @@ p { color: #ddd; font-size: 1.4rem; margin-top: 5px; line-height: 2.5rem; font-w
 .browser-frame {
   width: 100%;
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
   overflow: hidden;
 }
 
