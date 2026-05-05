@@ -201,13 +201,10 @@ p {
 
 /* Hero Section */
 #hero {
-  background-color: #1a1a1a;
-  background-image: url(../images/hero-bg.png);
   background-size: cover;
   background-position: top center;
   position: relative;
-  overflow: hidden;
-  min-height: 100vh;
+  z-index: 1;
 }
 #hero::after {
   content: "";
@@ -218,15 +215,13 @@ p {
   width: 100%;
   background-color: black;
   opacity: 0.7;
-  z-index: 1;
+  z-index: -1;
 }
 #hero .hero {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 50px;
   justify-content: flex-start;
-  position: relative;
-  z-index: 2;
 }
 #hero h1 {
   display: block;
@@ -236,7 +231,6 @@ p {
   color: transparent;
   animation: text_reveal 0.5s ease forwards;
   animation-delay: 1s;
-  z-index: 2;
 }
 #hero h1:nth-child(1) {
   animation-delay: 1s;
@@ -674,7 +668,13 @@ ul {
 
 /* fin  Media Query pour Desktop */
 
-/* #myVideo — voir la règle principale ci-dessous */
+#myVideo {
+  position: relative;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}
 
 .Optimise {
   color: #ffffff;
@@ -689,19 +689,17 @@ ul {
   background-color: gray;
 }
 
-/* Vidéo background — position:absolute dans #hero (iOS Safari compatible)
-   position:fixed sur <video> ne fonctionne PAS sur iOS Safari              */
+/* Style the video: 100% width and height pour couvrir toute la fenetre */
 #myVideo {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   object-fit: cover;
-  z-index: 0;
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
-  will-change: transform;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
 }
 
 .audio {
@@ -713,12 +711,13 @@ ul {
 
 #accueillePara {
   color: antiquewhite;
-  margin: 1% 2% 2%;
+  margin-left: 2%;
+  margin-right: 2%;
+  margin-bottom: 2%;
+  margin-top: 1%;
   text-align: justify;
   font-family: "Montserrat", sans-serif;
   font-size: 17px;
-  position: relative;
-  z-index: 2;
 }
 
 #TitreBien {
@@ -726,86 +725,5 @@ ul {
   margin-left: 2%;
   font-size: 40px;
   font-family: "Montserrat", sans-serif;
-  position: relative;
-  z-index: 2;
-}
-
-#audiosetup {
-  position: relative;
-  z-index: 2;
-}
-#hero > div {
-  position: relative;
-  z-index: 2;
-}
-
-/* ============================================================
-   RESPONSIVE COMPLET — intro.css (index.html)
-   XS<480 | SM 480-767 | MD 768-1023 | LG 1024-1199 | XL 1200+
-   ============================================================ */
-
-/* XS — Très petits téléphones */
-@media (max-width: 480px) {
-  html { font-size: 8px; }
-  .brand h1 { font-size: 2.2rem; }
-  .section-title { font-size: 2.6rem; letter-spacing: 0.05rem; }
-  .cta { font-size: 1.6rem; padding: 10px 20px; margin-top: 20px; }
-  #hero h1 { font-size: 2.8rem; }
-  #hero .hero { padding: 0 15px; }
-  #TitreBien { font-size: 22px; margin-left: 15px; margin-top: 20px; }
-  #accueillePara { font-size: 13px; margin: 10px 15px; }
-  .audio { width: 95%; }
-  .footer-col { width: 100%; }
-  .footer { padding: 50px 20px; }
-}
-
-/* SM — Téléphones */
-@media (min-width: 480px) and (max-width: 767px) {
-  html { font-size: 9px; }
-  .brand h1 { font-size: 2.5rem; }
-  .cta { font-size: 1.8rem; padding: 12px 30px; }
-  #hero h1 { font-size: 3.5rem; }
-  #hero .hero { padding: 0 25px; }
-  #TitreBien { font-size: 26px; margin-left: 20px; }
-  #accueillePara { font-size: 14px; margin: 10px 20px; }
-  .audio { width: 90%; }
-  .footer-col { width: 50%; margin-bottom: 30px; }
-}
-
-/* MD — Tablettes */
-@media (min-width: 768px) and (max-width: 1023px) {
-  #hero h1 { font-size: 5.5rem; }
-  #TitreBien { font-size: 32px; }
-  #accueillePara { font-size: 16px; }
-  .cta { font-size: 2rem; padding: 15px 45px; }
-  h1.section-title { font-size: 5rem; }
-}
-
-/* LG — Grand écran / petit desktop */
-@media (min-width: 1024px) and (max-width: 1199px) {
-  #header .hamburger { display: none; }
-  #header .nav-list ul { position: initial; display: block; height: auto; width: fit-content; background-color: transparent; }
-  #header .nav-list ul li { display: inline-block; }
-  #header .nav-list ul li a { font-size: 1.6rem; }
-  #header .nav-list ul a:after { display: none; }
-  #hero h1 { font-size: 6rem; }
-}
-
-/* XL — Desktop */
-@media (min-width: 1200px) {
-  #header .hamburger { display: none; }
-  #header .nav-list ul { position: initial; display: block; height: auto; width: fit-content; background-color: transparent; }
-  #header .nav-list ul li { display: inline-block; }
-  #header .nav-list ul li a { font-size: 1.8rem; }
-  #header .nav-list ul a:after { display: none; }
-  #hero h1 { font-size: 7rem; }
-}
-
-/* Footer responsive */
-@media (max-width: 767px) { .footer-col { width: 50%; margin-bottom: 30px; } }
-@media (max-width: 480px) { .footer-col { width: 100%; } }
-
-/* iOS Safari — background-attachment: fixed non supporté */
-@supports (-webkit-touch-callout: none) {
-  .walpc { background-attachment: scroll; }
+  scroll-behavior: smooth;
 }

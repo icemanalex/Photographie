@@ -2,10 +2,7 @@
 <html lang="fr">
   <head>
     <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-    <meta name="theme-color" content="#29323c">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/intro.css"/>
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <title>La Photographie</title>
@@ -14,6 +11,10 @@
 
   <body>
     <!-- Début Header -->
+     <!-- La video -->
+     <div><video autoplay muted loop id="myVideo">
+      <source src="video/home-bg.mp4" type="video/mp4">
+    </video></div>
     <section id="header">      
       <div class="header container">        
         <div class="nav-bar">
@@ -40,10 +41,6 @@
     <!-- Fin Header -->
     <!--Début Hero Section  -->
     <section id="hero">
-      <!-- Vidéo background — position:absolute fiable sur tous les navigateurs y compris iOS Safari -->
-      <video autoplay muted loop playsinline webkit-playsinline id="myVideo" poster="images/hero-bg.png" preload="auto">
-        <source src="video/home-bg.mp4" type="video/mp4">
-      </video>
       <div class="hero container">
         <div>
           <h1>Bonjour, <span></span></h1>
