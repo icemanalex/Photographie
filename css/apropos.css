@@ -134,8 +134,7 @@ body { background: #080c12; }
 }
 .hero-photo-frame {
   position: relative;
-  border-radius: 4px;
-  overflow: hidden;
+  border: 10px solid white;
   box-shadow: 0 40px 80px rgba(0,0,0,0.6);
 }
 .hero-photo-frame img {
@@ -152,35 +151,22 @@ body { background: #080c12; }
   filter: brightness(1) contrast(1.05);
 }
 
-/* Cadre décoratif décalé */
-.hero-photo-accent {
+/* Cadre crimson décalé — style original */
+.hero-photo-frame::after {
+  content: '';
   position: absolute;
-  top: 28px;
-  right: 42px;
-  left: 8px;
-  bottom: 28px;
-  border: 1.5px solid rgba(220,20,60,0.4);
-  border-radius: 4px;
-  pointer-events: none;
+  left: -33px;
+  top: 19px;
+  height: 98%;
+  width: 98%;
+  border: 7px solid crimson;
+  z-index: -1;
   transition: border-color 0.4s ease;
 }
-.hero-photo-wrap:hover .hero-photo-accent { border-color: rgba(220,20,60,0.7); }
+.hero-photo-wrap:hover .hero-photo-frame::after { border-color: rgba(220,20,60,0.6); }
 
-/* Texte déco vertical */
-.hero-photo-frame::after {
-  content: 'PHOTOGRAPHE';
-  position: absolute;
-  right: -12px;
-  top: 50%;
-  transform: translateY(-50%) rotate(90deg);
-  font-size: 1rem;
-  font-weight: 700;
-  letter-spacing: 0.3rem;
-  color: rgba(255,255,255,0.08);
-  font-family: "Poppins", sans-serif;
-  pointer-events: none;
-  white-space: nowrap;
-}
+/* .hero-photo-accent inutilisé mais conservé pour le HTML */
+.hero-photo-accent { display: none; }
 
 /* ===== STATS ===== */
 #apropos-stats {
