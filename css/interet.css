@@ -412,11 +412,11 @@ img { height: 100%; width: 100%; object-fit: cover; }
 }
 
 /* Cadrage optimal */
-.img-canon  { object-position: center 30%; }
-.img-sony   { object-position: center center; }
-.img-apple  { object-position: center 40%; }
-.img-nikon  { object-position: center 35%; }
-.img-adobe  { object-position: center 20%; }
+.img-canon  { object-position: center 40%; }
+.img-sony   { object-position: center 30%; }
+.img-apple  { object-position: center 35%; }
+.img-nikon  { object-position: center 25%; }
+.img-adobe  { object-position: center 35%; }
 
 /* ---- Overlay hover ---- */
 .img-overlay {
@@ -531,3 +531,10 @@ ul { list-style: none; }
 @supports (-webkit-touch-callout: none) {
   .wallsiteinteret { background-attachment: scroll; }
 }
+
+/* Accent couleur par marque dans la barre URL */
+[data-brand="CANON"] .b-url i  { color: #cc0000; }
+[data-brand="SONY"] .b-url i   { color: #00439c; }
+[data-brand="APPLE"] .b-url i  { color: #555; }
+[data-brand="NIKON"] .b-url i  { color: #ffd700; }
+[data-brand="ADOBE"] .b-url i  { color: #ff0000; }
