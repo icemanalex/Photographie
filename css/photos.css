@@ -12,7 +12,7 @@ body { background: #111; }
 /* ---- Header ---- */
 #header { position: fixed; z-index: 1000; left: 0; top: 0; width: 100vw; height: auto; }
 #header .header { min-height: 8vh; background-color: rgba(31,30,30,0.24); transition: 0.3s ease background-color; }
-#header .container { min-height: 8vh; }
+.container { min-height: 100vh; width: 100%; display: flex; align-items: center; justify-content: center; }
 #header .nav-bar { display: flex; align-items: center; justify-content: space-between; width: 100%; height: 100%; max-width: 1300px; padding: 0 10px; }
 #header .nav-list ul { list-style: none; position: absolute; background-color: rgb(31,30,30); width: 100vw; height: 100vh; left: 100%; top: 0; display: flex; flex-direction: column; justify-content: center; align-items: center; z-index: 1; overflow-x: hidden; transition: 0.5s ease left; }
 #header .nav-list ul.active { left: 0%; }
