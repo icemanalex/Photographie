@@ -1,9 +1,3 @@
-// Fix iOS Safari viewport height — set once, never update on scroll
-(function() {
-  var vh = window.innerHeight * 0.01;
-  document.documentElement.style.setProperty('--vh', vh + 'px');
-})();
-
 const hamburger = document.querySelector(
   ".header .nav-bar .nav-list .hamburger"
 );
@@ -42,7 +36,6 @@ menu_item.forEach((item) => {
 
   // Bloquer le hero au chargement
   document.body.classList.add('splash-active');
-  document.documentElement.classList.add('splash-active');
 
   if (!splash || !btn) return;
 
@@ -54,8 +47,6 @@ menu_item.forEach((item) => {
     }
     // Révéler le hero
     document.body.classList.remove('splash-active');
-    document.documentElement.classList.remove('splash-active');
-    window.scrollTo(0, 0);
     // Cacher le splash
     splash.classList.add('hidden');
     // Retirer du DOM après la transition
