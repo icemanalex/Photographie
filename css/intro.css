@@ -668,13 +668,7 @@ ul {
 
 /* fin  Media Query pour Desktop */
 
-#myVideo {
-  position: relative;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-}
+/* #myVideo base — voir règle principale ci-dessous */
 
 .Optimise {
   color: #ffffff;
@@ -689,7 +683,7 @@ ul {
   background-color: gray;
 }
 
-/* Style the video: 100% width and height pour couvrir toute la fenetre */
+/* Style the video: couvre toute la fenêtre sur tous les appareils */
 #myVideo {
   width: 100vw;
   height: 100vh;
@@ -700,6 +694,9 @@ ul {
   top: 0;
   bottom: 0;
   z-index: -1;
+  /* iOS Safari — force le rendu correct */
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
 }
 
 .audio {
@@ -738,10 +735,6 @@ ul {
 
   .brand h1 { font-size: 2.2rem; }
 
-  /* Vidéo background cachée sur mobile, fond noir à la place */
-  #myVideo { display: none; }
-  body { background-color: #1a1a1a; }
-
   #hero { min-height: 100vh; }
   #hero h1 { font-size: 2.8rem; }
   #hero .hero { padding: 0 15px; min-height: 60vh; }
@@ -762,9 +755,6 @@ ul {
 @media (min-width: 480px) and (max-width: 767px) {
   html { font-size: 9px; }
   .brand h1 { font-size: 2.5rem; }
-
-  #myVideo { display: none; }
-  body { background-color: #1a1a1a; }
 
   #hero h1 { font-size: 3.5rem; }
   #hero .hero { padding: 0 25px; }
