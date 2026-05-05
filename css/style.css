@@ -97,7 +97,6 @@ p {
   color: crimson;
 }
 
-/* Header section */
 #header {
   position: fixed;
   z-index: 1000;
@@ -222,9 +221,7 @@ p {
 #header .hamburger.active .bar::after {
   top: 0;
 }
-/* Fin Header section */
 
-/* Hero Section */
 #hero {
   background-image: url(../images/hero-bg.png);
   background-size: cover;
@@ -288,9 +285,6 @@ p {
   animation-delay: 2.5s;
 }
 
-/* Fin Hero Section */
-
-/* Projects section */
 #projects .projects {
   flex-direction: column;
   max-width: 1200px;
@@ -361,9 +355,7 @@ p {
 #projects .project-item:hover .project-img img {
   transform: scale(1.1);
 }
-/* Fin Projects section */
 
-/* Début Apropos Section */
 .ParContact {
   color: #ffffff;
 }
@@ -460,9 +452,7 @@ p {
   border: 7px solid crimson;
   z-index: -1;
 }
-/* fin apropos Section */
 
-/* contact Section */
 #contact .contact {
   flex-direction: column;
   max-width: 1200px;
@@ -470,7 +460,7 @@ p {
   width: 90%;
 }
 #contact .contact-items {
-  /* max-width: 400px; */
+
   width: 100%;
 }
 #contact .contact-item {
@@ -506,9 +496,7 @@ p {
   line-height: 2rem;
   font-weight: 500;
 }
-/*Fin contact Section */
 
-/* Début Footer */
 .containerfooter {
   max-width: 1170px;
   margin: auto;
@@ -581,9 +569,7 @@ ul {
   background-color: #ffffff;
   font-size: xx-large;
 }
-/* Fin Footer */
 
-/* Keyframes */
 @keyframes hamburger_puls {
   0% {
     opacity: 1;
@@ -615,9 +601,7 @@ ul {
     font-weight: 500;
   }
 }
-/* Fin Keyframes */
 
-/* Media Query pour Tablet */
 @media only screen and (min-width: 768px) {
   .cta {
     font-size: 2.5rem;
@@ -627,13 +611,10 @@ ul {
     font-size: 6rem;
   }
 
-  /* Hero */
   #hero h1 {
     font-size: 7rem;
   }
-  /* Fin Hero */
 
-  /* contact  */
   #contact .contact {
     flex-direction: column;
     padding: 100px 0;
@@ -666,13 +647,11 @@ ul {
     text-align: left;
     padding-left: 20px;
   }
-  /* Fin contact  */
-}
-/* fin Media Query pour Tablet */
 
-/* Media Query pour Desktop */
+}
+
 @media only screen and (min-width: 1200px) {
-  /* header */
+
   #header .hamburger {
     display: none;
   }
@@ -692,7 +671,6 @@ ul {
   #header .nav-list ul a:after {
     display: none;
   }
-  /* fin header */
 
   #services .service-bottom .service-item {
     flex-basis: 22%;
@@ -700,7 +678,6 @@ ul {
   }
 }
 
-/*responsive footer*/
 @media (max-width: 767px) {
   .footer-col {
     width: 50%;
@@ -712,8 +689,6 @@ ul {
     width: 100%;
   }
 }
-
-/* fin  Media Query pour Desktop */
 
 #myVideo {
   position: relative;
@@ -766,7 +741,6 @@ ul {
   text-align: justify;
 }
 
-/* Services Section */
 #services .services {
   flex-direction: column;
   text-align: center;
@@ -827,4 +801,3 @@ ul {
   color: white;
   text-align: left;
 }
-/* fin Services Section */

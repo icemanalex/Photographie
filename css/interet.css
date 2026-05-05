@@ -60,7 +60,7 @@ p {
 .section-title span {
   color: crimson;
 }
-/*interet 2 */
+
 .section-title10 {
   font-size: 4rem;
   font-weight: 300;
@@ -72,10 +72,6 @@ p {
   text-align: justify;
 }
 .section-title10 span {
-  color: crimson;
-}
-
-.section-title span {
   color: crimson;
 }
 
@@ -105,7 +101,6 @@ p {
   color: crimson;
 }
 
-/* Header section */
 #header {
   position: fixed;
   z-index: 1000;
@@ -230,9 +225,7 @@ p {
 #header .hamburger.active .bar::after {
   top: 0;
 }
-/* Fin Header section */
 
-/* Hero Section */
 #hero {
   background-image: url(../images/hero-bg.png);
   background-size: cover;
@@ -296,9 +289,6 @@ p {
   animation-delay: 2.5s;
 }
 
-/* Fin Hero Section */
-
-/* Projects section */
 #projects .projects {
   flex-direction: column;
   max-width: 1200px;
@@ -355,7 +345,6 @@ p {
   position: relative;
 }
 
-/* Hover effect for project images */
 #projects .project-img img {
   transition: 0.3s ease transform;
 }
@@ -363,7 +352,6 @@ p {
   transform: scale(1.2);
 }
 
-/* Début Footer */
 .containerfooter {
   max-width: 1170px;
   margin: auto;
@@ -436,9 +424,7 @@ ul {
   background-color: #ffffff;
   font-size: xx-large;
 }
-/* Fin Footer */
 
-/* Keyframes */
 @keyframes hamburger_puls {
   0% { opacity: 1; transform: scale(1); }
   100% { opacity: 0; transform: scale(1.4); }
@@ -453,9 +439,7 @@ ul {
 @keyframes text_reveal_name {
   100% { color: crimson; font-weight: 500; }
 }
-/* Fin Keyframes */
 
-/* Media Query pour Tablet */
 @media only screen and (min-width: 768px) {
   .cta {
     font-size: 2.5rem;
@@ -468,9 +452,7 @@ ul {
     font-size: 7rem;
   }
 }
-/* Fin Media Query pour Tablet */
 
-/* Media Query pour Desktop */
 @media only screen and (min-width: 1200px) {
   #header .hamburger {
     display: none;
@@ -508,9 +490,7 @@ ul {
     height: 100%;
   }
 }
-/* Fin Media Query pour Desktop */
 
-/* Responsive footer */
 @media (max-width: 767px) {
   .footer-col {
     width: 50%;

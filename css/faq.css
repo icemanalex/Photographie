@@ -64,7 +64,6 @@ p {
   color: crimson;
 }
 
-/* Header section */
 #header {
   position: fixed;
   z-index: 1000;
@@ -190,8 +189,6 @@ p {
   top: 0;
 }
 
-/* Début FAQ Section */
-
 #about .about {
   flex-direction: column-reverse;
   text-align: left;
@@ -211,7 +208,7 @@ p {
   font-weight: 500;
   letter-spacing: 0.2rem;
   margin-bottom: 10px;
-  color: black; /*Color Faq interior */
+  color: black;
 }
 #about .col-right p {
   margin-bottom: 20px;
@@ -239,13 +236,7 @@ p {
   border: 7px solid crimson;
   z-index: -1;
 }
-/* fin apropos Section */
 
-/*Début Slider */
-
-/*Fin Slider */
-
-/* Début Footer */
 .containerfooter {
   max-width: 1170px;
   margin: auto;
@@ -318,9 +309,7 @@ ul {
   background-color: #ffffff;
   font-size: xx-large;
 }
-/* Fin Footer */
 
-/* Debut Keyframes */
 @keyframes hamburger_puls {
   0% {
     opacity: 1;
@@ -352,9 +341,7 @@ ul {
     font-weight: 500;
   }
 }
-/* Fin Keyframes */
 
-/* Media Query pour Tablet */
 @media only screen and (min-width: 768px) {
   .cta {
     font-size: 2.5rem;
@@ -364,14 +351,10 @@ ul {
     font-size: 6rem;
   }
 
-  /* Hero */
   #hero h1 {
     font-size: 7rem;
   }
 
-  /* Fin Hero */
-
-  /*  Debut contact  */
   #contact .contact {
     flex-direction: column;
     padding: 100px 0;
@@ -404,13 +387,11 @@ ul {
     text-align: left;
     padding-left: 20px;
   }
-  /* Fin contact  */
-}
-/* Fin Media Query Pour Tablet */
 
-/* Media Query Pour Desktop */
+}
+
 @media only screen and (min-width: 1200px) {
-  /* header */
+
   #header .hamburger {
     display: none;
   }
@@ -430,7 +411,6 @@ ul {
   #header .nav-list ul a:after {
     display: none;
   }
-  /* Fin header */
 
   #services .service-bottom .service-item {
     flex-basis: 22%;
@@ -438,7 +418,6 @@ ul {
   }
 }
 
-/*responsive footer*/
 @media (max-width: 767px) {
   .footer-col {
     width: 50%;
@@ -451,8 +430,6 @@ ul {
   }
 }
 
-/* Fin  Media Query pour Desktop */
-
 .wallcontact {
   background-image: url(../images/pexels-garrett-morrow-2179865.jpg);
   background-attachment: fixed;
@@ -460,7 +437,6 @@ ul {
   background-size: cover;
   background-blend-mode: overlay;
 }
-/*  Début FAQ */
 
 .containerFAQ {
   width: fit-content;
@@ -472,7 +448,7 @@ ul {
 }
 .wrapperFAQ {
   background-color: #ffffff;
-  /*opacity: 0.8;*/
+
   margin-bottom: 20px;
   padding: 15px 40px;
   border-radius: 5px;
