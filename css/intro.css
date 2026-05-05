@@ -704,22 +704,28 @@ ul {
 }
 .splash-bg {
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url(images/hero-bg.png);
+  top: 0; left: 0; right: 0; bottom: 0;
+  width: 100%; height: 100%;
+  background-image: url(images/pexels-derice-jason-fahnkow-1595243.jpg);
   background-size: cover;
   background-position: center;
+  animation: splashZoom 12s ease forwards;
+}
+@keyframes splashZoom {
+  from { transform: scale(1.08); }
+  to   { transform: scale(1); }
 }
 .splash-bg::after {
   content: '';
   position: absolute;
   top: 0; left: 0;
   width: 100%; height: 100%;
-  background: rgba(0,0,0,0.78);
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.55) 0%,
+    rgba(0,0,0,0.7) 50%,
+    rgba(0,0,0,0.82) 100%
+  );
 }
 .splash-content {
   position: relative;
@@ -729,10 +735,11 @@ ul {
   flex-direction: column;
   align-items: center;
   gap: 0;
-  animation: splashFadeIn 1s ease forwards;
+  opacity: 0;
+  animation: splashFadeIn 1.2s ease 0.5s forwards;
 }
 @keyframes splashFadeIn {
-  from { opacity: 0; transform: translateY(20px); }
+  from { opacity: 0; transform: translateY(25px); }
   to   { opacity: 1; transform: translateY(0); }
 }
 .splash-logo {
@@ -745,10 +752,14 @@ ul {
 }
 .splash-logo span { color: crimson; }
 .splash-divider {
-  width: 60px;
+  width: 0px;
   height: 2px;
   background: linear-gradient(90deg, transparent, crimson, transparent);
   margin: 22px auto;
+  animation: dividerExpand 0.8s ease 1.8s forwards;
+}
+@keyframes dividerExpand {
+  to { width: 80px; }
 }
 .splash-sub {
   font-size: 1.3rem;
