@@ -22,28 +22,59 @@ a { text-decoration: none; }
   justify-content: center;
   position: relative;
   overflow: hidden;
-  background:
-    radial-gradient(ellipse at 20% 50%, rgba(220,20,60,0.08) 0%, transparent 55%),
-    radial-gradient(ellipse at 80% 50%, rgba(220,20,60,0.05) 0%, transparent 55%),
-    linear-gradient(180deg, #0a0d14 0%, #060910 100%);
 }
 
-/* Grille décorative en arrière-plan */
+/* Photo de fond bokeh */
 #si-hero::before {
   content: '';
   position: absolute;
   inset: 0;
+  background-image: url(../images/si-hero-bg.jpg);
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+  animation: heroBgDrift 20s ease-in-out infinite alternate;
+}
+@keyframes heroBgDrift {
+  from { transform: scale(1.08) translateX(-1%); }
+  to   { transform: scale(1.12) translateX(1%); }
+}
+
+/* Gradient overlay multicouche */
+#si-hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 15% 60%, rgba(220,20,60,0.18) 0%, transparent 45%),
+    radial-gradient(ellipse at 85% 40%, rgba(220,20,60,0.1) 0%, transparent 45%),
+    linear-gradient(180deg,
+      rgba(6,9,16,0.7) 0%,
+      rgba(6,9,16,0.55) 40%,
+      rgba(6,9,16,0.75) 75%,
+      rgba(6,9,16,0.97) 100%
+    );
+  z-index: 1;
+}
+
+/* Grille décorative */
+#si-hero .si-hero-content::before {
+  content: '';
+  position: fixed;
+  inset: 0;
   background-image:
-    linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
-  background-size: 80px 80px;
-  mask-image: radial-gradient(ellipse at center, black 30%, transparent 75%);
-  -webkit-mask-image: radial-gradient(ellipse at center, black 30%, transparent 75%);
+    linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+  background-size: 70px 70px;
+  mask-image: radial-gradient(ellipse at center, black 20%, transparent 70%);
+  -webkit-mask-image: radial-gradient(ellipse at center, black 20%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
 }
 
 .si-hero-content {
   position: relative;
-  z-index: 1;
+  z-index: 2;
   text-align: center;
   padding: 120px 20px 80px;
   max-width: 900px;
@@ -60,11 +91,17 @@ a { text-decoration: none; }
   text-transform: uppercase;
   letter-spacing: 0.25rem;
   margin-bottom: 20px;
-  border: 1px solid rgba(220,20,60,0.25);
+  border: 1px solid rgba(220,20,60,0.3);
   padding: 7px 20px;
   border-radius: 30px;
-  background: rgba(220,20,60,0.06);
-  backdrop-filter: blur(8px);
+  background: rgba(220,20,60,0.08);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 0 20px rgba(220,20,60,0.1), inset 0 0 12px rgba(220,20,60,0.04);
+  animation: eyebrowPulse 3s ease-in-out infinite;
+}
+@keyframes eyebrowPulse {
+  0%, 100% { box-shadow: 0 0 20px rgba(220,20,60,0.1), inset 0 0 12px rgba(220,20,60,0.04); }
+  50%       { box-shadow: 0 0 35px rgba(220,20,60,0.2), inset 0 0 20px rgba(220,20,60,0.08); }
 }
 
 .si-hero-title {
@@ -432,10 +469,37 @@ a { text-decoration: none; }
 
 .reveal-card {
   opacity: 0;
-  transform: translateY(50px);
-  transition: opacity 0.75s ease, transform 0.75s ease;
+  transform: translateY(60px);
+  transition: opacity 0.8s cubic-bezier(0.25,0.46,0.45,0.94),
+              transform 0.8s cubic-bezier(0.25,0.46,0.45,0.94);
 }
 .reveal-card.visible { opacity: 1; transform: translateY(0); }
+
+/* Ligne lumineuse animée sous les cards au hover */
+.brand-card::before {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, crimson, transparent);
+  transform: scaleX(0);
+  transition: transform 0.5s ease;
+  z-index: 5;
+}
+.brand-card:hover::before { transform: scaleX(1); }
+
+/* Lueur ambiante rouge sur le fond au hover */
+.brand-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at center, rgba(220,20,60,0.04) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+  z-index: 0;
+}
+.brand-card:hover::after { opacity: 1; }
 
 /* ============================================================
    FOOTER
@@ -489,3 +553,50 @@ ul { list-style: none; }
 @supports (-webkit-touch-callout: none) {
   .wallsiteinteret { background-attachment: scroll; }
 }
+
+/* ---- Scroll indicator ---- */
+.si-scroll-indicator {
+  position: absolute;
+  bottom: 35px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  opacity: 0;
+  animation: fadeIn 0.8s ease 1.5s forwards;
+}
+.si-scroll-indicator span {
+  font-size: 1rem;
+  color: rgba(255,255,255,0.25);
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  font-family: "Poppins", sans-serif;
+}
+.si-scroll-mouse {
+  width: 22px;
+  height: 36px;
+  border: 1.5px solid rgba(255,255,255,0.2);
+  border-radius: 11px;
+  position: relative;
+}
+.si-scroll-mouse::after {
+  content: '';
+  position: absolute;
+  top: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 3px;
+  height: 7px;
+  background: crimson;
+  border-radius: 2px;
+  animation: scrollDot 1.8s ease infinite;
+}
+@keyframes scrollDot {
+  0%   { top: 5px; opacity: 1; }
+  80%  { top: 20px; opacity: 0; }
+  100% { top: 5px; opacity: 0; }
+}
+@keyframes fadeIn { to { opacity: 1; } }
