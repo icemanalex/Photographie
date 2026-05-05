@@ -1,3 +1,32 @@
+// iOS Safari — forcer la lecture de la vidéo background
+(function() {
+  const video = document.getElementById('myVideo');
+  if (!video) return;
+
+  function tryPlay() {
+    const promise = video.play();
+    if (promise !== undefined) {
+      promise.catch(() => {
+        // Autoplay bloqué (Low Power Mode, etc.) → cacher la vidéo, garder le poster
+        video.style.display = 'none';
+      });
+    }
+  }
+
+  // Tenter dès le chargement
+  if (video.readyState >= 2) {
+    tryPlay();
+  } else {
+    video.addEventListener('canplay', tryPlay, { once: true });
+  }
+
+  // iOS — relancer sur premier touch si nécessaire
+  document.addEventListener('touchstart', function onFirstTouch() {
+    if (video.paused) tryPlay();
+    document.removeEventListener('touchstart', onFirstTouch);
+  }, { once: true, passive: true });
+})();
+
 const hamburger = document.querySelector(
   ".header .nav-bar .nav-list .hamburger"
 );
