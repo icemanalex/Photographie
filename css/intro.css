@@ -201,6 +201,7 @@ p {
   background-position: top center;
   position: relative;
   z-index: 1;
+  padding-top: 8vh;
 }
 #hero::after {
   content: "";
