@@ -686,10 +686,20 @@ ul {
 /* ===== SPLASH SCREEN ===== */
 #splash {
   position: fixed;
-  inset: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
   z-index: 9999;
+  display: -webkit-flex;
   display: flex;
+  -webkit-align-items: center;
   align-items: center;
+  -webkit-justify-content: center;
   justify-content: center;
   transition: opacity 0.9s ease, visibility 0.9s ease;
 }
@@ -700,7 +710,12 @@ ul {
 }
 .splash-bg {
   position: absolute;
-  inset: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
   background-image: url(images/hero-bg.png);
   background-size: cover;
   background-position: center;
@@ -708,7 +723,8 @@ ul {
 .splash-bg::after {
   content: '';
   position: absolute;
-  inset: 0;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
   background: rgba(0,0,0,0.78);
 }
 .splash-content {
@@ -800,7 +816,12 @@ ul {
 .splash-hint i { color: rgba(220,20,60,0.4); font-size: 1rem; }
 /* ===== FIN SPLASH SCREEN ===== */
 
-/* Cacher le contenu hero tant que le splash est visible */
+/* Bloquer le scroll et cacher le contenu pendant le splash */
+body.splash-active {
+  overflow: hidden;
+  height: 100vh;
+  height: -webkit-fill-available;
+}
 body.splash-active #hero,
 body.splash-active #header {
   visibility: hidden;
