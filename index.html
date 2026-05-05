@@ -14,15 +14,55 @@
     <!-- Splash Screen -->
     <div id="splash">
       <div class="splash-bg"></div>
+      <div class="splash-overlay"></div>
+
+      <!-- Bokeh particles -->
+      <canvas id="splashCanvas"></canvas>
+
       <div class="splash-content">
-        <h1 class="splash-logo"><span>L</span>a <span>P</span>hotographie</h1>
-        <div class="splash-divider"></div>
-        <p class="splash-sub">par Alexandre Bossé</p>
+
+        <!-- Aperture / iris animé -->
+        <div class="aperture">
+          <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+            <circle class="ap-ring ap-ring-1" cx="60" cy="60" r="54"/>
+            <circle class="ap-ring ap-ring-2" cx="60" cy="60" r="44"/>
+            <circle class="ap-ring ap-ring-3" cx="60" cy="60" r="34"/>
+            <line class="ap-blade" x1="60" y1="6"  x2="60" y2="26"/>
+            <line class="ap-blade" x1="60" y1="94" x2="60" y2="114"/>
+            <line class="ap-blade" x1="6"  y1="60" x2="26" y2="60"/>
+            <line class="ap-blade" x1="94" y1="60" x2="114" y2="60"/>
+            <line class="ap-blade" x1="18" y1="18" x2="33" y2="33"/>
+            <line class="ap-blade" x1="87" y1="87" x2="102" y2="102"/>
+            <line class="ap-blade" x1="102" y1="18" x2="87" y2="33"/>
+            <line class="ap-blade" x1="18" y1="102" x2="33" y2="87"/>
+            <circle class="ap-center" cx="60" cy="60" r="6"/>
+          </svg>
+        </div>
+
+        <!-- Logo lettre par lettre -->
+        <div class="splash-logo-wrap">
+          <h1 class="splash-logo">
+            <span class="l1">L</span><span class="l2">A</span>
+            <span class="l-space"> </span>
+            <span class="l3 red">P</span><span class="l4">H</span><span class="l5">O</span><span class="l6">T</span><span class="l7">O</span><span class="l8">G</span><span class="l9">R</span><span class="l10">A</span><span class="l11">P</span><span class="l12">H</span><span class="l13">I</span><span class="l14">E</span>
+          </h1>
+          <div class="splash-line-wrap">
+            <div class="splash-line"></div>
+          </div>
+          <p class="splash-sub">par <strong>Alexandre Bossé</strong></p>
+        </div>
+
+        <!-- Bouton -->
         <button id="splashEnter" class="splash-btn">
-          <span>Entrer</span>
-          <i class="fas fa-arrow-right"></i>
+          <div class="btn-inner">
+            <div class="btn-shutter"></div>
+            <span class="btn-text">Entrer</span>
+            <i class="fas fa-chevron-right btn-icon"></i>
+          </div>
         </button>
-        <p class="splash-hint"><i class="fas fa-music"></i> Avec musique</p>
+
+        <p class="splash-hint"><i class="fas fa-music"></i> Expérience musicale</p>
+
       </div>
     </div>
     <!-- Fin Splash Screen -->
