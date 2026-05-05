@@ -145,6 +145,7 @@ body { background: #080c12; }
   object-fit: cover;
   object-position: center top;
   display: block;
+  clip-path: inset(0);
 }
 
 /* Cadre crimson décalé — exactement comme l'original */
