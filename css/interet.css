@@ -4,459 +4,442 @@
 * { padding: 0; margin: 0; box-sizing: border-box; }
 html { font-size: 10px; font-family: "Montserrat", sans-serif; scroll-behavior: smooth; }
 a { text-decoration: none; }
-.container { min-height: 100vh; width: 100%; display: flex; align-items: center; justify-content: center; }
-img { height: 100%; width: 100%; object-fit: cover; }
+.container { width: 100%; display: flex; align-items: center; justify-content: center; }
 
 /* ---- Background ---- */
 .wallsiteinteret {
-  background-image: url(../images/2pxhere.com.jpg);
-  background-attachment: fixed;
-  background-position: center;
-  background-size: cover;
-  background-color: #080c12;
+  background: #060910;
+  min-height: 100vh;
 }
 
-/* ---- Section ---- */
-#projects .projects {
-  flex-direction: column;
-  max-width: 1240px;
-  margin: 0 auto;
-  padding: 110px 20px 80px;
-}
-
-/* ---- Header ---- */
-#projects .projects-header {
-  text-align: center;
-  margin-bottom: 80px;
+/* ============================================================
+   HERO
+   ============================================================ */
+#si-hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse at 20% 50%, rgba(220,20,60,0.08) 0%, transparent 55%),
+    radial-gradient(ellipse at 80% 50%, rgba(220,20,60,0.05) 0%, transparent 55%),
+    linear-gradient(180deg, #0a0d14 0%, #060910 100%);
 }
 
-/* Énorme texte décoratif en arrière-plan */
-#projects .projects-header::before {
-  content: 'RESSOURCES';
+/* Grille décorative en arrière-plan */
+#si-hero::before {
+  content: '';
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 11rem;
-  font-weight: 900;
-  font-family: "Poppins", sans-serif;
-  color: rgba(255,255,255,0.025);
-  white-space: nowrap;
-  letter-spacing: 0.3rem;
-  pointer-events: none;
-  user-select: none;
-  z-index: 0;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+  background-size: 80px 80px;
+  mask-image: radial-gradient(ellipse at center, black 30%, transparent 75%);
+  -webkit-mask-image: radial-gradient(ellipse at center, black 30%, transparent 75%);
 }
 
-.section-title {
-  font-size: 5.5rem;
+.si-hero-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: 120px 20px 80px;
+  max-width: 900px;
+}
+
+.si-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: crimson;
+  font-size: 1.2rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.25rem;
+  margin-bottom: 20px;
+  border: 1px solid rgba(220,20,60,0.25);
+  padding: 7px 20px;
+  border-radius: 30px;
+  background: rgba(220,20,60,0.06);
+  backdrop-filter: blur(8px);
+}
+
+.si-hero-title {
+  font-size: 6.5rem;
   font-weight: 200;
   color: white;
   text-transform: uppercase;
-  letter-spacing: 0.5rem;
-  margin-bottom: 10px;
-  position: relative;
-  z-index: 1;
+  letter-spacing: 0.4rem;
+  line-height: 1.05;
+  margin-bottom: 0;
 }
-.section-title span { color: crimson; font-weight: 500; }
+.si-hero-title span { color: crimson; font-weight: 600; }
 
-.projects-subtitle {
-  color: rgba(255,255,255,0.35);
-  font-size: 1.3rem;
-  font-weight: 300;
-  letter-spacing: 0.2rem;
-  text-transform: uppercase;
-  font-family: "Poppins", sans-serif;
-  margin-bottom: 28px;
-  position: relative;
-  z-index: 1;
-}
-
-#projects .projects-header::after {
-  content: '';
-  display: block;
-  width: 80px;
+.si-hero-line {
+  width: 0;
   height: 1px;
   background: linear-gradient(90deg, transparent, crimson, transparent);
-  margin: 18px auto 26px;
-  position: relative;
-  z-index: 1;
+  margin: 28px auto;
+  animation: heroLineExpand 1s ease 0.3s forwards;
+}
+@keyframes heroLineExpand { to { width: 200px; } }
+
+.si-hero-sub {
+  font-size: 1.5rem;
+  color: rgba(255,255,255,0.4);
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  letter-spacing: 0.08rem;
+  margin-bottom: 50px;
 }
 
-.projects-meta {
+/* Stats bar */
+.si-stats {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-wrap: wrap;
-  gap: 10px;
-  position: relative;
-  z-index: 1;
+  gap: 0;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 12px;
+  padding: 20px 40px;
+  backdrop-filter: blur(10px);
+  max-width: 680px;
+  margin: 0 auto;
 }
-.meta-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(255,255,255,0.1);
-  color: rgba(255,255,255,0.5);
-  font-size: 1.1rem;
-  padding: 6px 16px;
-  border-radius: 30px;
-  font-family: "Poppins", sans-serif;
-  letter-spacing: 0.05rem;
-  backdrop-filter: blur(8px);
-}
-.meta-count {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  background: rgba(220,20,60,0.1);
-  border: 1px solid rgba(220,20,60,0.3);
+.si-stat { text-align: center; padding: 0 30px; }
+.si-stat-n {
+  display: block;
+  font-size: 3rem;
+  font-weight: 700;
   color: crimson;
-  font-size: 1.1rem;
-  padding: 6px 16px;
-  border-radius: 30px;
   font-family: "Poppins", sans-serif;
-  font-weight: 500;
+  line-height: 1;
+  margin-bottom: 5px;
+}
+.si-stat-l {
+  display: block;
+  font-size: 1.1rem;
+  color: rgba(255,255,255,0.35);
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  font-family: "Poppins", sans-serif;
+}
+.si-stat-sep {
+  width: 1px;
+  height: 40px;
+  background: rgba(255,255,255,0.08);
+  flex-shrink: 0;
 }
 
-/* ---- Cards container ---- */
-#projects .all-projects {
+/* ============================================================
+   BRAND CARDS
+   ============================================================ */
+#brands-section {
+  padding: 0 20px 80px;
+  background: #060910;
+}
+
+.brands-wrap {
+  max-width: 1300px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: 3px;
 }
 
 /* ---- Carte ---- */
-#projects .project-item {
-  display: flex;
-  align-items: stretch;
-  width: 100%;
-  overflow: hidden;
+.brand-card {
+  display: grid;
+  grid-template-columns: 55% 45%;
   min-height: 480px;
+  overflow: hidden;
   position: relative;
-  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+  transition: transform 0.4s cubic-bezier(0.25,0.46,0.45,0.94),
               box-shadow 0.4s ease;
 }
-#projects .project-item:hover {
+.brand-card:nth-child(even) { grid-template-columns: 45% 55%; }
+.brand-card:nth-child(even) .brand-card-img { order: 2; }
+.brand-card:nth-child(even) .brand-card-body { order: 1; }
+
+.brand-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 40px 100px rgba(0,0,0,0.7),
-              0 0 0 1px rgba(220,20,60,0.18),
-              0 0 60px rgba(220,20,60,0.06);
+              0 0 0 1px rgba(220,20,60,0.2),
+              0 0 80px rgba(220,20,60,0.05);
   z-index: 2;
 }
-#projects .project-item:nth-child(even) { flex-direction: row-reverse; }
 
-/* ---- Info panel ---- */
-#projects .project-info {
-  flex: 0 0 45%;
-  padding: 55px 60px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background:
-    radial-gradient(ellipse at 0% 0%, rgba(220,20,60,0.06) 0%, transparent 60%),
-    linear-gradient(150deg, #0f151d 0%, #151e2a 50%, #1a2535 100%);
+/* ---- Image panel ---- */
+.brand-card-img {
   position: relative;
   overflow: hidden;
-  border-left: 0px solid crimson;
-  transition: border-left-width 0.3s ease;
+  background: #0d1117;
 }
-#projects .project-item:nth-child(even) .project-info {
-  background:
-    radial-gradient(ellipse at 100% 0%, rgba(220,20,60,0.06) 0%, transparent 60%),
-    linear-gradient(210deg, #0f151d 0%, #151e2a 50%, #1a2535 100%);
+.brand-card-img img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.8s cubic-bezier(0.25,0.46,0.45,0.94),
+              filter 0.5s ease;
+  filter: brightness(0.85) saturate(1.1);
+}
+.brand-card:hover .brand-card-img img {
+  transform: scale(1.07);
+  filter: brightness(0.65) saturate(1.3);
 }
 
-/* Trait gauche animé */
-#projects .project-info::before {
-  content: '';
+/* Numéro ghost sur l'image */
+.brand-num-ghost {
   position: absolute;
-  top: 0; left: 0;
-  width: 3px;
-  height: 0%;
-  background: linear-gradient(to bottom, transparent, crimson 30%, crimson 70%, transparent);
-  transition: height 0.5s ease;
-}
-#projects .project-item:hover .project-info::before { height: 100%; }
-#projects .project-item:nth-child(even) .project-info::before { left: auto; right: 0; }
-
-/* Balayage lumineux au hover */
-#projects .project-info .shimmer {
-  position: absolute;
-  top: -150%;
-  left: -60%;
-  width: 60%;
-  height: 300%;
-  background: linear-gradient(
-    105deg,
-    transparent 40%,
-    rgba(255,255,255,0.03) 50%,
-    transparent 60%
-  );
-  transform: skewX(-15deg);
-  transition: top 0.7s ease;
-  pointer-events: none;
-}
-#projects .project-item:hover .project-info .shimmer { top: 150%; }
-
-/* Nom de marque fantôme géant */
-#projects .project-info::after {
-  content: attr(data-brand);
-  position: absolute;
-  right: -15px;
-  bottom: -30px;
-  font-size: 14rem;
-  font-weight: 900;
-  font-family: "Poppins", sans-serif;
-  color: rgba(255,255,255,0.03);
-  line-height: 1;
-  pointer-events: none;
-  user-select: none;
-  letter-spacing: -0.02em;
-  transition: color 0.5s ease, transform 0.5s ease;
-}
-#projects .project-item:hover .project-info::after {
-  color: rgba(220,20,60,0.07);
-  transform: translateX(-6px);
-}
-
-/* ---- Card top ---- */
-.card-top {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  margin-bottom: 24px;
-  position: relative;
-  z-index: 1;
-}
-.site-number {
+  top: 16px;
+  left: 20px;
   font-size: 1rem;
   font-weight: 700;
-  color: crimson;
-  border: 1.5px solid rgba(220,20,60,0.55);
-  border-radius: 4px;
-  padding: 3px 10px;
-  letter-spacing: 0.08rem;
-  font-family: "Poppins", sans-serif;
-  background: rgba(220,20,60,0.08);
-  transition: background 0.3s ease;
-}
-#projects .project-item:hover .site-number { background: rgba(220,20,60,0.18); }
-.site-category {
-  font-size: 1.05rem;
-  color: rgba(255,255,255,0.3);
-  text-transform: uppercase;
-  letter-spacing: 0.14rem;
-  font-weight: 400;
-  font-family: "Poppins", sans-serif;
-  display: inline-flex;
-  align-items: center;
-  gap: 5px;
-}
-
-/* ---- Titre ---- */
-#projects .project-info h1 {
-  font-size: 3.6rem;
-  font-weight: 700;
   color: white;
-  margin-bottom: 18px;
-  line-height: 1.15;
-  letter-spacing: -0.02rem;
-  position: relative;
-  z-index: 1;
-  transition: letter-spacing 0.3s ease;
-}
-#projects .project-item:hover .project-info h1 { letter-spacing: 0; }
-#projects .project-info h1 span { color: crimson; }
-
-/* ---- Description ---- */
-#projects .project-info p {
-  color: rgba(255,255,255,0.5);
-  font-size: 1.35rem;
-  line-height: 2.3rem;
-  font-weight: 300;
-  flex-grow: 1;
-  position: relative;
-  z-index: 1;
-  max-width: 460px;
+  background: rgba(220,20,60,0.9);
+  padding: 4px 12px;
+  border-radius: 4px;
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 0.05rem;
+  z-index: 3;
 }
 
-/* ---- Séparateur + bouton ---- */
-.site-cta-wrap {
-  margin-top: 30px;
-  padding-top: 22px;
-  border-top: 1px solid rgba(255,255,255,0.06);
-  position: relative;
-  z-index: 1;
+/* Overlay hover image */
+.brand-card-img-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg,
+    rgba(180,0,30,0.85) 0%,
+    rgba(220,20,60,0.8) 100%
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: 2;
+  backdrop-filter: blur(3px);
 }
-.site-cta {
+.brand-card:hover .brand-card-img-overlay { opacity: 1; }
+.brand-visit-btn {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  padding: 11px 28px;
-  background: transparent;
-  border: 1px solid rgba(220,20,60,0.4);
-  color: rgba(255,255,255,0.65);
-  font-size: 1.15rem;
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 0.12rem;
-  border-radius: 3px;
-  transition: all 0.3s ease;
-  font-family: "Poppins", sans-serif;
-  position: relative;
-  overflow: hidden;
-}
-/* Fond qui se remplit de droite à gauche */
-.site-cta::before {
-  content: '';
-  position: absolute;
-  top: 0; right: 0;
-  width: 0%; height: 100%;
-  background: crimson;
-  transition: width 0.35s ease;
-  z-index: -1;
-}
-.site-cta:hover::before { width: 100%; left: 0; right: auto; }
-.site-cta:hover {
-  border-color: crimson;
   color: white;
-  box-shadow: 0 8px 28px rgba(220,20,60,0.4);
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  font-family: "Poppins", sans-serif;
+  border: 2px solid rgba(255,255,255,0.6);
+  padding: 14px 30px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
 }
-.site-cta i { font-size: 1rem; transition: transform 0.3s ease; }
-.site-cta:hover i { transform: translateX(4px); }
+.brand-visit-btn:hover { background: white; color: crimson; }
 
-/* ---- Image panel ---- */
-#projects .project-img {
-  flex: 0 0 55%;
-  position: relative;
-  overflow: hidden;
-  display: flex;
-  align-items: stretch;
-  background: #080c12;
-}
-
-/* Gradient de vignette en haut de l'image */
-#projects .project-img::before {
+/* Vignette haut de l'image */
+.brand-card-img::before {
   content: '';
   position: absolute;
   top: 0; left: 0; right: 0;
-  height: 40%;
-  background: linear-gradient(to bottom, rgba(8,12,18,0.6), transparent);
-  z-index: 2;
+  height: 35%;
+  background: linear-gradient(to bottom, rgba(6,9,16,0.6), transparent);
+  z-index: 1;
   pointer-events: none;
 }
 
-/* ---- Browser mockup ---- */
-.browser-frame {
-  width: 100%;
-  display: flex;
-  flex-direction: column-reverse;
-  overflow: hidden;
-}
-.browser-bar {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  padding: 11px 18px;
-  background: rgba(8,12,18,0.96);
-  border-top: 1px solid rgba(255,255,255,0.05);
-  flex-shrink: 0;
-  backdrop-filter: blur(12px);
-  z-index: 3;
-}
-.b-dot { width: 11px; height: 11px; border-radius: 50%; flex-shrink: 0; }
-.b-dot.red    { background: #ff5f57; box-shadow: 0 0 8px rgba(255,95,87,0.6); }
-.b-dot.yellow { background: #febc2e; box-shadow: 0 0 8px rgba(254,188,46,0.6); }
-.b-dot.green  { background: #28c840; box-shadow: 0 0 8px rgba(40,200,64,0.6); }
-.b-url {
-  flex: 1;
-  background: rgba(255,255,255,0.05);
-  border-radius: 5px;
-  padding: 4px 14px;
-  display: flex;
-  align-items: center;
-  gap: 7px;
-  margin-left: 10px;
-  color: rgba(255,255,255,0.3);
-  font-size: 1.1rem;
-  font-family: "Poppins", sans-serif;
-  max-width: 260px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.b-url i { color: #28c840; font-size: 0.9rem; flex-shrink: 0; }
-
-.browser-screen {
-  flex: 1;
-  position: relative;
-  overflow: hidden;
-  min-height: 0;
-}
-.browser-screen img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center center;
-  display: block;
-  transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-              filter 0.5s ease;
-  filter: brightness(0.88) saturate(1.1);
-}
-#projects .project-item:hover .browser-screen img {
-  transform: scale(1.07);
-  filter: brightness(0.72) saturate(1.2);
-}
-
-/* Cadrage optimal */
+/* Object positions */
 .img-canon  { object-position: center 40%; }
 .img-sony   { object-position: center 30%; }
 .img-apple  { object-position: center 35%; }
 .img-nikon  { object-position: center 25%; }
 .img-adobe  { object-position: center 35%; }
 
-/* ---- Overlay hover ---- */
-.img-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(135deg,
-    rgba(180,0,30,0.88) 0%,
-    rgba(220,20,60,0.82) 50%,
-    rgba(140,10,40,0.9) 100%
-  );
+/* ---- Body panel ---- */
+.brand-card-body {
+  padding: 50px 55px;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  gap: 14px;
-  opacity: 0;
-  transition: opacity 0.4s ease;
-  color: white;
-  backdrop-filter: blur(4px);
-  z-index: 4;
+  gap: 18px;
+  background:
+    radial-gradient(ellipse at 0% 0%, rgba(220,20,60,0.06) 0%, transparent 55%),
+    linear-gradient(150deg, #0f151d 0%, #151e2a 50%, #1a2535 100%);
+  position: relative;
+  overflow: hidden;
 }
-.img-overlay i { font-size: 3.2rem; filter: drop-shadow(0 6px 16px rgba(0,0,0,0.5)); }
-.img-overlay span {
-  font-size: 1.4rem;
-  font-weight: 600;
+
+/* Trait latéral animé */
+.brand-card-body::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 3px; height: 0%;
+  background: linear-gradient(to bottom, transparent, crimson 30%, crimson 70%, transparent);
+  transition: height 0.5s ease;
+}
+.brand-card:hover .brand-card-body::before { height: 100%; }
+.brand-card:nth-child(even) .brand-card-body::before { left: auto; right: 0; }
+
+/* Shimmer */
+.brand-card-body::after {
+  content: attr(data-brand);
+  position: absolute;
+  right: -15px; bottom: -25px;
+  font-size: 13rem;
+  font-weight: 900;
+  font-family: "Poppins", sans-serif;
+  color: rgba(255,255,255,0.025);
+  line-height: 1;
+  pointer-events: none;
+  user-select: none;
+  letter-spacing: -0.02em;
+  transition: color 0.5s ease, transform 0.5s ease;
+}
+.brand-card:hover .brand-card-body::after {
+  color: rgba(220,20,60,0.06);
+  transform: translateX(-6px);
+}
+
+/* ---- Card top ---- */
+.brand-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+/* ---- Logo SVG ---- */
+.brand-logo-wrap {
+  flex-shrink: 0;
+}
+.brand-logo {
+  height: 36px;
+  width: auto;
+  max-width: 180px;
+  filter: drop-shadow(0 2px 8px rgba(0,0,0,0.5));
+}
+
+.brand-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 1.05rem;
+  color: rgba(255,255,255,0.3);
   text-transform: uppercase;
-  letter-spacing: 0.3rem;
+  letter-spacing: 0.12rem;
+  font-family: "Poppins", sans-serif;
+  white-space: nowrap;
+}
+
+/* ---- Titre ---- */
+.brand-card-title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: white;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  letter-spacing: -0.01rem;
+  position: relative;
+  z-index: 1;
+  transition: letter-spacing 0.3s ease;
+}
+.brand-card:hover .brand-card-title { letter-spacing: 0; }
+.brand-card-title span { color: crimson; display: block; font-weight: 400; font-size: 0.9em; }
+
+/* ---- Description ---- */
+.brand-card-desc {
+  color: rgba(255,255,255,0.5);
+  font-size: 1.35rem;
+  line-height: 2.2rem;
+  font-weight: 300;
+  font-family: "Poppins", sans-serif;
+  position: relative;
+  z-index: 1;
+}
+
+/* ---- Footer de carte ---- */
+.brand-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 18px;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  position: relative;
+  z-index: 1;
+  margin-top: auto;
+}
+.brand-url {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 1.1rem;
+  color: rgba(255,255,255,0.25);
   font-family: "Poppins", sans-serif;
 }
-#projects .project-item:hover .img-overlay { opacity: 1; }
+.brand-url i { color: #28c840; font-size: 0.9rem; }
 
-/* ---- Animations d'entrée ---- */
-.slide-in {
+.brand-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 24px;
+  background: transparent;
+  border: 1px solid rgba(220,20,60,0.4);
+  color: rgba(255,255,255,0.7);
+  font-size: 1.15rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.12rem;
+  border-radius: 3px;
+  font-family: "Poppins", sans-serif;
+  position: relative;
+  overflow: hidden;
+  transition: color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.brand-cta::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: crimson;
+  transform: translateX(-105%);
+  transition: transform 0.35s cubic-bezier(0.77,0,0.175,1);
+  z-index: -1;
+}
+.brand-cta:hover::before { transform: translateX(0); }
+.brand-cta:hover {
+  color: white;
+  border-color: crimson;
+  box-shadow: 0 8px 25px rgba(220,20,60,0.35);
+}
+.brand-cta i { font-size: 1rem; transition: transform 0.3s ease; }
+.brand-cta:hover i { transform: translateX(4px); }
+
+/* ============================================================
+   ANIMATIONS D'ENTRÉE
+   ============================================================ */
+.reveal-up {
   opacity: 0;
-  transform: translateY(55px);
+  transform: translateY(35px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal-up.visible { opacity: 1; transform: translateY(0); }
+
+.reveal-card {
+  opacity: 0;
+  transform: translateY(50px);
   transition: opacity 0.75s ease, transform 0.75s ease;
 }
-.slide-in.visible { opacity: 1; transform: translateY(0); }
+.reveal-card.visible { opacity: 1; transform: translateY(0); }
 
-/* ---- Footer ---- */
+/* ============================================================
+   FOOTER
+   ============================================================ */
 .containerfooter { max-width: 1170px; margin: auto; }
 .row { display: flex; flex-wrap: wrap; }
 ul { list-style: none; }
@@ -471,70 +454,38 @@ ul { list-style: none; }
 .footer-col .social-links a:hover { color: crimson; background-color: #fff; }
 .Optimise { color: rgba(255,255,255,0.6); font-style: italic; font-size: 1.4rem; }
 
-/* ---- Desktop large (1400px+) ---- */
-@media (min-width: 1400px) {
-  #projects .projects { max-width: 1400px; }
-  #projects .project-info { padding: 65px 75px; }
-  #projects .project-info h1 { font-size: 4.2rem; }
-  #projects .project-item { min-height: 520px; }
-}
-
-/* ---- Tablette (768-1023px) ---- */
-@media (min-width: 768px) and (max-width: 1023px) {
-  .section-title { font-size: 3.8rem; }
-  #projects .project-item { flex-direction: column !important; min-height: auto; margin-bottom: 20px; border-radius: 12px; }
-  #projects .project-info { flex: none; padding: 36px 36px; }
-  #projects .project-info::after { font-size: 10rem; }
-  #projects .project-info h1 { font-size: 2.8rem; }
-  #projects .project-img { flex: none; min-height: 290px; }
-  #projects .project-img::before { display: none; }
-  .img-overlay { display: none; }
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 1023px) {
+  .brand-card, .brand-card:nth-child(even) {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+  .brand-card:nth-child(even) .brand-card-img { order: 1; }
+  .brand-card:nth-child(even) .brand-card-body { order: 2; }
+  .brand-card-img { min-height: 300px; }
+  .brand-card-body { padding: 36px 36px; }
+  .si-hero-title { font-size: 5rem; }
   .footer-col { width: 50%; margin-bottom: 30px; }
 }
-
-/* ---- Téléphone (480-767px) ---- */
-@media (min-width: 480px) and (max-width: 767px) {
-  html { font-size: 9px; }
-  .section-title { font-size: 3rem; letter-spacing: 0.2rem; }
-  #projects .projects { padding: 90px 12px 50px; }
-  #projects .project-item { flex-direction: column !important; min-height: auto; margin-bottom: 16px; border-radius: 10px; }
-  #projects .project-info { flex: none; padding: 28px 24px; }
-  #projects .project-info::after { font-size: 8rem; }
-  #projects .project-info h1 { font-size: 2.5rem; }
-  #projects .project-img { flex: none; min-height: 240px; }
-  #projects .project-img::before { display: none; }
-  .img-overlay { display: none; }
-  .footer-col { width: 50%; margin-bottom: 30px; }
+@media (max-width: 767px) {
+  .si-hero-title { font-size: 3.5rem; letter-spacing: 0.2rem; }
+  .si-stats { flex-wrap: wrap; padding: 15px 20px; }
+  .si-stat { flex: 0 0 45%; }
+  .si-stat-sep { display: none; }
+  .brand-card-body { padding: 28px 24px; }
+  .brand-card-title { font-size: 2rem; }
+  .brand-card-img-overlay { display: none; }
 }
-
-/* ---- Petit téléphone (<480px) ---- */
 @media (max-width: 480px) {
   html { font-size: 8px; }
-  .section-title { font-size: 2.8rem; letter-spacing: 0.1rem; }
-  #projects .projects-header::before { display: none; }
-  .projects-meta { flex-direction: column; align-items: center; }
-  #projects .projects { padding: 85px 10px 40px; }
-  #projects .project-item { flex-direction: column !important; min-height: auto; margin-bottom: 14px; border-radius: 10px; }
-  #projects .project-info { flex: none; padding: 22px 18px; }
-  #projects .project-info::after { display: none; }
-  .card-top { flex-wrap: wrap; }
-  #projects .project-info h1 { font-size: 2.2rem; }
-  #projects .project-img { flex: none; min-height: 210px; }
-  #projects .project-img::before { display: none; }
-  .img-overlay { display: none; }
-  .browser-bar { padding: 8px 12px; }
+  .si-hero-title { font-size: 3rem; }
+  .si-hero-content { padding: 100px 15px 50px; }
+  .brand-card-body::after { display: none; }
   .footer-col { width: 100%; }
   .footer { padding: 50px 20px; }
 }
-
-/* iOS Safari */
 @supports (-webkit-touch-callout: none) {
   .wallsiteinteret { background-attachment: scroll; }
 }
-
-/* Accent couleur par marque dans la barre URL */
-[data-brand="CANON"] .b-url i  { color: #cc0000; }
-[data-brand="SONY"] .b-url i   { color: #00439c; }
-[data-brand="APPLE"] .b-url i  { color: #555; }
-[data-brand="NIKON"] .b-url i  { color: #ffd700; }
-[data-brand="ADOBE"] .b-url i  { color: #ff0000; }
