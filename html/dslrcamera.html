@@ -2,7 +2,15 @@
 <!--
   ╔══════════════════════════════════════════════════════════════╗
   ║                    LA PHOTOGRAPHIE                           ║
-  ║  Auteur : Alexandre Bossé — github.com/icemanalex            ║
+  ║──────────────────────────────────────────────────────────────║
+  ║  Auteur       : Alexandre Bossé                              ║
+  ║  GitHub       : github.com/icemanalex                        ║
+  ║  Email        : tech.alexandre.bosse@gmail.com               ║
+  ║──────────────────────────────────────────────────────────────║
+  ║  Site web sur la photographie amateur — Montréal, Québec     ║
+  ║  Développé avec HTML5, CSS3, JavaScript                      ║
+  ║  Hébergé sur GitHub Pages                                    ║
+  ║  Assisté par Claude (Anthropic) — Mai 2026                   ║
   ╚══════════════════════════════════════════════════════════════╝
 -->
 <html lang="fr">
@@ -10,69 +18,57 @@
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../css/nav.css"/>
-    <link rel="stylesheet" href="../css/dslr.css"/>
+    <link rel="stylesheet" href="../css/style.css"/>
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <title>DSLR Caméra</title>
     <link rel="icon" type="image/x-icon" href="../images/icons8-photo-96.png">
   </head>
 
   <body class="wallpDSLR">
-    <!-- Header -->
+    <!-- Début Header -->
     <section id="header">
       <div class="header container">
         <div class="nav-bar">
           <div class="brand">
-            <a href="../index.html"><h1><span>L</span>a <span>P</span>hotographie</h1></a>
+            <a href="../index.html">
+              <h1><span>L</span>a <span>P</span>hotographie</h1>
+            </a>
           </div>
           <div class="nav-list">
-            <div class="hamburger"><div class="bar"></div></div>
+            <div class="hamburger">
+              <div class="bar"></div>
+            </div>
             <ul>
               <li><a href="../index.html" data-after="Accueil">Accueil</a></li>
               <li><a href="photos.html" data-after="Collection Photos">Collection Photos</a></li>
-              <li><a href="sitesinterets.html" data-after="Sites d'intérêts">Sites d'intérêts</a></li>
+              <li><a href="sitesinterets.html" data-after="Sites d’intérêts">Sites d’intérêts</a></li>
               <li><a href="faq.html" data-after="FAQ">FAQ</a></li>
               <li><a href="apropos.html" data-after="À propos">À propos</a></li>
             </ul>
-          </div>
-        </div>
-      </div>
+          </div><!-- fin nav-list -->
+        </div><!-- fin nav-bar -->
+      </div><!-- fin header container -->
     </section>
-
-    <!-- Section DSLR -->
+    <!-- Fin Header -->
+    <!-- Dslr Section -->
     <section id="about">
       <div class="about container">
-
-        <!-- Photo avec cadre original -->
-        <div class="col-left anim-left" style="--d:0.1s">
+        <div class="col-left">
           <div class="about-img">
-            <img src="../images/pexels-derice-jason-fahnkow-1595243.jpg" alt="Photographe DSLR"/>
+            <img src="../images/pexels-derice-jason-fahnkow-1595243.jpg" alt="img" />
           </div>
         </div>
-
-        <!-- Contenu -->
         <div class="col-right">
-          <p class="dslr-eyebrow anim-up" style="--d:0.1s"><i class="fas fa-camera-retro"></i> Photographie numérique</p>
-          <h1 class="section-title2 anim-up" style="--d:0.22s">Caméra <span>DSLR</span></h1>
-          <div class="dslr-divider anim-up" style="--d:0.32s"></div>
-          <h2 class="anim-up" style="--d:0.42s">L'appareil photo DSLR apporte un grand changement.</h2>
-          <p class="ParDSLR anim-up" style="--d:0.52s">
-            De nos jours, les photographes talentueux ont la capacité de créer des images très professionnelles avec un appareil photo DSLR numérique. Cette technologie considérée comme extrêmement chère est maintenant accessible à de nombreux consommateurs. À première vue, cela semble intimidant mais avec suffisamment de pratique, n'importe qui peut apprendre à utiliser un appareil photo DSLR.
+          <h1 class="section-title2">Caméra <span>DSLR</span></h1>
+          <h2>L'appareil photo DSLR apporte un grand changement.</h2>
+          <p class="ParDSLR">
+            De nos jours, les photographes talentueux ont la capacité de créer des images très professionnelles avec un appareil photo DSLR numérique. Cette technologie considérée comme extrêmement chère est maintenant accessible à de nombreux consommateurs. À première vue, cela semble intimidant mais avec suffisamment de pratique, n'importe qui peut apprendre à utiliser un appareil photo DSLR pour ses projets personnels.
           </p>
-          <div class="dslr-tags anim-up" style="--d:0.62s">
-            <span class="dslr-tag"><i class="fas fa-sliders-h"></i> Contrôle manuel</span>
-            <span class="dslr-tag"><i class="fas fa-circle"></i> Grand capteur</span>
-            <span class="dslr-tag"><i class="fas fa-plug"></i> Objectifs interchangeables</span>
-            <span class="dslr-tag"><i class="fas fa-bolt"></i> Qualité pro</span>
-          </div>
-          <a href="sitesinterets.html" class="dslr-cta anim-up" style="--d:0.72s">
-            Voir les ressources <i class="fas fa-arrow-right"></i>
-          </a>
         </div>
-
       </div>
     </section>
-
-    <!-- Footer -->
+    <!-- Fin Dslr Section -->
+    <!-- debut Footer -->
     <footer class="footer">
       <div class="containerfooter">
         <div class="row">
@@ -97,31 +93,23 @@
           </div>
           <div class="footer-col">
             <h4>Navigateurs</h4>
-            <ul><p class="Optimise">Ce site est optimisé pour Chrome, Opéra, Safari, Edge et FireFox</p></ul>
+            <ul>
+              <p class="Optimise">Se site est optimisé pour les navigateurs Chrome, Opéra, <br> Safari, Edge et FireFox </p>
+            </ul>
           </div>
           <div class="footer-col">
             <h4>Média Sociaux</h4>
             <div class="social-links">
-              <a href="https://www.facebook.com/profile.php?id=100083169858534" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
-              <a href="https://twitter.com/AlexandreBoss15" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
-              <a href="https://www.linkedin.com/in/alexandre-boss%C3%A9-838408245" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+              <a href="https://www.facebook.com/profile.php?id=100083169858534" target="_blank"><i class="fab fa-facebook-f"></i></a>
+              <a href="https://twitter.com/AlexandreBoss15" target="_blank"><i class="fab fa-twitter"></i></a>
+              <a href="https://www.linkedin.com/in/alexandre-boss%C3%A9-838408245" target="_blank"><i class="fab fa-linkedin"></i></a>
               <a href="mailto:tech.alexandre.bosse@gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i></a>
             </div>
           </div>
         </div>
       </div>
     </footer>
-
+    <!-- Fin Footer -->
     <script src="../js/app.js"></script>
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        var observer = new IntersectionObserver(function(entries) {
-          entries.forEach(function(e) {
-            if (e.isIntersecting) { e.target.classList.add('in'); observer.unobserve(e.target); }
-          });
-        }, { threshold: 0.1 });
-        document.querySelectorAll('.anim-up, .anim-left').forEach(function(el) { observer.observe(el); });
-      });
-    </script>
   </body>
 </html>

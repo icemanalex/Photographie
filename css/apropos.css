@@ -136,6 +136,7 @@ body { background: #080c12; }
   height: 360px;
   position: relative;
   border: 10px solid white;
+  overflow: hidden;
 }
 .hero-photo-frame img {
   width: 100%;
