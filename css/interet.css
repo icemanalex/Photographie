@@ -256,7 +256,7 @@ a { text-decoration: none; }
 /* Object positions */
 .img-canon  { object-position: center 40%; }
 .img-sony   { object-position: center center; }
-.img-apple  { object-position: center 35%; }
+.img-apple  { object-position: center 40%; }
 .img-nikon  { object-position: center 40%; }
 .img-adobe  { object-position: center 35%; }
 
