@@ -18,7 +18,7 @@ body { background: #111; }
 /* ---- Hero header ---- */
 .gallery-hero {
   text-align: center;
-  padding: 25px 20px 22px;
+  padding: 25px 20px 0;
   background: linear-gradient(180deg, #1a1e26 0%, #0f1115 100%);
 }
 .gallery-title {
@@ -248,7 +248,7 @@ body { background: #111; }
   align-items: center;
   justify-content: center;
   gap: 10px;
-  padding: 10px 20px 40px;
+  padding: 10px 20px 0;
   flex-wrap: wrap;
   max-width: 1200px;
   margin: 0 auto;
@@ -329,7 +329,7 @@ ul { list-style: none; }
   .prev { left: 8px; }
   .next { right: 8px; }
   .thumb { width: 56px; height: 38px; }
-  .thumbnails { gap: 6px; padding: 8px 10px 25px; }
+  .thumbnails { gap: 6px; padding: 8px 10px 0; }
   .slide-caption { padding: 30px 15px 15px; }
   .slide-caption h3 { font-size: 1.4rem; }
   .slide-tag { font-size: 0.95rem; }

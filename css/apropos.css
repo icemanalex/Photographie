@@ -209,7 +209,7 @@ body { background: #080c12; }
 
 /* ===== SECTIONS ===== */
 #apropos-sections {
-  padding: 90px 20px 80px;
+  padding: 90px 20px 0;
   background: #080c12;
 }
 .sections-wrap {

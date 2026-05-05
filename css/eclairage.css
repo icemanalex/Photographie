@@ -19,7 +19,7 @@ a { text-decoration: none; }
 /* ---- Section ---- */
 #eclair-section {
   min-height: 100vh;
-  padding: 120px 20px 80px;
+  padding: 120px 20px 0;
   background: rgba(0,0,0,0.68);
   backdrop-filter: blur(2px);
 }
@@ -317,7 +317,7 @@ ul { list-style: none; }
 @media (max-width: 767px) {
   .eclair-grid { grid-template-columns: 1fr; }
   .eclair-title { font-size: 3.2rem; letter-spacing: 0.2rem; }
-  #eclair-section { padding: 100px 15px 60px; }
+  #eclair-section { padding: 100px 15px 0; }
   .eclair-intro { padding: 22px 22px; }
   .eclair-quote { padding: 30px 22px 28px; }
   .eclair-quote i { font-size: 2.2rem; top: 14px; left: 16px; }

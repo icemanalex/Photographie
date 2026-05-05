@@ -81,6 +81,8 @@
 #header .hamburger {
   height: 60px;
   width: 60px;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
   display: inline-block;
   border: 3px solid white;
   border-radius: 50%;
@@ -151,4 +153,14 @@
 @keyframes hamburger_puls {
   0%   { opacity: 1; transform: scale(1); }
   100% { opacity: 0; transform: scale(1.4); }
+}
+
+/* Zone de touch élargie pour le hamburger */
+#header .hamburger::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
 }
