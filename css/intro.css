@@ -704,9 +704,13 @@ ul {
 }
 .splash-bg {
   position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  width: 100%; height: 100%;
-  background-image: url(../images/dslrwallpaper.jpg);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(images/hero-bg.png);
   background-size: cover;
   background-position: center;
 }
@@ -715,13 +719,7 @@ ul {
   position: absolute;
   top: 0; left: 0;
   width: 100%; height: 100%;
-  background: linear-gradient(
-    to bottom,
-    rgba(0,0,0,0.5) 0%,
-    rgba(0,0,0,0.65) 40%,
-    rgba(0,0,0,0.97) 85%,
-    rgba(0,0,0,1) 100%
-  );
+  background: rgba(0,0,0,0.78);
 }
 .splash-content {
   position: relative;
@@ -731,11 +729,10 @@ ul {
   flex-direction: column;
   align-items: center;
   gap: 0;
-  opacity: 0;
-  animation: splashFadeIn 1.2s ease 0.5s forwards;
+  animation: splashFadeIn 1s ease forwards;
 }
 @keyframes splashFadeIn {
-  from { opacity: 0; transform: translateY(25px); }
+  from { opacity: 0; transform: translateY(20px); }
   to   { opacity: 1; transform: translateY(0); }
 }
 .splash-logo {
@@ -748,14 +745,10 @@ ul {
 }
 .splash-logo span { color: crimson; }
 .splash-divider {
-  width: 0px;
+  width: 60px;
   height: 2px;
   background: linear-gradient(90deg, transparent, crimson, transparent);
   margin: 22px auto;
-  animation: dividerExpand 0.8s ease 1.8s forwards;
-}
-@keyframes dividerExpand {
-  to { width: 80px; }
 }
 .splash-sub {
   font-size: 1.3rem;
@@ -817,6 +810,22 @@ ul {
 .splash-hint i { color: rgba(220,20,60,0.4); font-size: 1rem; }
 /* ===== FIN SPLASH SCREEN ===== */
 
-/* splash z-index:9999 position:fixed couvre tout — body non modifié */
+/* Bloquer le scroll et cacher le contenu pendant le splash */
+body.splash-active {
+  overflow: hidden;
+  height: 100vh;
+  height: -webkit-fill-available;
+}
+body.splash-active #hero,
+body.splash-active #header {
+  visibility: hidden;
+  opacity: 0;
+}
+body.splash-active video#myVideo {
+  display: none;
+}
+#hero, #header {
+  transition: opacity 0.6s ease, visibility 0.6s ease;
+}
 
 audio#bgMusic { display: none; position: absolute; }
