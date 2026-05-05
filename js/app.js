@@ -34,58 +34,6 @@ menu_item.forEach((item) => {
   });
 });
 
-
-// ===== Bokeh Canvas =====
-(function() {
-  var canvas = document.getElementById('splashCanvas');
-  if (!canvas) return;
-  var ctx = canvas.getContext('2d');
-  var W, H, particles = [];
-
-  function resize() {
-    W = canvas.width  = window.innerWidth;
-    H = canvas.height = window.innerHeight;
-  }
-  resize();
-  window.addEventListener('resize', resize, { passive: true });
-
-  function rand(min, max) { return Math.random() * (max - min) + min; }
-
-  for (var i = 0; i < 35; i++) {
-    particles.push({
-      x: rand(0, 1), y: rand(0, 1),
-      r: rand(2, 12),
-      alpha: rand(0.05, 0.25),
-      speed: rand(0.00008, 0.00025),
-      drift: rand(-0.00015, 0.00015),
-      hue: Math.random() > 0.7 ? 'crimson' : 'rgba(255,255,255,'
-    });
-  }
-
-  var startTime = Date.now();
-  function draw() {
-    if (!document.getElementById('splash') || document.getElementById('splash').classList.contains('hidden')) return;
-    ctx.clearRect(0, 0, W, H);
-    var elapsed = Date.now() - startTime;
-    particles.forEach(function(p) {
-      p.y -= p.speed;
-      p.x += p.drift;
-      if (p.y < -0.05) { p.y = 1.05; p.x = rand(0, 1); }
-      ctx.beginPath();
-      ctx.arc(p.x * W, p.y * H, p.r, 0, Math.PI * 2);
-      if (p.hue === 'crimson') {
-        ctx.fillStyle = 'rgba(220,20,60,' + p.alpha + ')';
-      } else {
-        ctx.fillStyle = p.hue + p.alpha + ')';
-      }
-      ctx.fill();
-    });
-    requestAnimationFrame(draw);
-  }
-  draw();
-})();
-// ===== Fin Bokeh Canvas =====
-
 // ===== Splash Screen =====
 (function () {
   var splash = document.getElementById('splash');
