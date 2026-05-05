@@ -820,3 +820,20 @@ body.splash-active video#myVideo {
 }
 
 audio#bgMusic { display: none; position: absolute; }
+
+/* ---- Vidéo : masquée sur téléphone, active sur iPad+ ---- */
+@media (max-width: 767px) {
+  #myVideo {
+    display: none;
+  }
+  #hero {
+    background-image: url(../images/hero-bg.png);
+    background-size: cover;
+    background-position: center top;
+  }
+}
+@media (min-width: 768px) {
+  #myVideo {
+    display: block;
+  }
+}
