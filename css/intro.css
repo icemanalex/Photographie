@@ -861,6 +861,11 @@ body.splash-active video#myVideo {
   #myVideo {
     display: block;
   }
+  /* iPad+ : photo de fond originale si la vidéo ne charge pas */
+  #hero {
+    background-image: url(../images/hero-bg.png) !important;
+    background-position: top center;
+  }
 }
 
 /* ============================================================
