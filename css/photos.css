@@ -4,21 +4,30 @@
 * { padding: 0; margin: 0; box-sizing: border-box; }
 html { font-size: 10px; font-family: "Montserrat", sans-serif; scroll-behavior: smooth; }
 a { text-decoration: none; }
-body { background: #0f1115; }
+body {
+  background: #0f1115;
+}
+html {
+  background: #0f1115;
+}
 
 /* ---- Page gallery ---- */
 #gallery-page {
-  padding-top: 8vh;
+  padding-top: 0;
   min-height: 100vh;
   background: transparent;
   display: flex;
   flex-direction: column;
 }
 
+.gallery-hero {
+  padding-top: calc(8vh + 25px);
+}
+
 /* ---- Hero header ---- */
 .gallery-hero {
   text-align: center;
-  padding: 25px 20px 22px;
+  padding: 0 20px 22px;
   background: linear-gradient(180deg, #1a1e26 0%, #0f1115 100%);
 }
 .gallery-title {
