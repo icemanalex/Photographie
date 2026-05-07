@@ -818,9 +818,12 @@ ul {
 
 /* Bloquer le scroll et cacher le contenu pendant le splash */
 html.splash-active,
+html.splash-active,
 body.splash-active {
   overflow: hidden !important;
-  height: 100vh !important;
+  height: 100% !important;
+}
+body.splash-active {
   max-height: 100vh !important;
 }
 body.splash-active > *:not(#splash) {

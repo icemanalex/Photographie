@@ -4,6 +4,16 @@
   document.documentElement.style.setProperty('--vh', vh + 'px');
 })();
 
+// Créer l'audio en JS — aucun rendu natif dans le DOM HTML
+(function() {
+  var a = document.createElement('audio');
+  a.id = 'bgMusic';
+  a.src = 'audio/battle-of-the-dragons-8037.mp3';
+  a.preload = 'none';
+  a.style.cssText = 'position:absolute;width:0;height:0;overflow:hidden;opacity:0;pointer-events:none;';
+  document.body.appendChild(a);
+})();
+
 const hamburger = document.querySelector(
   ".header .nav-bar .nav-list .hamburger"
 );
@@ -55,6 +65,7 @@ menu_item.forEach((item) => {
     document.body.classList.remove('splash-active');
     document.documentElement.classList.remove('splash-active');
     // Révéler le contenu
+    document.documentElement.classList.remove('splash-active');
     document.querySelectorAll('body > *:not(#splash)').forEach(function(el) { el.style.display = ''; });
     // Cacher le splash
     splash.classList.add('hidden');
