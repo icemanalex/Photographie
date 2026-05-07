@@ -223,6 +223,8 @@ p {
   margin: 0 auto;
   padding: 0 50px;
   justify-content: flex-start;
+  position: relative;
+  z-index: 2;
 }
 #hero h1 {
   display: block;
