@@ -11,21 +11,17 @@ body {
 
 /* ---- Page gallery ---- */
 #gallery-page {
-  padding-top: 0;
+  padding-top: 8vh;
   min-height: 100vh;
   background: transparent;
   display: flex;
   flex-direction: column;
 }
 
-.gallery-hero {
-  padding-top: calc(8vh + 25px);
-}
-
 /* ---- Hero header ---- */
 .gallery-hero {
   text-align: center;
-  padding: 0 20px 22px;
+  padding: 25px 20px 22px;
   background: linear-gradient(180deg, #1a1e26 0%, #0f1115 100%);
 }
 .gallery-title {
