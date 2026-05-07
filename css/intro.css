@@ -11,7 +11,7 @@ html {
   scroll-behavior: smooth;
   background: #111;
 }
-body { background: #111; }
+body { background: #29323c; }
 a {
   text-decoration: none;
 }
@@ -204,6 +204,8 @@ p {
   position: relative;
   z-index: 1;
   padding-top: 8vh;
+  min-height: 100vh;
+  min-height: calc(var(--vh, 1vh) * 100);
 }
 #hero::after {
   content: "";
