@@ -225,6 +225,9 @@ p {
   justify-content: flex-start;
   position: relative;
   z-index: 2;
+  min-height: 100vh;
+  min-height: calc(var(--vh, 1vh) * 100);
+  align-items: center;
 }
 #hero h1 {
   display: block;
