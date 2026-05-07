@@ -4,6 +4,7 @@
 * { padding: 0; margin: 0; box-sizing: border-box; }
 html { font-size: 10px; font-family: "Montserrat", sans-serif; scroll-behavior: smooth; }
 a { text-decoration: none; }
+.container { width: 100%; display: flex; align-items: center; justify-content: center; }
 body {
   background: linear-gradient(180deg, #1a1e26 0%, #0f1115 100%);
   background-attachment: fixed;
