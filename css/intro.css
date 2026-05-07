@@ -730,7 +730,8 @@ ul {
   gap: 0;
   width: 90%;
   max-width: 580px;
-  padding: 0 16px;
+  padding: 0 20px;
+  margin: 0 auto;
   animation: splashFadeIn 1s ease forwards;
 }
 @keyframes splashFadeIn {
@@ -761,6 +762,8 @@ ul {
   font-family: "Poppins", sans-serif;
   font-weight: 300;
   margin-bottom: 40px;
+  text-align: center;
+  width: 100%;
 }
 .splash-btn {
   display: inline-flex;
