@@ -5,10 +5,8 @@
 html { font-size: 10px; font-family: "Montserrat", sans-serif; scroll-behavior: smooth; }
 a { text-decoration: none; }
 body {
-  background: #0f1115;
-}
-html {
-  background: #0f1115;
+  background: linear-gradient(180deg, #1a1e26 0%, #0f1115 100%);
+  background-attachment: fixed;
 }
 
 /* ---- Page gallery ---- */
