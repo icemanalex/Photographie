@@ -11,7 +11,7 @@ body {
 
 /* ---- Page gallery ---- */
 #gallery-page {
-  padding-top: 8vh;
+  padding-top: 110px;
   min-height: 100vh;
   background: transparent;
   display: flex;
