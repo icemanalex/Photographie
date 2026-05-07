@@ -4,20 +4,6 @@
   document.documentElement.style.setProperty('--vh', vh + 'px');
 })();
 
-// Bloquer le scroll pendant le splash
-(function() {
-  function preventScroll(e) { e.preventDefault(); e.stopPropagation(); return false; }
-  document.addEventListener('touchmove', preventScroll, { passive: false });
-  document.addEventListener('wheel', preventScroll, { passive: false });
-  var enterBtn = document.getElementById('splashEnter');
-  if (enterBtn) {
-    enterBtn.addEventListener('click', function() {
-      document.removeEventListener('touchmove', preventScroll);
-      document.removeEventListener('wheel', preventScroll);
-    });
-  }
-})();
-
 const hamburger = document.querySelector(
   ".header .nav-bar .nav-list .hamburger"
 );
@@ -68,6 +54,8 @@ menu_item.forEach((item) => {
     // Révéler le hero
     document.body.classList.remove('splash-active');
     document.documentElement.classList.remove('splash-active');
+    // Révéler le contenu
+    document.querySelectorAll('body > *:not(#splash)').forEach(function(el) { el.style.display = ''; });
     // Cacher le splash
     splash.classList.add('hidden');
     // Retirer du DOM après la transition
