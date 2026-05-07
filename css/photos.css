@@ -13,7 +13,7 @@ body {
 #gallery-page {
   padding-top: 110px;
   min-height: 100vh;
-  background: transparent;
+  background: rgba(6,9,16,0.88);
   display: flex;
   flex-direction: column;
 }
