@@ -4,16 +4,6 @@
   document.documentElement.style.setProperty('--vh', vh + 'px');
 })();
 
-// Créer l'audio en JS — aucun rendu natif dans le DOM HTML
-(function() {
-  var a = document.createElement('audio');
-  a.id = 'bgMusic';
-  a.src = 'audio/battle-of-the-dragons-8037.mp3';
-  a.preload = 'none';
-  a.style.cssText = 'position:absolute;width:0;height:0;overflow:hidden;opacity:0;pointer-events:none;';
-  document.body.appendChild(a);
-})();
-
 const hamburger = document.querySelector(
   ".header .nav-bar .nav-list .hamburger"
 );
